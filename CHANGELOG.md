@@ -90,3 +90,4 @@ Promoted corrections and rendered releases only. Nothing here is published or pu
 - 2026-09-16: casework promoted 17 row(s) from research/agents-2026-09-16/MDREVIEW-MD99.md.
 - 2026-09-16: casework promoted 52 row(s) from research/agents-2026-09-16/MDREVIEW-MD74.md.
 - 2026-09-16: casework promoted 44 row(s) from research/agents-2026-09-16/MDREVIEW-MD73.md.
+- 2026-09-16: casework promoted 71 row(s) from research/agents-2026-09-16/MDREVIEW-MD75.md.

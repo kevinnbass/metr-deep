@@ -1,6 +1,6 @@
 # Figures (metr_deep)
 
-Rendered 2026-09-16T20:23:01Z. Every figure is self-contained HTML under `figures/` with a PNG under `figures/png/`. Each cites promoted row ids, carries an unknown block, keeps money types separate, and passes `scripts/lint_figures.py`. Figures 01-06 are the PLAN.md §8 set (MD53); 07-30 are the second series built by `scripts/build_figures_v2.py` from the promoted tables and the seven figure audits under `research/agents-2026-09-16/figure-audits/`.
+Rendered 2026-09-16T22:28:14Z. Every figure is self-contained HTML under `figures/` with a PNG under `figures/png/`. Each cites promoted row ids, carries an unknown block, keeps money types separate, and passes `scripts/lint_figures.py`. Figures 01-06 are the PLAN.md §8 set (MD53); 07-30 are the second series built by `scripts/build_figures_v2.py` from the promoted tables and the seven figure audits under `research/agents-2026-09-16/figure-audits/`.
 
 | # | file | title | question | ids cited |
 |---|---|---|---|---|
@@ -14,7 +14,7 @@ Rendered 2026-09-16T20:23:01Z. Every figure is self-contained HTML under `figure
 | 08 | `figures/metr-deep-08-source-coverage-heatmap.html` | Source coverage by claim: what was read, what is partial, what does not apply | Which public source classes were read for each claim, and which cells remain partial? | 7 |
 | 09 | `figures/metr-deep-09-posted-claims-scorecard.html` | Scorecard: sixteen posted claims and six response sentences against the promoted record | Which claims of the 14 September figure hold up against the documents, and which need what? | 39 |
 | 10 | `figures/metr-deep-10-supporter-page-versions.html` | METR&#x27;s supporter paragraph, version by version: 2024-04-23 to 2026-09-16 | When did each supporter name first appear on METR&#x27;s about page, and what wording changed? | 17 |
-| 11 | `figures/metr-deep-11-coi-policy-timeline.html` | One policy version, dated 2026-08-28: every named assessment before it ran with none in force | Which METR assessments were published before any conflict-of-interest policy version existed, and when did the policy appear? | 18 |
+| 11 | `figures/metr-deep-11-coi-policy-timeline.html` | One policy version, dated 2026-08-28: every named assessment before it ran with none in force | Which METR assessments were published before any conflict-of-interest policy version existed, and when did the policy appear? | 32 |
 | 12 | `figures/metr-deep-12-evidence-effort-map.html` | The evidence effort: 4,548 promoted rows from 57 lanes across fifteen source classes | How much was read, by whom, from which source classes, and with what result? | 27 |
 | 13 | `figures/metr-deep-13-negatives-per-supporter.html` | Bounded negatives and positives per supporter: where the search went and what it found | For each named supporter, how many sources were checked and what did they yield? | 88 |
 | 14 | `figures/metr-deep-14-element-readiness-board.html` | Readiness board: ten claims, thirty-eight elements, three open | Which claim elements rest on a primary document, which are open, and who owns the gap? | 40 |

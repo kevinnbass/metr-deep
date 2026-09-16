@@ -1,6 +1,6 @@
 # Claim-by-claim verdicts (metr_deep)
 
-Rendered 2026-09-16T20:17:24Z from `casework readiness --pack metr_deep` and the promoted tables. A verdict is the engine's readiness floor over the claim's elements; it never states a motive and never uses the barred conclusion vocabulary of casework.json. Money types are never summed across type. Open elements name the exact missing document or the lane that owns them.
+Rendered 2026-09-16T22:27:45Z from `casework readiness --pack metr_deep` and the promoted tables. A verdict is the engine's readiness floor over the claim's elements; it never states a motive and never uses the barred conclusion vocabulary of casework.json. Money types are never summed across type. Open elements name the exact missing document or the lane that owns them.
 
 ## C01 — The approximately $71M commitment total
 
@@ -98,7 +98,7 @@ Rendered 2026-09-16T20:17:24Z from `casework readiness --pack metr_deep` and the
 
 | element | evidence | primary | negatives | rebuttals | state | text |
 |---|---|---|---|---|---|---|
-| C08.E1 | 61/1 | 24 | 41 | 0 | ready | The conflict-of-interest policy version in force at each engagement date, with its dated capture |
+| C08.E1 | 62/1 | 25 | 41 | 0 | ready | The conflict-of-interest policy version in force at each engagement date, with its dated capture |
 | C08.E2 | 79/1 | 18 | 19 | 0 | ready | Personnel disclosures, recusals and stated close relationships for each project |
 | C08.E3 | 65/1 | 38 | 16 | 0 | ready | Provider redaction and exit authority and the evaluator's editorial control for each project |
 | C08.E4 | 41/1 | 19 | 10 | 0 | ready | Compensation and in-kind terms for each project |
@@ -113,8 +113,8 @@ Rendered 2026-09-16T20:17:24Z from `casework readiness --pack metr_deep` and the
 | element | evidence | primary | negatives | rebuttals | state | text |
 |---|---|---|---|---|---|---|
 | C09.E1 | 204/1 | 47 | 77 | 0 | ready | Dated archive snapshots of METR's funding, about and donor-rule pages showing when each supporter and rule first appeared |
-| C09.E2 | 21/1 | 2 | 11 | 0 | ready | Dated versions of the conflict-of-interest policy with their hashes |
-| C09.E3 | 167/1 | 36 | 57 | 0 | ready | An explicit record that a page appearance date is not a transaction date, with any case where the two are known to differ |
+| C09.E2 | 52/1 | 17 | 42 | 0 | ready | Dated versions of the conflict-of-interest policy with their hashes |
+| C09.E3 | 198/1 | 51 | 88 | 0 | ready | An explicit record that a page appearance date is not a transaction date, with any case where the two are known to differ |
 
 **Open elements:** none
 

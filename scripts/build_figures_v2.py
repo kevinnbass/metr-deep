@@ -226,6 +226,11 @@ def fig11():
     ]
     marks = [("policy v1.0 printed 'last updated'", "2026-08-28", "MDP0708", C["known"]), ("about page: no policy link (archive)", "2026-09-14", "MDT0248", C["ctx"]),
              ("about page first links the policy (archive)", "2026-09-15", "MDT0249", C["known"]), ("sitemap lastmod for the PDF", "2026-09-16", "MDT0246", C["ctx"])]
+    bound_rows = [["2026-08-27 to 2026-09-14", "nine hashed archive captures of metr.org/about (Aug 27 ×3, Aug 30, Aug 31, Sep 3, Sep 4, Sep 13, Sep 14 13:20 UTC)", "none links the PDF", ids(kids(["MDT0445", "MDT0448", "MDT0452", "MDT0453"]))],
+                  ["2026-09-15 08:08 UTC", "third-party X post linking metr.org/coi-policy.pdf and reading its printed date as 2026-08-28", "earliest documented public reference to the file", ids(kids(["MDT0463", "MDT0464"]))],
+                  ["2026-09-15 16:00 UTC", "archive capture of metr.org/about", "first capture with the policy link", ids(kids(["MDT0454", "MDT0249"]))],
+                  ["2026-06-16 and earlier", "last archived sitemap; all eight 2026 Common Crawl crawls (latest ends 2026-08-20); archive.today", "no copy of the PDF anywhere; no sitemap capture in Aug–Sep 2026", ids(kids(["MDT0440", "MDT0441"]) + find_ids("Common Crawl 2026 indexes for metr.org/coi-policy.pdf|archive.ph timemap", (MDS,), 2))],
+                  ["before 2026-09-15", "DuckDuckGo, Bing linkers, Bluesky, X, Hacker News, LessWrong, AI Evaluator Forum, Transluce, METR's own posts and feed", "no page links or names the PDF", ids(find_ids("link:metr.org/coi-policy.pdf|Hacker News Algolia search metr.org|Bluesky app.bsky.feed.searchPosts q=metr.org", (MDS,), 3))]]
     d0 = dt.date(2025, 7, 1); d1 = dt.date(2026, 10, 1); W = 1200; x0, x1 = 40, W - 40
     def X(s): d = dt.date.fromisoformat(s); return x0 + (x1 - x0) * ((d - d0).days / (d1 - d0).days)
     H = 120 + 30 * len(projects) + 110
@@ -246,7 +251,8 @@ def fig11():
     prow = [[esc(d), esc(n), '<span class="tag n">none in force</span>' if d < "2026-08-28" else '<span class="tag u">v1.0 exists; application not stated</span>', esc(q[rid]["result"][:170]), ids([rid])] for n, d, rid in projects]
     mrow = [[esc(d), esc(l), esc((pv.get(rid) or tv.get(rid) or {}).get("result", "")[:170]), ids([rid])] for l, d, rid, _ in marks]
     body = unknown_block([
-        ("Only one policy version exists in any public capture (v1.0, printed 2026-08-28); no earlier version is documented, and Wayback holds zero captures of the PDF.", ["MDP0711", "MDS1607"] if "MDS1607" in {r["row_id"] for r in MDS} else ["MDP0711"]),
+        ("Only one policy version exists in any public capture (v1.0, printed 2026-08-28); no earlier version is documented, and no archive or crawl holds a copy of the PDF.", ["MDP0711"] + find_ids("Wayback sparkline: metr.org/coi-policy.pdf has not been archived", (MDS,), 1)),
+        ("When the file first became reachable is not established: the earliest documented reference is a third-party post at 08:08 UTC on 2026-09-15; nothing documents the file between 2026-08-28 and then.", ["MDT0464", "MDT0463"]),
         ("Whether v1.0 was applied to the 2026-09-09 Anthropic agreement is not stated by either party's page.", ["MDQ0181"]),
         ("The printed date, the sitemap date, the HTTP date, the fetch time and the archive appearance dates are seven distinct dates; none is an in-force date by itself.", ["MDT0250", "MDT0245"]),
         ("The policy's content (scope, disclosure tiers, recusal, equity rule) is quoted from the sole hashed body; how it was applied to any named assessment is not disclosed.", ["MDP0712", "MDP0713", "MDP0714", "MDP0715"]),
@@ -254,6 +260,7 @@ def fig11():
     body += legend([("project published before any policy version existed", C["neg"]), ("project after the printed date; application not stated", C["unknown"])]) + s
     body += '<h2 class="sec">Named projects and the policy state on their dates</h2>' + table(["date", "project", "policy state", "row result", "row"], prow)
     body += '<h2 class="sec">The policy\'s own dates</h2>' + table(["date", "event", "row result", "row"], mrow)
+    body += '<h2 class="sec">When did the file first exist? The bound after MD75</h2><p class="note">The PDF is documented publicly reachable by 2026-09-15 08:08 UTC. METR\'s about page did not link it at 2026-09-14 13:20 UTC. No archive, crawl, search index or third-party page documents the file between its printed date of 2026-08-28 and 2026-09-15, in either direction: it may have been reachable and unlinked for up to eighteen days, or not. ' + ids(kids(["MDT0464"])) + '</p>' + table(["when", "what was checked", "result", "rows"], bound_rows)
     body += '<p class="note">The Frontier Risk Report (2026-05-19) states in its own operating-conditions table that no applicable personnel conflict-of-interest policy was in place at project start. ' + ids(["MDP0716", "MDQ0177"]) + '</p>'
     return page("metr-deep-11-coi-policy-timeline", "Which METR assessments were published before any conflict-of-interest policy version existed, and when did the policy appear?",
                 "One policy version, dated 2026-08-28: every named assessment before it ran with none in force",

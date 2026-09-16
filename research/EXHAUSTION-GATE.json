@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-09-16T20:17:25Z",
+ "built_utc": "2026-09-16T22:27:45Z",
  "exceptions": [
   {
    "field": "records_routes",
@@ -162,7 +162,7 @@
  },
  "frontier_command": {
   "command": "cd /home/kevin/repos/casework && python3 -m casework frontier --pack metr_deep",
-  "utc": "2026-09-16T20:17:25Z",
+  "utc": "2026-09-16T22:27:45Z",
   "exit": 0,
   "output_sha256": "6c3815c20cec68b2c2e636c27a7511373cfd9725b3c1cfac9d82871f668a4f14",
   "lines": 153

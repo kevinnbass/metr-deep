@@ -862,3 +862,25 @@ lane("MD74", "S5", 5,
       "Record the dated officer and director roster changes between consecutive Statements of Information as timeline "
       "rows, and separately note any officer who is also named on a promoted funder, lab or intermediary row, citing "
       "the promoted row id and asserting nothing beyond the two documents."])
+
+
+# ---------------------------------------------------------------- MD75 (Kevin, 2026-09-16T21:05Z): when did the COI policy PDF first exist? Created by MD72's bound (about-page link absent 2026-09-14T13:20:53Z, present 2026-09-15T16:00:44Z; PDF never archived)
+lane("MD75", "S5", 5,
+     "First public existence of metr.org/coi-policy.pdf: archived sitemaps, third-party indexes and inbound links",
+     "coi-policy-first-existence",
+     "Wayback CDX and raw id_ captures of metr.org/sitemap.xml and every metr.org page between 2026-08-20 and 2026-09-16; "
+     "Common Crawl index API (CC-MAIN-2026 crawls) for the PDF URL; archive.today; search-engine result dates; any third-party "
+     "page, post or report that linked the PDF before 2026-09-15",
+     ["C09.E2", "C09.E3", "C08.E1"],
+     ["Enumerate every Wayback capture of https://metr.org/sitemap.xml from 2026-08-01 to 2026-09-16 (CDX, retry on 503, record each "
+      "attempt), fetch each distinct digest raw with id_, and record for each whether it lists /coi-policy.pdf and with what lastmod; "
+      "the earliest sitemap that lists the PDF bounds its existence from above and the latest that does not bounds it from below.",
+      "Query the Common Crawl index API for every 2026 crawl (index list at index.commoncrawl.org/collinfo.json) for url=metr.org/coi-policy.pdf "
+      "and for metr.org/about, recording crawl id, timestamp, status and digest; fetch any WARC record found and hash it; do the same on "
+      "archive.today (archive.ph) and on the Wayback CDX for metr.org/*.pdf with matchType=prefix.",
+      "Search for inbound links to the PDF dated before 2026-09-15: DuckDuckGo html, Bing, Bluesky and X search pages, Hacker News "
+      "and LessWrong search, the AI Evaluator Forum and Transluce pages, and METR's own posts and reports from 2026-08-20 onward "
+      "(raw id_ captures where live pages are JS shells); quote any page that links or names the policy with its date and hash.",
+      "State the resulting bound in one row: the earliest date at which the PDF is documented to exist and the latest date at which it "
+      "is documented not to be linked, with the exact capture or index record for each end; distinguish existence of the file from "
+      "appearance of the link; assert nothing about why the policy appeared when it did."])

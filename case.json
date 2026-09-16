@@ -35508,6 +35508,12 @@
               "role": "context",
               "row_id": "MDS1729",
               "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#D01",
+              "role": "evidence",
+              "row_id": "MDT0464",
+              "strength": "primary"
             }
           ],
           "element_id": "C08.E1",
@@ -41703,6 +41709,432 @@
               "role": "negative",
               "row_id": "MDS1651",
               "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A01",
+              "role": "negative",
+              "row_id": "MDS1745",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A02",
+              "role": "context",
+              "row_id": "MDS1746",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A03",
+              "role": "evidence",
+              "row_id": "MDT0440",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A04",
+              "role": "evidence",
+              "row_id": "MDT0441",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A05",
+              "role": "evidence",
+              "row_id": "MDP0760",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A06",
+              "role": "evidence",
+              "row_id": "MDT0442",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A07",
+              "role": "context",
+              "row_id": "MDS1747",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A08",
+              "role": "evidence",
+              "row_id": "MDT0443",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A09",
+              "role": "evidence",
+              "row_id": "MDT0444",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A16",
+              "role": "evidence",
+              "row_id": "MDT0445",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A17",
+              "role": "evidence",
+              "row_id": "MDT0446",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A18",
+              "role": "evidence",
+              "row_id": "MDT0447",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A19",
+              "role": "evidence",
+              "row_id": "MDT0448",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A20",
+              "role": "evidence",
+              "row_id": "MDT0449",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A21",
+              "role": "evidence",
+              "row_id": "MDT0450",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A22",
+              "role": "evidence",
+              "row_id": "MDT0451",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A23",
+              "role": "evidence",
+              "row_id": "MDT0452",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A10",
+              "role": "evidence",
+              "row_id": "MDT0453",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A11",
+              "role": "evidence",
+              "row_id": "MDT0454",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A24",
+              "role": "evidence",
+              "row_id": "MDT0455",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A12",
+              "role": "evidence",
+              "row_id": "MDS1748",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A15",
+              "role": "context",
+              "row_id": "MDS1749",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B01",
+              "role": "context",
+              "row_id": "MDP0761",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B02",
+              "role": "negative",
+              "row_id": "MDS1750",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B03",
+              "role": "negative",
+              "row_id": "MDS1751",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B04",
+              "role": "negative",
+              "row_id": "MDS1752",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B05",
+              "role": "negative",
+              "row_id": "MDS1753",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B06",
+              "role": "negative",
+              "row_id": "MDS1754",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B07",
+              "role": "negative",
+              "row_id": "MDS1755",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B08",
+              "role": "negative",
+              "row_id": "MDS1756",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B09",
+              "role": "negative",
+              "row_id": "MDS1757",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B10",
+              "role": "evidence",
+              "row_id": "MDS1758",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B11",
+              "role": "evidence",
+              "row_id": "MDT0456",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B12",
+              "role": "evidence",
+              "row_id": "MDT0457",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B13",
+              "role": "evidence",
+              "row_id": "MDT0458",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B14",
+              "role": "evidence",
+              "row_id": "MDT0459",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B15",
+              "role": "evidence",
+              "row_id": "MDT0460",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B16",
+              "role": "evidence",
+              "row_id": "MDT0461",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B17",
+              "role": "evidence",
+              "row_id": "MDT0462",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B18",
+              "role": "negative",
+              "row_id": "MDS1759",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B19",
+              "role": "negative",
+              "row_id": "MDS1760",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B21",
+              "role": "negative",
+              "row_id": "MDS1761",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B22",
+              "role": "context",
+              "row_id": "MDS1762",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B23",
+              "role": "negative",
+              "row_id": "MDS1763",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B24",
+              "role": "negative",
+              "row_id": "MDS1764",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C01",
+              "role": "evidence",
+              "row_id": "MDP0762",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C02",
+              "role": "negative",
+              "row_id": "MDS1765",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C03",
+              "role": "negative",
+              "row_id": "MDS1766",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C04",
+              "role": "evidence",
+              "row_id": "MDP0763",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C05",
+              "role": "negative",
+              "row_id": "MDS1767",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C07",
+              "role": "negative",
+              "row_id": "MDS1768",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C08",
+              "role": "evidence",
+              "row_id": "MDT0463",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C09",
+              "role": "negative",
+              "row_id": "MDS1769",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C10",
+              "role": "context",
+              "row_id": "MDS1770",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C11",
+              "role": "negative",
+              "row_id": "MDS1771",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C12",
+              "role": "negative",
+              "row_id": "MDS1772",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C13",
+              "role": "negative",
+              "row_id": "MDS1773",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C14",
+              "role": "evidence",
+              "row_id": "MDP0764",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#D01",
+              "role": "evidence",
+              "row_id": "MDT0464",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E01",
+              "role": "negative",
+              "row_id": "MDS1774",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E02",
+              "role": "negative",
+              "row_id": "MDS1775",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E03",
+              "role": "negative",
+              "row_id": "MDS1776",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E04",
+              "role": "negative",
+              "row_id": "MDS1777",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E05",
+              "role": "negative",
+              "row_id": "MDS1778",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E06",
+              "role": "context",
+              "row_id": "MDS1779",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E07",
+              "role": "negative",
+              "row_id": "MDS1780",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E08",
+              "role": "negative",
+              "row_id": "MDS1781",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E09",
+              "role": "negative",
+              "row_id": "MDS1782",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E10",
+              "role": "context",
+              "row_id": "MDS1783",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E11",
+              "role": "context",
+              "row_id": "MDS1784",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E12",
+              "role": "negative",
+              "row_id": "MDS1785",
+              "strength": "supporting"
             }
           ],
           "element_id": "C09.E2",
@@ -43281,6 +43713,432 @@
               "role": "evidence",
               "row_id": "MDT0434",
               "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A01",
+              "role": "negative",
+              "row_id": "MDS1745",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A02",
+              "role": "context",
+              "row_id": "MDS1746",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A03",
+              "role": "evidence",
+              "row_id": "MDT0440",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A04",
+              "role": "evidence",
+              "row_id": "MDT0441",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A05",
+              "role": "evidence",
+              "row_id": "MDP0760",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A06",
+              "role": "evidence",
+              "row_id": "MDT0442",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A07",
+              "role": "context",
+              "row_id": "MDS1747",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A08",
+              "role": "evidence",
+              "row_id": "MDT0443",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A09",
+              "role": "evidence",
+              "row_id": "MDT0444",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A16",
+              "role": "evidence",
+              "row_id": "MDT0445",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A17",
+              "role": "evidence",
+              "row_id": "MDT0446",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A18",
+              "role": "evidence",
+              "row_id": "MDT0447",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A19",
+              "role": "evidence",
+              "row_id": "MDT0448",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A20",
+              "role": "evidence",
+              "row_id": "MDT0449",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A21",
+              "role": "evidence",
+              "row_id": "MDT0450",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A22",
+              "role": "evidence",
+              "row_id": "MDT0451",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A23",
+              "role": "evidence",
+              "row_id": "MDT0452",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A10",
+              "role": "evidence",
+              "row_id": "MDT0453",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A11",
+              "role": "evidence",
+              "row_id": "MDT0454",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A24",
+              "role": "evidence",
+              "row_id": "MDT0455",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A12",
+              "role": "evidence",
+              "row_id": "MDS1748",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#A15",
+              "role": "context",
+              "row_id": "MDS1749",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B01",
+              "role": "context",
+              "row_id": "MDP0761",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B02",
+              "role": "negative",
+              "row_id": "MDS1750",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B03",
+              "role": "negative",
+              "row_id": "MDS1751",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B04",
+              "role": "negative",
+              "row_id": "MDS1752",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B05",
+              "role": "negative",
+              "row_id": "MDS1753",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B06",
+              "role": "negative",
+              "row_id": "MDS1754",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B07",
+              "role": "negative",
+              "row_id": "MDS1755",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B08",
+              "role": "negative",
+              "row_id": "MDS1756",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B09",
+              "role": "negative",
+              "row_id": "MDS1757",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B10",
+              "role": "evidence",
+              "row_id": "MDS1758",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B11",
+              "role": "evidence",
+              "row_id": "MDT0456",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B12",
+              "role": "evidence",
+              "row_id": "MDT0457",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B13",
+              "role": "evidence",
+              "row_id": "MDT0458",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B14",
+              "role": "evidence",
+              "row_id": "MDT0459",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B15",
+              "role": "evidence",
+              "row_id": "MDT0460",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B16",
+              "role": "evidence",
+              "row_id": "MDT0461",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B17",
+              "role": "evidence",
+              "row_id": "MDT0462",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B18",
+              "role": "negative",
+              "row_id": "MDS1759",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B19",
+              "role": "negative",
+              "row_id": "MDS1760",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B21",
+              "role": "negative",
+              "row_id": "MDS1761",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B22",
+              "role": "context",
+              "row_id": "MDS1762",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B23",
+              "role": "negative",
+              "row_id": "MDS1763",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#B24",
+              "role": "negative",
+              "row_id": "MDS1764",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C01",
+              "role": "evidence",
+              "row_id": "MDP0762",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C02",
+              "role": "negative",
+              "row_id": "MDS1765",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C03",
+              "role": "negative",
+              "row_id": "MDS1766",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C04",
+              "role": "evidence",
+              "row_id": "MDP0763",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C05",
+              "role": "negative",
+              "row_id": "MDS1767",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C07",
+              "role": "negative",
+              "row_id": "MDS1768",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C08",
+              "role": "evidence",
+              "row_id": "MDT0463",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C09",
+              "role": "negative",
+              "row_id": "MDS1769",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C10",
+              "role": "context",
+              "row_id": "MDS1770",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C11",
+              "role": "negative",
+              "row_id": "MDS1771",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C12",
+              "role": "negative",
+              "row_id": "MDS1772",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C13",
+              "role": "negative",
+              "row_id": "MDS1773",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#C14",
+              "role": "evidence",
+              "row_id": "MDP0764",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#D01",
+              "role": "evidence",
+              "row_id": "MDT0464",
+              "strength": "primary"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E01",
+              "role": "negative",
+              "row_id": "MDS1774",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E02",
+              "role": "negative",
+              "row_id": "MDS1775",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E03",
+              "role": "negative",
+              "row_id": "MDS1776",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E04",
+              "role": "negative",
+              "row_id": "MDS1777",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E05",
+              "role": "negative",
+              "row_id": "MDS1778",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E06",
+              "role": "context",
+              "row_id": "MDS1779",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E07",
+              "role": "negative",
+              "row_id": "MDS1780",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E08",
+              "role": "negative",
+              "row_id": "MDS1781",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E09",
+              "role": "negative",
+              "row_id": "MDS1782",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E10",
+              "role": "context",
+              "row_id": "MDS1783",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E11",
+              "role": "context",
+              "row_id": "MDS1784",
+              "strength": "supporting"
+            },
+            {
+              "note": "promoted from lane=research/grok-out/MD75-coi-policy-first-existence.csv#E12",
+              "role": "negative",
+              "row_id": "MDS1785",
+              "strength": "supporting"
             }
           ],
           "element_id": "C09.E3",
