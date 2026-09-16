@@ -1,0 +1,38 @@
+<!-- casework-review lane=research/grok-out/MD18-metr-canary-commitment.csv -->
+
+# Review of MD18 — metr canary commitment
+
+Reviewing agent: Claude (parent session), 2026-09-16. Lane CSV sha256 73a5468c505b6100a94aff78e06dd4f1192906f8704a8064f11c3cbfec7165d0; goal state complete. xhigh re-run of the promoted medium lane (PLAN A3/A4). Rows whose facts (url, target, money type, amount, date) match the promoted medium row reuse that row's reviewed verdict and supersede it; rows whose facts changed were re-read against the saved primaries and re-adjudicated; added rows were reviewed as new. The medium review remains on record. Hash-pinned at promotion.
+
+| row | verdict | target_prefix | element_ids | primary_values | strength | role | supersedes | note |
+|---|---|---|---|---|---|---|---|---|
+| A01 | CONFIRMED | MDF | C06.E2 | {} | primary | evidence | MDF0170 | saved blog verified; METR-side $17M commitment; MD16 A02 is the same statement, both lanes own it; keep as evidence primary for C06.E2 (MD18 is the METR-side lane) |
+| A02 | CONFIRMED | MDF | C06.E2 | {} | supporting | evidence | MDF0171 | X post 1844005567532245136 via fxtwitter mirror: '$17M in new funding'; same-day restatement; evidence supporting |
+| A03 | CONFIRMED | MDF | C06.E2 | {} | primary | evidence | MDF0172 | Barnes 2025-09-28 restatement; saved GreaterWrong comment verified; amount_usd left blank because 'a bit under $16m' is not an integer |
+| B01 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0432 | bounded: no Canary-attributed line on the FY2024 return / FY2025 not posted [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B02 | CONFIRMED | MDS | C06.E1 | {} | supporting | negative | MDS0433 | bounded: no Canary-attributed line on the FY2024 return / FY2025 not posted [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B03 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0434 | TED Foundation 990-PF Part XV has no METR/RAND/Canary grant (consistent with the FAQ that TED does not fund grantees) [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B04 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0435 | TED Foundation 990-PF Part XV has no METR/RAND/Canary grant (consistent with the FAQ that TED does not fund grantees) [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B05 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0436 | TED Foundation 990-PF Part XV has no METR/RAND/Canary grant (consistent with the FAQ that TED does not fund grantees) [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B06 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0437 | Valhalla $10,000,000 to RAND for Project Canary; a payment to RAND, not METR; the lineage/S0 context already holds it; bound as negative for 'payment into METR' [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B07 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0438 | High Tide $333,334 to RAND; same treatment [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B08 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0439 | the filed METR grant exists (promoted by MD09/MD11) but its purpose does not name Canary; bounded negative for Canary attribution [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B09 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0440 | the filed METR grant exists (promoted by MD09/MD11) but its purpose does not name Canary; bounded negative for Canary attribution [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B10 | CONFIRMED | MDS | C06.E1 | {} | primary | negative | MDS0441 | the filed METR grant exists (promoted by MD09/MD11) but its purpose does not name Canary; bounded negative for Canary attribution [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| B11 | CONFIRMED | MDS | C06.E1 | {} | supporting | negative |  | Gates Foundation TY2024 990-PF: no grant to METR (EIN and name absent); bounded |
+| B12 | CONFIRMED | MDS | C06.E1 | {} | supporting | negative |  | Skoll Foundation TY2024 990-PF: no METR, RAND or Canary grant; bounded |
+| B13 | DIFFERS | MDS | C06.E1 | {"money_type": "", "amount_usd": "", "ledger": ""} | supporting | context |  | none-found row for a payment into METR; the Open Philanthropy $10M commitment to RAND is already promoted from MD17, so money_type/amount are cleared here; context |
+| C01 | DIFFERS | MDP | C06.E2 | {"money_type": ""} | primary | evidence | MDP0150 | FY2024 return does not follow FASB 117 net-asset split; DonorRstrOrQuasiEndowmentsInd 0; restricted-revenue treatment of Canary not visible; correctly bounded; MDF row without amount retargeted to MDP [RERUN-CHANGED: target_prefix: 'MDF'->'MDP'] |
+| C02 | CONFIRMED | MDS | C06.E2 | {} | supporting | context | MDS0442 | FY2025 return calendar closer; context [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| D01 | CONFIRMED | MDP | C01.E3 | {} | primary | evidence | MDP0151 | Canary METR-share commitment is outside the Feb-Aug 2026 window; consistent with MD14 C06 |
+| D02 | CONFIRMED | MDP | C01.E3 | {} | supporting | evidence | MDP0152 | restatement also outside the window; consistent with MD14 C07 |
+| E01 | CONFIRMED | MDS | C06.E2 | {} | supporting | negative | MDS0443 | Audacious page no share; bounded [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E02 | CONFIRMED | MDS | C06.E1 | {} | supporting | negative | MDS0444 | bounded negative as stated [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E03 | CONFIRMED | MDS | C06.E1 | {} | supporting | context | MDS0445 | route failure or scope note, not a content negative; context [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E04 | CONFIRMED | MDS | C06.E1 | {} | supporting | context | MDS0446 | route failure or scope note, not a content negative; context [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E05 | CONFIRMED | MDS | C06.E1 | {} | supporting | context | MDS0447 | route failure or scope note, not a content negative; context [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E06 | CONFIRMED | MDS | C06.E1 | {} | supporting | negative | MDS0448 | bounded negative as stated [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E07 | CONFIRMED | MDS | C06.E2 | {} | supporting | negative | MDS0449 | about page no share restatement; bounded [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E08 | CONFIRMED | MDS | C06.E2;C01.E3 | {} | supporting | negative | MDS0450 | funding update no share restatement; bounded [xhigh re-run: wording re-verified; facts (url, prefix, money_type, amount, date) unchanged] |
+| E09 | CONFIRMED | MDS | C06.E2 | {} | supporting | context |  | CDX 503 with the dated id_ capture still fetchable; route cap; context |
+| E10 | CONFIRMED | MDS | C06.E2 | {} | supporting | context |  | LessWrong 429 Vercel checkpoint; GreaterWrong was the working route; context |

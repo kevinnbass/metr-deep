@@ -1,0 +1,1306 @@
+{
+ "audit": "E-stake-and-anthropic-ties",
+ "pack_root": "/mnt/f/projects/anthropic/metr_deep",
+ "tables_read": [
+  "research/relationships.csv (MDR, 207 live rows)",
+  "research/provenance.csv (MDP, 744)",
+  "research/funding_events.csv (MDF, 1032; 9 superseded skipped)",
+  "research/source_coverage.csv (MDS, 1690; 18 superseded skipped)",
+  "research/timeline.csv (MDT, 435; 2 superseded skipped)",
+  "research/entities.csv (MDE, 140; 1 superseded skipped)",
+  "research/CLAIMS.md (element text for C05, C06, C07)"
+ ],
+ "elements": {
+  "C05.E1": "Each supporter's Anthropic investment or governance role, attached to the exact person or legal entity named by the source",
+  "C05.E2": "The donation event and the investment event separately sourced and separately dated",
+  "C05.E3": "Individuals, employers, foundations, donor-advised accounts and investment vehicles kept distinct, with the identifier that distinguishes each",
+  "C06.E4": "Relationships that are adjacency only, explicitly labelled as not a money flow",
+  "C07.E1": "The dated public statements about the donation, quoted exactly",
+  "C07.E2": "Each vehicle excluded by a document, with that document and the period it covers",
+  "C07.E3": "Each vehicle still possible and the exact document that would identify it",
+  "C07.E4": "A record of whether any transaction from any candidate vehicle into METR appears in the filings checked"
+ },
+ "seed_vs_lane_rule": "new_vs_seed = 'seed' when the row's note carries lane=research/grok-out/S0-seed-import.csv (role=context, checked_utc is the 10-metr pack build date 2026-09-14, not a metr_deep re-check); 'lane' when promoted from an MDnn lane with a this-run primary. Where a lane row re-collected a seed fact the lane row is the evidence row and the seed row is cited as its locator.",
+ "supporter_anthropic_links": [
+  {
+   "supporter": "Jaan Tallinn (named by METR only indirectly: metr.org/about names 'recommendations by the Survival and Flourishing Fund', not the person)",
+   "person_or_entity_named": "Jaan Tallinn (individual), as the Anthropic issuer page names him",
+   "link_type": "Series A lead investor (issuer statement); individual amount and share count not disclosed",
+   "date_of_investment_event": "2021-05-28",
+   "date_of_donation_event": "SFF-2024 recommendation $204,000 (round label, not a payment date; MDF0215); SFF-2025 recommendation $120,000 (MDF0216) and separate $428,000 matching pledge typed commitment (MDF0217); ledger paid_grant $184,000 2024-12-06 via FP-US (MDF0218); Founders Pledge Inc TY2024 filed_grant $184,000 (MDF0219); ledger SFF-spec $10,000 on 2024-07-23 and $10,000 on 2024-07-24 (MDF0221, MDF0222); SVCF TY2024 filed_grant $20,000 with no adviser named (MDF0220). Money types are never summed.",
+   "row_ids": [
+    "MDR0080",
+    "MDR0024",
+    "MDR0001",
+    "MDE0063",
+    "MDE0064",
+    "MDE0030",
+    "MDF0215",
+    "MDF0216",
+    "MDF0217",
+    "MDF0218",
+    "MDF0219",
+    "MDF0220",
+    "MDF0221",
+    "MDF0222",
+    "MDF0008",
+    "MDF0009",
+    "MDF0010",
+    "MDF0011"
+   ],
+   "urls": [
+    "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems",
+    "https://survivalandflourishing.fund/recommendations",
+    "https://jaan.online/philanthropy/donations.csv",
+    "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523079349303352_public.xml",
+    "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202543149349305759_public.xml"
+   ],
+   "strength": "primary (issuer statement for the investment; issuer/self-statement/funder-filing rows for the donation side)",
+   "new_vs_seed": "lane (MD33 MDR0080 re-fetched 2026-09-16; MD09 MDR0024; seed MDR0001 held as locator)"
+  },
+  {
+   "supporter": "Jaan Tallinn",
+   "person_or_entity_named": "Jaan Tallinn (individual)",
+   "link_type": "governance: first-person words declining a board seat; observer status is press reportage only (Postimees 2026-02-22 quoting January Äripäev radio; Semafor 2023-04-28). Not an issuer confirmation. Anthropic /company board list names no observers.",
+   "date_of_investment_event": "2021-05-28 (Series A, separately sourced)",
+   "date_of_donation_event": "see previous entry (SFF/FP/SVCF rows); statement dates 2023-04-28 and 2026-02-22 are neither investment nor donation dates",
+   "row_ids": [
+    "MDR0090",
+    "MDR0091",
+    "MDR0026",
+    "MDR0025",
+    "MDS0237",
+    "MDS0756",
+    "MDS0239",
+    "MDS0757",
+    "MDS0778",
+    "MDP0571"
+   ],
+   "urls": [
+    "https://majandus.postimees.ee/8418603/tabel-jaan-tallinna-osalusega-anthropicu-vaartus-on-nuud-enam-kui-kolmandik-triljonit",
+    "https://www.semafor.com/article/04/28/2023/co-founder-of-skype-invested-in-hot-ai-startups-but-thinks-he-failed",
+    "https://www.anthropic.com/company"
+   ],
+   "strength": "self-statement for the decline of a board seat (Estonian quote, MDR0090; English quote, MDR0091); press only for 'observer' (MDR0026); bounded negatives on issuer and SEC",
+   "new_vs_seed": "lane (MD33, MD09)"
+  },
+  {
+   "supporter": "Jaan Tallinn (vehicle)",
+   "person_or_entity_named": "Metaplanet (investment company owned by Tallinn, as quoted in Postimees)",
+   "link_type": "press-quoted self-statement that Metaplanet is the vehicle whose Anthropic stake was diluted; share count undisclosed; not a US 990 filer; SEC Form D 'Metaplanet AI Fund I, LP' not shown to be this vehicle",
+   "date_of_investment_event": "not stated (Series A 2021-05-28 names the individual, not Metaplanet)",
+   "date_of_donation_event": "none (not a METR payer)",
+   "row_ids": [
+    "MDE0030",
+    "MDE0064",
+    "MDS0773",
+    "MDS0778"
+   ],
+   "urls": [
+    "https://majandus.postimees.ee/8418603/tabel-jaan-tallinna-osalusega-anthropicu-vaartus-on-nuud-enam-kui-kolmandik-triljonit"
+   ],
+   "strength": "press quote",
+   "new_vs_seed": "lane (MD09, MD33)"
+  },
+  {
+   "supporter": "Dustin Moskovitz (NOT a METR-named supporter; included because the Series A issuer page and the donated-stake statements name him)",
+   "person_or_entity_named": "Dustin Moskovitz (individual), as the Anthropic issuer page names him; no foundation, DAF, trust or LLC named as purchaser",
+   "link_type": "Series A participant (issuer statement); individual amount and share class not disclosed",
+   "date_of_investment_event": "2021-05-28",
+   "date_of_donation_event": "donation of the Anthropic stake: no day stated in any statement; earliest press 2025-11-10 says 'early 2025' (Tuna, quoted); Moskovitz's own words begin 2026-03-30. No donation to METR is documented (see no_transaction_into_metr).",
+   "row_ids": [
+    "MDR0082",
+    "MDR0207",
+    "MDE0083",
+    "MDE0108",
+    "MDP0707",
+    "MDS1624",
+    "MDS0878"
+   ],
+   "urls": [
+    "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems"
+   ],
+   "strength": "primary (issuer statement)",
+   "new_vs_seed": "lane (MD33 MDR0082; MD71 MDR0207 re-fetched 2026-09-16T17:34Z; seed MDR0001 as locator)"
+  },
+  {
+   "supporter": "Dustin Moskovitz",
+   "person_or_entity_named": "Dustin Moskovitz (individual)",
+   "link_type": "governance: self-described Anthropic board observer (Stratechery interview with Ben Thompson, 2025-10-20); no issuer document confirms the seat; Anthropic /company board list does not name observers",
+   "date_of_investment_event": "2021-05-28 (separately sourced)",
+   "date_of_donation_event": "statement 2025-10-20 does not mention the donation (MDP0703)",
+   "row_ids": [
+    "MDR0089",
+    "MDR0003",
+    "MDR0168",
+    "MDT0238",
+    "MDP0703",
+    "MDS0756"
+   ],
+   "urls": [
+    "https://stratechery.com/2025/an-interview-with-asana-founder-dustin-moskovitz-about-ai-saas-and-safety/"
+   ],
+   "strength": "self-statement (person's own dated words); seed MDR0003 is context, MDR0089 is the this-run evidence row",
+   "new_vs_seed": "lane (MD33 MDR0089; MD71 MDT0238); seed MDR0003"
+  },
+  {
+   "supporter": "Schmidt Sciences (METR-named foundation supporter; brand; legal payer not stated by METR)",
+   "person_or_entity_named": "Eric Schmidt (individual), as the Anthropic issuer page names him — NOT Schmidt Sciences, LLC, NOT The Eric and Wendy Schmidt Fund for Strategic Innovation (EIN 46-3460261), NOT Hillspire, LLC",
+   "link_type": "Series A participant (issuer statement); amount undisclosed",
+   "date_of_investment_event": "2021-05-28",
+   "date_of_donation_event": "Schmidt Sciences named on metr.org/about without amount, date or payer EIN (MDF0214); EIN 46-3460261 TY2024 990-PF Part XV has no METR/ARC grantee line (MDS0770); next document: TY2025 990-PF Part XV or award letter",
+   "row_ids": [
+    "MDR0081",
+    "MDR0009",
+    "MDR0001",
+    "MDE0061",
+    "MDE0059",
+    "MDE0060",
+    "MDE0134",
+    "MDF0214",
+    "MDS0770",
+    "MDS0758",
+    "MDS1221"
+   ],
+   "urls": [
+    "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems",
+    "https://metr.org/about",
+    "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202543219349108364_public.xml",
+    "https://www.schmidtsciences.org/faq/"
+   ],
+   "strength": "primary (issuer statement) for the investment; bounded negative for any Schmidt-entity grant to METR",
+   "new_vs_seed": "lane (MD33 MDR0081; MD04 MDR0009)"
+  },
+  {
+   "supporter": "Schmidt Sciences (adjacent family office)",
+   "person_or_entity_named": "Hillspire, LLC (Eric Schmidt's family office, as CNBC names it; also the highest-paid contractor on EIN 46-3460261's TY2024 990-PF)",
+   "link_type": "press-reported investment in Anthropic among 22 private AI firms; cheque size undisclosed",
+   "date_of_investment_event": "2025-01-21 (press date, not a transaction date)",
+   "date_of_donation_event": "none (Hillspire is not a METR payer in any row)",
+   "row_ids": [
+    "MDR0088",
+    "MDR0010",
+    "MDR0123",
+    "MDE0062",
+    "MDE0006",
+    "MDR0163",
+    "MDR0180"
+   ],
+   "urls": [
+    "https://www.cnbc.com/2025/01/21/eric-schmidts-family-office-invests-ai-startups.html"
+   ],
+   "strength": "press",
+   "new_vs_seed": "lane (MD04, MD33, rerun MD04)"
+  },
+  {
+   "supporter": "individuals from Jane Street (METR-named class of unnamed natural persons; no individual is named by METR)",
+   "person_or_entity_named": "Jane Street Global Trading, LLC (court-named purchaser) — a legal entity, not the unnamed individuals",
+   "link_type": "court-documented purchase of 3,332,833 Anthropic Series B Preferred shares from the FTX estate for $99,999,988 (In re FTX Trading Ltd., D. Del. 22-11068, Doc 10241-1 Exhibit 1)",
+   "date_of_investment_event": "2024-03-22 (exhibit filing date)",
+   "date_of_donation_event": "'individuals from Jane Street' named on metr.org/about, undated, no amount, no individual (MDF0213, MDF0015); janestreet.com search none (MDS0775); METR FY2024 Schedule B RESTRICTED (MDS0769)",
+   "row_ids": [
+    "MDR0083",
+    "MDR0004",
+    "MDE0058",
+    "MDE0001",
+    "MDE0133",
+    "MDF0213",
+    "MDF0015",
+    "MDE0055",
+    "MDS0775",
+    "MDS0769",
+    "MDP0622",
+    "MDP0475"
+   ],
+   "urls": [
+    "https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.10241.1.pdf",
+    "https://metr.org/about"
+   ],
+   "strength": "primary (court exhibit) for the firm purchase; the donor class is an acknowledgment only",
+   "new_vs_seed": "lane (MD07 MDR0004 verdict DIFFERS after audits on source_class/quantity fields; MD33 MDR0083 CONFIRMED)"
+  },
+  {
+   "supporter": "individuals from Jane Street",
+   "person_or_entity_named": "'Jane Street' as the Anthropic issuer names it (legal entity not identified by the issuer)",
+   "link_type": "priced-round participation: Series E (2025-03-03), Series F (2025-09-02), Series G (2026-02-12), Series H (2026-05-28); amounts not disclosed; round sizes are not Jane Street's stake",
+   "date_of_investment_event": "2025-03-03; 2025-09-02; 2026-02-12; 2026-05-28",
+   "date_of_donation_event": "see previous entry",
+   "row_ids": [
+    "MDR0084",
+    "MDR0085",
+    "MDR0086",
+    "MDR0087",
+    "MDR0005",
+    "MDR0006",
+    "MDR0007",
+    "MDR0008",
+    "MDR0125",
+    "MDR0002",
+    "MDE0056",
+    "MDE0057",
+    "MDS0777",
+    "MDS1061",
+    "MDS1219"
+   ],
+   "urls": [
+    "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation",
+    "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation",
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+    "https://www.anthropic.com/news/series-h"
+   ],
+   "strength": "primary (issuer statements); SEC bounded negatives",
+   "new_vs_seed": "lane (MD07, MD33, rerun MD07); seed MDR0002 (Series H round figure $65B is the round, not a stake)"
+  },
+  {
+   "supporter": "David Farhi (METR-named individual, 'many others, such as')",
+   "person_or_entity_named": "David Farhi (individual)",
+   "link_type": "no Anthropic investment or governance role found on Anthropic issuer pages (bounded negative). Adjacency only: OpenAI o1 contributions credit; Computer History Museum profile title; WIRED-reported departure from OpenAI summer 2025; Guardrails Alliance political committee — all labelled not a money flow",
+   "date_of_investment_event": "none found",
+   "date_of_donation_event": "named on metr.org/about without amount or date (MDF0232)",
+   "row_ids": [
+    "MDF0232",
+    "MDE0079",
+    "MDS0776",
+    "MDR0155",
+    "MDR0156",
+    "MDR0172",
+    "MDR0184"
+   ],
+   "urls": [
+    "https://metr.org/about"
+   ],
+   "strength": "bounded negative on Anthropic pages; adjacency rows are role/access, not money",
+   "new_vs_seed": "lane (MD33, MD47)"
+  },
+  {
+   "supporter": "Geoff Ralston",
+   "person_or_entity_named": "Geoff Ralston (individual)",
+   "link_type": "no Anthropic investment or governance role found on Anthropic issuer pages. Adjacency only: named among AVERI's funders; former Y Combinator president; SAIF founder per TechCrunch 2025-04-17 — not a money flow",
+   "date_of_investment_event": "none found",
+   "date_of_donation_event": "named on metr.org/about without amount or date (MDF0233)",
+   "row_ids": [
+    "MDF0233",
+    "MDE0080",
+    "MDS0776",
+    "MDR0158",
+    "MDR0169"
+   ],
+   "urls": [
+    "https://metr.org/about"
+   ],
+   "strength": "bounded negative; adjacency",
+   "new_vs_seed": "lane (MD33, MD47)"
+  },
+  {
+   "supporter": "Dylan Field",
+   "person_or_entity_named": "Dylan Field (individual)",
+   "link_type": "no Anthropic investment or governance role found on Anthropic issuer pages; SEC EFTS hits for 'Dylan Field' Anthropic are Figma, Inc. filings, not Anthropic PBC. Adjacency only: Figma, Inc. role (MDR0170)",
+   "date_of_investment_event": "none found",
+   "date_of_donation_event": "named on metr.org/about without amount or date (MDF0234)",
+   "row_ids": [
+    "MDF0234",
+    "MDE0081",
+    "MDS0776",
+    "MDS0761",
+    "MDR0170"
+   ],
+   "urls": [
+    "https://metr.org/about"
+   ],
+   "strength": "bounded negative; adjacency",
+   "new_vs_seed": "lane (MD33, MD47)"
+  },
+  {
+   "supporter": "Steve Newman",
+   "person_or_entity_named": "Steve Newman (individual)",
+   "link_type": "no Anthropic investment or governance role found on Anthropic issuer pages. Adjacency only: self-described chairman and president of Golden Gate Institute for AI; Epoch AI role — not a money flow",
+   "date_of_investment_event": "none found",
+   "date_of_donation_event": "named on metr.org/about without amount or date (MDF0235)",
+   "row_ids": [
+    "MDF0235",
+    "MDE0082",
+    "MDS0776",
+    "MDR0164",
+    "MDR0167"
+   ],
+   "urls": [
+    "https://metr.org/about"
+   ],
+   "strength": "bounded negative; adjacency",
+   "new_vs_seed": "lane (MD33, MD47)"
+  },
+  {
+   "supporter": "The Pew Charitable Trusts; The David and Lucile Packard Foundation; Sijbrandij Foundation; LaCentra-Sumerlin Foundation; Astralis Foundation; Expa.org; The Audacious Project; Longview Philanthropy; Effektiv Spenden; AI Security Institute",
+   "person_or_entity_named": "each as METR names it on metr.org/about",
+   "link_type": "bounded negative: none found on Anthropic Series A/E/F/G/H and /company pages as an Anthropic investor or director as of 2026-09-16T09:37:25Z (not a cap-table claim)",
+   "date_of_investment_event": "none found",
+   "date_of_donation_event": "named on metr.org/about without amount, date or vehicle (MDF0223–MDF0231, MDF0225 Pew, MDF0226 Packard, MDF0224 Sijbrandij); held grant amounts from MD02/MD03/MD05 are locators outside this audit; Packard grants-database live HTML had 0 METR strings (MDS0771)",
+   "row_ids": [
+    "MDS0776",
+    "MDF0223",
+    "MDF0224",
+    "MDF0225",
+    "MDF0226",
+    "MDF0227",
+    "MDF0228",
+    "MDF0229",
+    "MDF0230",
+    "MDF0231",
+    "MDE0069",
+    "MDE0070",
+    "MDE0071",
+    "MDE0072",
+    "MDE0073",
+    "MDE0074",
+    "MDE0075",
+    "MDE0076",
+    "MDE0077",
+    "MDE0078",
+    "MDS0771"
+   ],
+   "urls": [
+    "https://www.anthropic.com/news/series-h",
+    "https://www.anthropic.com/company",
+    "https://metr.org/about"
+   ],
+   "strength": "bounded negative on the listed URLs only",
+   "new_vs_seed": "lane (MD33)"
+  }
+ ],
+ "stake_statements": [
+  {
+   "date": "2025-10-20",
+   "speaker": "Dustin Moskovitz",
+   "venue": "Stratechery interview with Ben Thompson",
+   "quote": "But the harder thing has been like I’m a board observer at Anthropic and we are early donors to OpenAI and there’s always this tension on if you’re creating capabilities, are you also creating dangerous capabilities?",
+   "says": "board observer at Anthropic; early donors to OpenAI (OpenAI is not Anthropic); Open Philanthropy chair role elsewhere in the interview",
+   "does_not_say": "donation of Anthropic shares: not stated; vehicle: not stated; holding in a foundation: not stated; timing: not stated; share class/amount: not stated; 'our foundation' phrase not used",
+   "row_id": "MDT0238 (this-run); MDR0089; MDP0703 (what it does/does not say); seed MDR0003",
+   "url": "https://stratechery.com/2025/an-interview-with-asana-founder-dustin-moskovitz-about-ai-saas-and-safety/"
+  },
+  {
+   "date": "2025-11-10",
+   "speaker": "Cari Tuna, as quoted by Forbes Australia ('she says'); not Moskovitz's words",
+   "venue": "Forbes.com.au",
+   "quote": "Their Anthropic stake (worth an estimated $500 million) was moved into a nonprofit vehicle in early 2025 so they could invest any “significant financial return” back into philanthropy and “dispel any perception of conflict of interest,” she says.",
+   "says": "a stake was moved into 'a nonprofit vehicle'; timing 'early 2025' (no day); $500 million is the article's estimate",
+   "does_not_say": "vehicle legal entity: not stated; share class: not stated; Good Ventures Foundation / Coefficient / DAF / trust: not stated; press restatement, not an issuer or funder document",
+   "row_id": "MDT0240 (this-run); MDP0705; seed MDT0004",
+   "url": "https://www.forbes.com.au/news/billionaires/this-billionaire-couple-has-a-plan-to-give-away-a-20-billion-facebook-fortune/"
+  },
+  {
+   "date": "2025-12-18",
+   "speaker": "Alexander Berger (CEO, Coefficient Giving; profile 'Views my own')",
+   "venue": "X status 2001669972171661401 (created_at Thu Dec 18 15:04:45 +0000 2025)",
+   "quote": "It's not. Also: 1. Open Phil never invested in Anthropic, dustin did early on. 2. He's since donated his stake (and not to us). 3. We're called Coefficient Giving now.",
+   "says": "Open Phil never invested in Anthropic; Dustin invested early on; he has since donated his stake; the donee is not 'us' (Coefficient Giving / Open Phil)",
+   "does_not_say": "donee vehicle: not named; 'us' not expanded to a legal filer beyond 'We're called Coefficient Giving now'; share class, amount and donation day: not stated; a person statement, not a Coefficient issuer page",
+   "row_id": "MDT0239 (this-run, quote_300 'He’s since donated his stake (and not to us).'); MDP0704; seed MDT0006 (full tweet text)",
+   "url": "https://x.com/albrgr/status/2001669972171661401"
+  },
+  {
+   "date": "2026-02-14",
+   "speaker": "Cari Tuna, as quoted by Forbes India (restatement of the same interview)",
+   "venue": "Forbes India",
+   "quote": "Their Anthropic stake (worth an estimated $500 million in mid-November) was moved into a non-profit vehicle in early 2025 so they could invest any “significant financial return” back into philanthropy and “dispel any perception of conflict of interest,” she says.",
+   "says": "same as 2025-11-10 with 'non-profit' hyphenation and 'mid-November' on the estimate",
+   "does_not_say": "vehicle still unnamed; press",
+   "row_id": "MDT0243",
+   "url": "https://www.forbesindia.com/article/global-game/cross-border/change-agents-cari-tuna-and-dustin-moskovitzs-ai-safety-bet/2991379/1"
+  },
+  {
+   "date": "2026-03-30 (createdAt 2026-03-30T05:24:03.877Z)",
+   "speaker": "Dustin Moskovitz",
+   "venue": "Bluesky @moskov.goodventures.org post 3miawblqk7224 (a reply; recovered via getPostThread, not in getAuthorFeed)",
+   "quote": "Our Anthropic shares are entirely in our foundation - no personal benefit.",
+   "says": "Anthropic shares are entirely in 'our foundation'; no personal benefit",
+   "does_not_say": "'our foundation' not identified as a legal entity; timing of any transfer: not stated (post date is not a donation date); share class: not stated; amount: not stated; that the filer is Good Ventures Foundation, a DAF, a trust, or Coefficient Giving: not stated",
+   "row_id": "MDT0234 (this-run); MDP0699; MDS1476; seed MDT0007",
+   "url": "https://bsky.app/profile/moskov.goodventures.org/post/3miawblqk7224"
+  },
+  {
+   "date": "2026-03-30 (createdAt 2026-03-30T05:28:20.270Z)",
+   "speaker": "Dustin Moskovitz",
+   "venue": "Bluesky post 3miawjaazyc24",
+   "quote": "Per the other thread all Anthropic holdings are in the foundation, dedicated to charity.",
+   "says": "all Anthropic holdings are in 'the foundation'; 'dedicated to charity' is the speaker's wording",
+   "does_not_say": "legal entity: not identified; timing: not stated; share class/amount: not stated; 'dedicated to charity' is not a named 501(c)(3)",
+   "row_id": "MDT0235; MDP0700",
+   "url": "https://bsky.app/profile/moskov.goodventures.org/post/3miawjaazyc24"
+  },
+  {
+   "date": "2026-04-11 (createdAt 2026-04-11T20:59:50.704Z)",
+   "speaker": "Dustin Moskovitz",
+   "venue": "Bluesky post 3mjaq5x2pws2e",
+   "quote": "We have given away $5B and we have about $20B more in the foundation and some more personal (you can look on bloomberg for that). The foundation is invested in Anthropic as well.",
+   "says": "the foundation is invested in Anthropic (present tense); about $20B in the foundation; $5B given away",
+   "does_not_say": "$20B is foundation assets, not the Anthropic stake size; do not equate $20B with Good Ventures Foundation 990-PF assets (not stated); donation timing: not stated; share class/amount: not stated; legal entity: not identified",
+   "row_id": "MDT0236; MDP0701",
+   "url": "https://bsky.app/profile/moskov.goodventures.org/post/3mjaq5x2pws2e"
+  },
+  {
+   "date": "2026-04-17",
+   "speaker": "Washington Examiner (press restatement linking Forbes.au)",
+   "venue": "washingtonexaminer.com",
+   "quote": "That same year, Moskovitz transferred his stake in Anthropic, which had",
+   "says": "press restatement: Moskovitz transferred his stake in Anthropic, reportedly grown to roughly $500 million, to his charity (per the row's result field)",
+   "does_not_say": "'his charity' unnamed; amount 'reportedly' via Forbes.au; not an issuer or funder statement. TABLE DEFECT: quote_300 is truncated mid-sentence in the row; the fuller wording exists only in the result field",
+   "row_id": "MDT0242",
+   "url": "https://www.washingtonexaminer.com/news/investigations/4532389/documents-tech-nonprofit-shaped-biden-era-ai-policy/"
+  },
+  {
+   "date": "2026-04-20",
+   "speaker": "Forbes (Matt Durot and Chase Peterson-Withorn); not Moskovitz's words",
+   "venue": "Forbes.com 'True Net Worth' reranking (live HTTP 403; recovered from Wayback id_ 20260421043155)",
+   "quote": "Last year he dona­ted his early investment in AI giant Anthropic: an estimated stake of less than 0.8% that has already skyrocketed in value amid the AI boom.",
+   "says": "'Last year' relative to 2026-04-20; estimated stake of less than 0.8% (an estimated bound, not a measured holding)",
+   "does_not_say": "vehicle: not named; legal entity: not identified; share class: not stated. NOTE: the this-run quote contains a soft hyphen (U+00AD) inside 'donated' from the Wayback capture; seed MDT0005 has 'donated' without it",
+   "row_id": "MDT0241 (this-run); MDP0706; MDS1630; seed MDT0005",
+   "url": "https://www.forbes.com/sites/mattdurot/2026/04/20/reranking-the-worlds-billionaires-by-wealth--and-altruism/"
+  },
+  {
+   "date": "2026-08-26 (createdAt 2026-08-26T13:19:23.610Z)",
+   "speaker": "Dustin Moskovitz",
+   "venue": "Bluesky post 3mtygcpxluc2b",
+   "quote": "GV is itself a beneficiary of that wave (via Anthropic and a number of other investments).",
+   "says": "names Good Ventures / GV as a beneficiary via Anthropic investments",
+   "does_not_say": "whether 'GV' is the legal entity Good Ventures Foundation (501(c)(3), EIN 46-1008520): not stated; that GV received the 2025 donation: not stated; timing/share class/amount: not stated",
+   "row_id": "MDT0237; MDP0702",
+   "url": "https://bsky.app/profile/moskov.goodventures.org/post/3mtygcpxluc2b"
+  },
+  {
+   "date": "n/a (not counted as a donation statement)",
+   "speaker": "Dustin Moskovitz",
+   "venue": "Bluesky post 3mnnmzfh7zc27 (parent post notFound)",
+   "quote": "We literally just made a decision with the foundation to  participate in the latest round",
+   "says": "'the foundation' participated in 'the latest round'",
+   "does_not_say": "Anthropic is not named in the recoverable thread; do not infer the issuer; legal entity of 'the foundation' not stated",
+   "row_id": "MDS1636",
+   "url": "https://bsky.app/profile/moskov.goodventures.org/post/3mnnmzfh7zc27"
+  }
+ ],
+ "stake_statement_negatives": [
+  {
+   "checked": "X @moskov profile and x.com search from:moskov Anthropic (JS shell; 0 tweet bodies)",
+   "row_ids": [
+    "MDS1619",
+    "MDS1626"
+   ]
+  },
+  {
+   "checked": "goodventures.org home, our-story, governance, press, speaking-and-writing, our-giving, ?s=Anthropic",
+   "row_ids": [
+    "MDS1620",
+    "MDS1621",
+    "MDS1627"
+   ]
+  },
+  {
+   "checked": "openphilanthropy.org (redirects to coefficientgiving.org) and /grants/",
+   "row_ids": [
+    "MDS1622",
+    "MDS1634"
+   ]
+  },
+  {
+   "checked": "coefficientgiving.org home, our-history, rebrand post, ?s=Anthropic, /grants/ (HTTP 404)",
+   "row_ids": [
+    "MDS1623",
+    "MDS1628",
+    "MDS1629"
+   ]
+  },
+  {
+   "checked": "anthropic.com Series A news, news index, company page",
+   "row_ids": [
+    "MDS1624",
+    "MDS1633"
+   ]
+  },
+  {
+   "checked": "Bluesky searchPosts (HTTP 403) and getAuthorFeed pagination",
+   "row_ids": [
+    "MDS1625",
+    "MDS1635"
+   ]
+  },
+  {
+   "checked": "Stratechery Wayback CDX (503; live used); r.jina.ai (403)",
+   "row_ids": [
+    "MDS1632",
+    "MDS1631"
+   ]
+  }
+ ],
+ "investment_vs_donation_separation": {
+  "statement": "Series A issuer statement is dated 2021-05-28 (May 28, 2021 on the page). Donation/holding statements begin 2025-11-10 in press and 2026-03-30 in Moskovitz's own words. Issuer Series A participation is not the donation event. These are statement dates, not a filing date of a share transfer; only the Tuna quote gives 'early 2025', still not a day.",
+  "row_ids": [
+   "MDR0207",
+   "MDP0707",
+   "MDT0244",
+   "MDS1624"
+  ]
+ },
+ "vehicles": {
+  "excluded": [
+   {
+    "vehicle": "Coefficient Giving (formerly Open Philanthropy) as donee of the stake",
+    "excluding_document": "Alexander Berger X post 2025-12-18: 'He's since donated his stake (and not to us)' — a person statement ('Views my own'), not an org filing; the exclusion is only as strong as that statement",
+    "period": "as of 2025-12-18",
+    "row_ids": [
+     "MDT0239",
+     "MDT0006",
+     "MDP0704",
+     "MDS1623",
+     "MDS1622"
+    ]
+   },
+   {
+    "vehicle": "Open Philanthropy as an Anthropic investor",
+    "excluding_document": "same Berger post: 'Open Phil never invested in Anthropic, dustin did early on'",
+    "period": "as of 2025-12-18",
+    "row_ids": [
+     "MDT0239",
+     "MDT0006"
+    ]
+   },
+   {
+    "vehicle": "Good Ventures Foundation (EIN 46-1008520) as recipient of a private/closely-held stock contribution",
+    "excluding_document": "Form 990-PF Schedule B NonCashPropertyContributionGrp for FY2020–FY2025: every NoncashPropertyDesc is PUBLICLY TRADED SECURITIES; no closely-held, private-stock, partnership/LLC or Anthropic-named line; Schedule B on these 990-PF years names contributors (not RESTRICTED)",
+    "period": "FY2020 (2019-07-01) through FY2025 (2025-06-30); FY2026 (from 2025-07-01) is NOT covered",
+    "row_ids": [
+     "MDF0318",
+     "MDF0320",
+     "MDF0322",
+     "MDF0325",
+     "MDF0329",
+     "MDF0330",
+     "MDF0333",
+     "MDF0296",
+     "MDT0008",
+     "MDE0114"
+    ]
+   },
+   {
+    "vehicle": "Good Ventures Foundation as a payer to METR",
+    "excluding_document": "Form 990-PF Part XV GrantOrContributionPdDurYrGrp, each year FY2020–FY2025 (FY2025 return has 565 grant rows, zero METR name/EIN hits); METR EIN 99-1219864 formed May 2024 so earlier years cannot list that EIN",
+    "period": "FY2020–FY2025",
+    "row_ids": [
+     "MDS1011",
+     "MDS1012",
+     "MDS1013",
+     "MDS1014",
+     "MDS1015",
+     "MDS1016"
+    ]
+   },
+   {
+    "vehicle": "Dustin Moskovitz Remainder Interest Trust dated March 10, 2018 as a Form 990-series filer / private foundation",
+    "excluding_document": "IRS e-file index_2022–index_2026 (0 of 656,503 / 705,156 / 728,719 / 748,906 / 385,890 rows); ProPublica org search total_results 0; SOI Form 5227 extracts sit-2020/2021/2022 (0 hits); EDGAR company browse 'No matching companies.'; 990-PF instructions: split-interest trusts file Form 5227 not 990-PF",
+    "period": "index years 2022–2026; sit 2020–2022",
+    "row_ids": [
+     "MDS0906",
+     "MDS0907",
+     "MDS0908",
+     "MDS0909",
+     "MDS0910",
+     "MDS0911",
+     "MDS0912",
+     "MDS0913",
+     "MDS0914",
+     "MDS0917",
+     "MDS0918",
+     "MDP0459"
+    ]
+   },
+   {
+    "vehicle": "Anthropic, PBC public registration statement as a source (any vehicle)",
+    "excluding_document": "EDGAR: no public Form S-1/S-1/A for Anthropic, PBC; 35 name matches are series/SPV funds; company_tickers.json 0; confidential draft S-1 announced 2026-06-01 is a Rule 135 notice, not a holder table",
+    "period": "as of 2026-09-16T09:20–09:49Z",
+    "row_ids": [
+     "MDS0938",
+     "MDS0931",
+     "MDS0927",
+     "MDS0928",
+     "MDS0926",
+     "MDS0922",
+     "MDS0924",
+     "MDS0934",
+     "MDT0162",
+     "MDP0372",
+     "MDS0868",
+     "MDS0877"
+    ]
+   }
+  ],
+  "possible": [
+   {
+    "vehicle": "the unnamed 'our foundation' / 'the foundation' / 'a nonprofit vehicle' — if it is Good Ventures Foundation and the stake arrived after 2025-06-30",
+    "identifying_document": "Good Ventures Foundation Form 990-PF TAX_PERIOD=202606 (FY2026, 2025-07-01 to 2026-06-30) Schedule B NonCashPropertyContributionGrp / Schedule M and Part XV; posted to IRS TEOS and the bulk e-file index (index_2026.csv currently has only TAX_PERIOD=202506 rows for EIN 461008520)",
+    "expected_date": "original due 2026-11-15 (Sunday) → 2026-11-16 next business day; Form 8868 automatic extension to 2027-05-15 (Saturday) → 2027-05-17; FY2025 return was signed 2026-05-15 i.e. on extension; California RRF-1 same dates",
+    "row_ids": [
+     "MDT0165",
+     "MDT0217",
+     "MDT0218",
+     "MDT0219",
+     "MDT0220",
+     "MDT0221",
+     "MDT0222",
+     "MDS0947",
+     "MDS0937",
+     "MDS1021"
+    ]
+   },
+   {
+    "vehicle": "any holder named in an Anthropic, PBC public Form S-1 (Item 403 table)",
+    "identifying_document": "public EDGAR Form S-1/S-1/A for Anthropic, PBC, Item 11(m)/Regulation S-K Item 403 beneficial-owner table — which lists only >5% holders of a voting class plus directors/named executive officers; a stake described in press as 'less than 0.8%' would be below the Item 403 threshold unless held by a director/NEO",
+    "expected_date": "unknown; confidential draft submitted 2026-06-01; next check 2026-10-16 (web-freshness window, not a promised filing date)",
+    "row_ids": [
+     "MDS0938",
+     "MDP0463",
+     "MDP0464",
+     "MDT0162",
+     "MDS0759",
+     "MDS0931"
+    ]
+   },
+   {
+    "vehicle": "a donor-advised fund account at a DAF sponsor (National Philanthropic Trust EIN 23-7825575; Vanguard Charitable EIN 23-2888152; Silicon Valley Community Foundation EIN 20-5205488; Fidelity Investments Charitable Gift Fund EIN 11-0303001; Donor Advised Charitable Giving Inc EIN 31-1640316)",
+    "identifying_document": "none public: a sponsor's Form 990 Schedule M SecuritiesCloselyHeldStockGrp reports only aggregate closely-held-stock contributions (e.g. NPT FY2025 $1,183,079,981; Vanguard FY2025 $96,652,480; Fidelity FY2025 $464,187,816); public Schedule B Part I is RESTRICTED; Schedule I Part II has no donor/adviser column. A DAF sponsor's filing would not name the account principal. Only a 6104(d) public-inspection copy request (drafted, unsent) or the principal's own statement could add anything",
+    "expected_date": "n/a (structural non-disclosure); NPT/Vanguard/Fidelity FY2026 (June year-end) returns and SVCF TY2025 follow the same 990 calendar",
+    "row_ids": [
+     "MDP0329",
+     "MDP0330",
+     "MDP0331",
+     "MDP0332",
+     "MDP0333",
+     "MDP0337",
+     "MDP0445",
+     "MDP0400",
+     "MDP0415",
+     "MDP0385",
+     "MDP0430",
+     "MDS0886",
+     "MDS0887",
+     "MDS0888",
+     "MDS0889",
+     "MDS0890",
+     "MDS0898",
+     "MDE0135",
+     "MDS1104",
+     "MDS1105"
+    ]
+   },
+   {
+    "vehicle": "Dustin Moskovitz Remainder Interest Trust dated March 10, 2018 (trustee Tom Van Loben Sels; contributor of publicly traded securities to GVF in FY2024 $446,082,975 and FY2025 $1,395,695,354)",
+    "identifying_document": "if a split-interest trust under IRC 664/4947(a)(2): Form 5227 via Form 4506-A line 8 (public except Schedule A, K-1, trust instrument, donor attachments) — draft written, approved_for_send false, unsent; if a grantor/family trust: Form 1041, confidential under IRC 6103, no public route. Trust type is not stated by any document",
+    "expected_date": "n/a; EIN not located",
+    "row_ids": [
+     "MDE0109",
+     "MDE0110",
+     "MDT0161",
+     "MDP0452",
+     "MDP0453",
+     "MDP0454",
+     "MDP0455",
+     "MDP0456",
+     "MDP0457",
+     "MDP0458",
+     "MDP0460",
+     "MDP0461",
+     "MDP0462",
+     "MDF0296",
+     "MDF0326",
+     "MDF0331",
+     "MDS0915"
+    ]
+   },
+   {
+    "vehicle": "Moskovitz Investments LLC; Monster Growth Ventures LLC; The CTF Trust dated December 27, 2012; Moskovitz Investment Holdings, LLC; Dustin A. Moskovitz Trust dated December 27, 2005 (named in Blue Owl, Facebook/Meta and Asana SEC filings for other securities, not Anthropic)",
+    "identifying_document": "an Anthropic issuer transfer ledger or public S-1 selling-stockholder table naming the vehicle; a CA/DE Statement of Information (CA BizFile Incapsula, DE ICIS captcha this run; Florida Sunbiz lists an unrelated-by-evidence 'MOSKOVITZ INVESTMENTS, LLC' L10000004438). Identifying a vehicle would not by itself establish any payment to METR — that would need a 990-PF Part XIV/XV donee line or a METR Schedule B naming the vehicle",
+    "expected_date": "n/a",
+    "row_ids": [
+     "MDE0095",
+     "MDE0096",
+     "MDE0097",
+     "MDE0098",
+     "MDE0099",
+     "MDE0100",
+     "MDE0101",
+     "MDE0102",
+     "MDE0103",
+     "MDE0104",
+     "MDE0105",
+     "MDE0106",
+     "MDE0107",
+     "MDE0108",
+     "MDS0853",
+     "MDS0854",
+     "MDS0855",
+     "MDS0856",
+     "MDS0857",
+     "MDS0858",
+     "MDS0859",
+     "MDS0860",
+     "MDS0861",
+     "MDS0862",
+     "MDS0863",
+     "MDS0864",
+     "MDS0865",
+     "MDS0866",
+     "MDS0867",
+     "MDS0869",
+     "MDS0871",
+     "MDS0872",
+     "MDS0873",
+     "MDS0874",
+     "MDS0875",
+     "MDS0876",
+     "MDS0878",
+     "MDS0879",
+     "MDS0881",
+     "MDS0882",
+     "MDS0883",
+     "MDS0884",
+     "MDS0885",
+     "MDP0373",
+     "MDP0374"
+    ]
+   }
+  ]
+ },
+ "gvf_schedule_b": [
+  {
+   "fy": "FY2020 (2019-07-01 to 2020-06-30)",
+   "contributor_label": "ContributorNum 1: DUSTIN MOSKOVITZ (person)",
+   "amount": 1017208584,
+   "money_type": "equity_value (TotalContributionsAmt; NoncashContributionInd=X)",
+   "row_id": "MDF0317"
+  },
+  {
+   "fy": "FY2020",
+   "contributor_label": "NonCashPropertyContributionGrp ContributorNum 1: PUBLICLY TRADED SECURITIES, received 2020-06-26",
+   "amount": 1017208584,
+   "money_type": "equity_value (FairMarketValueAmt; from_entity blank in row)",
+   "row_id": "MDF0318"
+  },
+  {
+   "fy": "FY2021 (2020-07-01 to 2021-06-30)",
+   "contributor_label": "ContributorNum 1: DUSTIN MOSKOVITZ",
+   "amount": 269719012,
+   "money_type": "equity_value",
+   "row_id": "MDF0319"
+  },
+  {
+   "fy": "FY2021",
+   "contributor_label": "NonCash ContributorNum 1: PUBLICLY TRADED SECURITIES, received 2020-09-03",
+   "amount": 269719012,
+   "money_type": "equity_value",
+   "row_id": "MDF0320"
+  },
+  {
+   "fy": "FY2022 (2021-07-01 to 2022-06-30)",
+   "contributor_label": "ContributorNum 1: DUSTIN MOSKOVITZ",
+   "amount": 170486492,
+   "money_type": "equity_value",
+   "row_id": "MDF0321"
+  },
+  {
+   "fy": "FY2022",
+   "contributor_label": "NonCash ContributorNum 1: PUBLICLY TRADED SECURITIES, received 2022-06-03 (FMV differs from the contributor total by 2,290,694; the rows do not explain the difference; not summed)",
+   "amount": 168195798,
+   "money_type": "equity_value",
+   "row_id": "MDF0322"
+  },
+  {
+   "fy": "FY2023 (2022-07-01 to 2023-06-30)",
+   "contributor_label": "ContributorNum 1: DUSTIN MOSKOVITZ",
+   "amount": 1911246067,
+   "money_type": "equity_value",
+   "row_id": "MDF0323"
+  },
+  {
+   "fy": "FY2023",
+   "contributor_label": "ContributorNum 2: FUTURE OF LIFE INSTITUTE",
+   "amount": 161864,
+   "money_type": "transfer (cash; not equity)",
+   "row_id": "MDF0324"
+  },
+  {
+   "fy": "FY2023",
+   "contributor_label": "NonCash ContributorNum 1: PUBLICLY TRADED SECURITIES, received 2023-06-15 (FMV differs from contributor total by 4,056,950)",
+   "amount": 1907189117,
+   "money_type": "equity_value",
+   "row_id": "MDF0325"
+  },
+  {
+   "fy": "FY2024 (2023-07-01 to 2024-06-30)",
+   "contributor_label": "ContributorNum 1: DUSTIN A MOSKOVITZ REMAINDER INTEREST TRUST (business name; 314 LYTTON AVE)",
+   "amount": 446082975,
+   "money_type": "equity_value",
+   "row_id": "MDF0326 (also MDE0110 from MD41 with amount stripped by audit; MDF0296 from MD41 duplicates the noncash line with amount_usd empty)"
+  },
+  {
+   "fy": "FY2024",
+   "contributor_label": "ContributorNum 2: DUSTIN MOSKOVITZ (person)",
+   "amount": 354990800,
+   "money_type": "equity_value",
+   "row_id": "MDF0327"
+  },
+  {
+   "fy": "FY2024",
+   "contributor_label": "ContributorNum 3: BENEFICIAL AI FOUNDATION",
+   "amount": 164128,
+   "money_type": "transfer (cash; not equity)",
+   "row_id": "MDF0328"
+  },
+  {
+   "fy": "FY2024",
+   "contributor_label": "NonCash ContributorNum 1: PUBLICLY TRADED SECURITIES, received 2024-02-05",
+   "amount": 446082975,
+   "money_type": "equity_value",
+   "row_id": "MDF0329"
+  },
+  {
+   "fy": "FY2024",
+   "contributor_label": "NonCash ContributorNum 2: PUBLICLY TRADED SECURITIES, received 2024-06-30 (FMV exceeds contributor 2 total by 4,056,950)",
+   "amount": 359047750,
+   "money_type": "equity_value",
+   "row_id": "MDF0330"
+  },
+  {
+   "fy": "FY2025 (2024-07-01 to 2025-06-30)",
+   "contributor_label": "ContributorNum 1: DUSTIN A MOSKOVITZ REMAINDER INTEREST TRUST",
+   "amount": 1395695354,
+   "money_type": "equity_value",
+   "row_id": "MDF0331"
+  },
+  {
+   "fy": "FY2025",
+   "contributor_label": "ContributorNum 2: BENEFICIAL AI FOUNDATION",
+   "amount": 150027,
+   "money_type": "transfer (cash; not equity)",
+   "row_id": "MDF0332"
+  },
+  {
+   "fy": "FY2025",
+   "contributor_label": "NonCash ContributorNum 1: PUBLICLY TRADED SECURITIES, received 2025-06-30",
+   "amount": 1395695354,
+   "money_type": "equity_value",
+   "row_id": "MDF0333 (seed MDT0008 is the context locator)"
+  },
+  {
+   "fy": "FY2020–FY2025",
+   "contributor_label": "Part XV GrantOrContributionPdDurYrGrp vs METR (EIN 99-1219864 / name): none found each year",
+   "amount": null,
+   "money_type": "n/a (bounded negative)",
+   "row_id": "MDS1011, MDS1012, MDS1013, MDS1014, MDS1015, MDS1016"
+  },
+  {
+   "fy": "FY2026 (2025-07-01 to 2026-06-30)",
+   "contributor_label": "not yet posted (index_2026.csv has only TAX_PERIOD=202506 for EIN 461008520)",
+   "amount": null,
+   "money_type": "calendar closer",
+   "row_id": "MDT0220, MDT0221, MDS0947"
+  }
+ ],
+ "no_transaction_into_metr": [
+  {
+   "vehicle": "Good Ventures Foundation (EIN 46-1008520)",
+   "row_ids": [
+    "MDS1011",
+    "MDS1012",
+    "MDS1013",
+    "MDS1014",
+    "MDS1015",
+    "MDS1016",
+    "MDS0870",
+    "MDS0880",
+    "MDP0569"
+   ],
+   "sources_checked": "Form 990-PF Part XV grant schedules FY2020–FY2025 (objects 202121349349102747, 202231329349104238, 202341359349105939, 202441369349105564, 202501349349105365, 202641359349102829); metr.org/about supporter list. Seed negative MDS0006 was superseded by MDS1275 (MD50) as 'unbounded in form'; the bounded replacements are MDS1011–MDS1016. GVF grants to Founders Pledge, ARC, Effective Ventures and RAND exist (MDF0334–MDF0409) and are labelled adjacency, not METR receipts (MDP0612–MDP0614)."
+  },
+  {
+   "vehicle": "Coefficient Giving / Open Philanthropy",
+   "row_ids": [
+    "MDP0053",
+    "MDP0519",
+    "MDS0335",
+    "MDS0340",
+    "MDS1120",
+    "MDS1173",
+    "MDS1180",
+    "MDS1283",
+    "MDS1270",
+    "MDS1634"
+   ],
+   "sources_checked": "Coefficient Giving staff note 2025: 'Note: This organization is not a Coefficient Giving grantee.'; coefficientgiving.org/grants (HTTP 404 / redirect) and openphilanthropy.org/grants?q=METR (redirects) checked 2026-09-16T06:09Z, 09:43Z, 12:23Z; seed local-snapshot negative MDS0001 superseded by MDS1283. Open Philanthropy recommendations paid by others are typed recommendation, not payment (MDP0615, MDE0137)."
+  },
+  {
+   "vehicle": "Dustin Moskovitz (individual)",
+   "row_ids": [
+    "MDR0082",
+    "MDE0083",
+    "MDS0870"
+   ],
+   "sources_checked": "Not a METR-named supporter on metr.org/about; no row in any table records a payment from the individual to METR. METR FY2024 Schedule B contributors are RESTRICTED on the public copy (MDS0769), so an individual gift could not be seen there either way."
+  },
+  {
+   "vehicle": "Dustin Moskovitz Remainder Interest Trust dated March 10, 2018",
+   "row_ids": [
+    "MDS0906",
+    "MDS0907",
+    "MDS0908",
+    "MDS0909",
+    "MDS0910",
+    "MDS0917",
+    "MDS0918",
+    "MDS0919",
+    "MDS0920",
+    "MDP0374",
+    "MDS0870"
+   ],
+   "sources_checked": "Trust is not a 990-series filer (IRS e-file indexes 2022–2026), not an EDGAR registrant, no CourtListener record, no CA registry record; therefore there is no grants schedule to check — the absence is structural, not a checked-and-empty schedule. Its only documented outflows are contributions of publicly traded securities into GVF (MDE0110, MDF0326, MDF0331)."
+  },
+  {
+   "vehicle": "Moskovitz Investments LLC; Monster Growth Ventures LLC; CTF Trust; Moskovitz Investment Holdings, LLC; 2005 Trust",
+   "row_ids": [
+    "MDS0870",
+    "MDS0880",
+    "MDS0882",
+    "MDP0374"
+   ],
+   "sources_checked": "metr.org/about legal-name string count 0; ProPublica org search 0; no public grants schedule exists for these vehicles; MDP0374 names the document that would establish a payment (990-PF Part XIV line 3a / METR Schedule B naming the vehicle)."
+  },
+  {
+   "vehicle": "National Philanthropic Trust (EIN 23-7825575)",
+   "row_ids": [
+    "MDS0186",
+    "MDS0187",
+    "MDS0188",
+    "MDS0189",
+    "MDS0190",
+    "MDS1276"
+   ],
+   "sources_checked": "Form 990 Schedule I FY2021–FY2025 (objects 202231339349309863, 202311359349313966, 202431429349301368, 202511339349301311, 202601289349302480): none found for METR; seed MDS0007 superseded by MDS1276 as unbounded in form."
+  },
+  {
+   "vehicle": "Fidelity Investments Charitable Gift Fund (EIN 11-0303001)",
+   "row_ids": [
+    "MDS0170",
+    "MDS0171",
+    "MDS0172",
+    "MDS0173",
+    "MDS0174",
+    "MDS0175"
+   ],
+   "sources_checked": "Form 990 Schedule I FY2021–FY2025: none found for METR."
+  },
+  {
+   "vehicle": "Vanguard Charitable Endowment Program (EIN 23-2888152) — EXCEPTION: one sponsor-level filed grant exists",
+   "row_ids": [
+    "MDF0012",
+    "MDP0043",
+    "MDS0182",
+    "MDS0183",
+    "MDS0184",
+    "MDS0185",
+    "MDS0394",
+    "MDS0395",
+    "MDS0396",
+    "MDS0397",
+    "MDS1093",
+    "MDS1094",
+    "MDS1104",
+    "MDS0887",
+    "MDE0135"
+   ],
+   "sources_checked": "Schedule I FY2021–FY2024 none found; FY2025 (2024-07-01 to 2025-06-30) Schedule I lists a $4,000,000 cash grant to METR (MDF0012, seed; MDP0043 excludes it from the ~$71M denominator as filed_grant/prior period). The sponsor's filing discloses no DAF account principal or adviser (MDS1104, MDS0887); the public Schedule B is RESTRICTED. This grant cannot be tied to, or excluded from, any Moskovitz vehicle by any public document — the pack does not deanonymize the adviser and neither may a figure."
+  },
+  {
+   "vehicle": "Silicon Valley Community Foundation (EIN 20-5205488) — EXCEPTION: one sponsor-level filed grant exists",
+   "row_ids": [
+    "MDF0011",
+    "MDF0220",
+    "MDS0191",
+    "MDS0192",
+    "MDS0193",
+    "MDS1095",
+    "MDS0398",
+    "MDS0399",
+    "MDS0400",
+    "MDS1146",
+    "MDS1105",
+    "MDS0886"
+   ],
+   "sources_checked": "Schedule I TY2020–TY2023 none found; TY2024 Schedule I lists $20,000 to METR EIN 99-1219864 purpose 'Sciences' (MDF0220). No adviser named (MDS1105). Dollar match to Tallinn ledger SFF-spec lines is noted in MDF0220's note as a coincidence, not an identification."
+  },
+  {
+   "vehicle": "Anthropic, PBC (direct)",
+   "row_ids": [
+    "MDR0147",
+    "MDR0151",
+    "MDR0174",
+    "MDP0621"
+   ],
+   "sources_checked": "Out of this audit's element scope (C03.E2); the pack's Anthropic→METR edges are access arrangements (tokens/model access) labelled not a money flow."
+  }
+ ],
+ "adjacency_only": [
+  {
+   "relationship": "RAND-bound grants/commitments read as Canary/METR receipts (n=170 promoted rows regrouped) — a payment or commitment to RAND Corporation is not a documented transaction into METR",
+   "row_id": "MDP0612"
+  },
+  {
+   "relationship": "Effective Ventures / Founders Pledge / DAF-sponsor / TED lines read as METR receipts (n=280) — a filed grant to EV, Founders Pledge, TED Foundation or a DAF sponsor is not a documented transaction into METR",
+   "row_id": "MDP0613"
+  },
+  {
+   "relationship": "ARC-bound awards read as METR receipts (n=66; excludes the separate ARC→METR transfer rows) — a grant to Alignment Research Center EIN 86-3605182 is not a grant to METR EIN 99-1219864",
+   "row_id": "MDP0614"
+  },
+  {
+   "relationship": "SFF / Longview / Open Philanthropy recommendations read as payments (n=73) — money_type=recommendation is not a payment",
+   "row_id": "MDP0615"
+  },
+  {
+   "relationship": "Audacious/Canary joint commitments read as documented METR receipts (n=78)",
+   "row_id": "MDP0616"
+  },
+  {
+   "relationship": "Anthropic equity / priced-round participation read as METR donations (n=50; covers MDR0001, MDR0002, MDR0004–MDR0010, MDR0024, MDR0080–MDR0088, MDR0123–MDR0125 and GVF Schedule B rows MDF0317–MDF0333) — an Anthropic share purchase or round participation is not a donation to METR",
+   "row_id": "MDP0617"
+  },
+  {
+   "relationship": "Named-supporter acknowledgments (no amount) read as grants (n=55; covers MDF0213–MDF0235 etc.) — a name on metr.org/about is not a documented transaction",
+   "row_id": "MDP0618"
+  },
+  {
+   "relationship": "Recipient-side unnamed 990 totals read as identified funder pipes (n=30)",
+   "row_id": "MDP0619"
+  },
+  {
+   "relationship": "Partnership/membership listings read as awards (n=165)",
+   "row_id": "MDP0620"
+  },
+  {
+   "relationship": "Lab access / tokens / credits read as cash (n=180; edge_type access arrangement)",
+   "row_id": "MDP0621"
+  },
+  {
+   "relationship": "Jane Street firm / vehicle investment read as METR 'individuals from Jane Street' gifts (n=20) — Jane Street legal entities' Anthropic positions are not METR gifts by unnamed individuals; no individual is deanonymized",
+   "row_id": "MDP0622"
+  },
+  {
+   "relationship": "Person-level role edges on the supporter/Anthropic side explicitly labelled 'not a money flow (C06.E4)': Moskovitz self-described observer (MDR0168); Tallinn Postimees (MDR0165) and Semafor (MDR0171); Farhi–OpenAI (MDR0155, MDR0156, MDR0172, MDR0184); Ralston–AVERI/SAIF (MDR0158, MDR0169); Newman–Epoch/Golden Gate (MDR0164, MDR0167); Field–Figma (MDR0170); Remainder Trust→GVF grouped as adjacency (MDF0991)",
+   "row_id": "MDR0155;MDR0156;MDR0158;MDR0164;MDR0165;MDR0167;MDR0168;MDR0169;MDR0170;MDR0171;MDR0172;MDR0184;MDF0991"
+  },
+  {
+   "relationship": "Entity-distinction corrections bound to C06.E4/C05.E3: ARC vs METR (MDE0132); unnamed Jane Street individuals vs Jane Street Group/Capital/Global Trading LLCs (MDE0133); Eric Schmidt vs Schmidt Sciences LLC vs Schmidt Fund EIN 46-3460261 vs Hillspire (MDE0134); DAF sponsor vs undisclosed account/adviser (MDE0135); Redwood vs METR (MDE0136); Good Ventures Foundation vs Open Philanthropy vs Coefficient Giving (MDE0137); RAND Europe vs RAND Corp (MDE0138); Dustin Moskovitz vs GVF vs Remainder Trust vs Moskovitz Investments LLC vs Monster Growth Ventures (MDE0139); and MD71's unmerge rule (MDE0140)",
+   "row_id": "MDE0132;MDE0133;MDE0134;MDE0135;MDE0136;MDE0137;MDE0138;MDE0139;MDE0140"
+  },
+  {
+   "relationship": "Final edge inventory (MD47 Task D): documented transaction n=863; role n=103; access arrangement n=180; adjacency n=153",
+   "row_id": "MDP0623;MDP0624;MDP0625;MDP0626"
+  }
+ ],
+ "entity_separation": [
+  {
+   "entity": "Dustin Moskovitz (individual)",
+   "identifier": "personal EDGAR CIK 0001549917 (MDS0865); Series A participant as a person (MDR0082); Schedule B ContributorPersonNm (MDF0317 etc.)",
+   "distinct_from": "Good Ventures Foundation; Open Philanthropy; Coefficient Giving; 'our foundation'; DAF sponsors/accounts; Remainder Interest Trust; Moskovitz Investments LLC; Monster Growth Ventures; CTF Trust",
+   "row_ids": [
+    "MDE0083",
+    "MDE0108",
+    "MDE0139",
+    "MDE0140",
+    "MDP0536"
+   ]
+  },
+  {
+   "entity": "Good Ventures Foundation",
+   "identifier": "EIN 46-1008520; 501(c)(3) private foundation; June 30 year-end; CA GLEIF registeredAs 3504459 (secondary locator only)",
+   "distinct_from": "'Good Ventures'/'GV' as used in a Bluesky post (MDT0237 does not identify the filer); Open Philanthropy; Coefficient Giving; the individual; DAF sponsors",
+   "row_ids": [
+    "MDE0114",
+    "MDE0094",
+    "MDS1621",
+    "MDE0137"
+   ]
+  },
+  {
+   "entity": "Open Philanthropy",
+   "identifier": "brand; openphilanthropy.org redirects to coefficientgiving.org this run (recorded as a redirect, not a legal merger)",
+   "distinct_from": "Coefficient Giving (legal entity not resolved from the redirect); GVF (the private foundation filer); 'never invested in Anthropic' per Berger",
+   "row_ids": [
+    "MDS1622",
+    "MDS1634",
+    "MDE0137",
+    "MDT0239"
+   ]
+  },
+  {
+   "entity": "Coefficient Giving",
+   "identifier": "brand successor per rebrand post and Berger's 'We're called Coefficient Giving now'; /grants/ HTTP 404",
+   "distinct_from": "Open Philanthropy; GVF; Alexander Berger's personal X account ('Views my own')",
+   "row_ids": [
+    "MDS1623",
+    "MDS1628",
+    "MDS1629",
+    "MDP0053",
+    "MDT0239"
+   ]
+  },
+  {
+   "entity": "'our foundation' / 'the foundation' / 'a nonprofit vehicle' / 'his charity'",
+   "identifier": "none — never identified as a legal entity in any statement",
+   "distinct_from": "every named filer above (labelling rule MDE0140: unmerge is not a finding that any vehicle holds or does not hold the shares)",
+   "row_ids": [
+    "MDP0699",
+    "MDP0700",
+    "MDP0701",
+    "MDP0702",
+    "MDP0705",
+    "MDT0242",
+    "MDE0140"
+   ]
+  },
+  {
+   "entity": "Dustin Moskovitz Remainder Interest Trust dated March 10, 2018 (990-PF spelling DUSTIN A MOSKOVITZ REMAINDER INTEREST TRUST)",
+   "identifier": "trustee Tom Van Loben Sels (Facebook 2019/2020 proxies); 314 LYTTON AVE PALO ALTO on GVF Schedule B; no EIN located; not the Moskovitz 2005 Trust; not the Christopher K. Cox 2009 annuity-trust remainder",
+   "distinct_from": "GVF; the individual; Moskovitz 2005 Trust; CTF Trust",
+   "row_ids": [
+    "MDE0109",
+    "MDE0110",
+    "MDT0161",
+    "MDP0452",
+    "MDP0453",
+    "MDS0902",
+    "MDE0139"
+   ]
+  },
+  {
+   "entity": "Jaan Tallinn (individual)",
+   "identifier": "Series A lead as a person (MDR0080); public donation ledger jaan.online",
+   "distinct_from": "Metaplanet (his investment company, MDE0064); Survival and Flourishing Fund (recommending process, MDE0065); Survival and Flourishing Corp (PBC, MDE0066); Founders Pledge Inc (regrantor, EIN via FP TY2024 990, MDE0067); FP-US (ledger intermediary, MDF0218); Silicon Valley Community Foundation (DAF sponsor, MDE0068); SEC 'Metaplanet AI Fund I, LP' (Form D, not shown to be Metaplanet)",
+   "row_ids": [
+    "MDE0063",
+    "MDE0064",
+    "MDE0065",
+    "MDE0066",
+    "MDE0067",
+    "MDE0068",
+    "MDF0218",
+    "MDF0219",
+    "MDS0778"
+   ]
+  },
+  {
+   "entity": "METR",
+   "identifier": "Model Evaluation and Threat Research, Inc., EIN 99-1219864, Covina CA public charity; FY2024 990 object 202523209349300367",
+   "distinct_from": "Alignment Research Center EIN 86-3605182 (ARC Evals was a project/alias); Redwood Research; Anthropic, PBC",
+   "row_ids": [
+    "MDE0053",
+    "MDE0132",
+    "MDE0136"
+   ]
+  },
+  {
+   "entity": "Anthropic, PBC",
+   "identifier": "issuer self-name on anthropic.com/legal; no public EDGAR CIK; Florida foreign-qualification F240000015680",
+   "distinct_from": "'Anthropic PBC 1, a Series of Venelite Venture Funds, LP' (CIK 0002062711); 'Anthropic PBC Jan 2026 a Series of CGF2021 LLC' (CIK 0002112584); 'Anthropic Capital Fund, LP' (CIK 0001931731); 'WU Anthropic LP' (CIK 2109576); fund NPORT mentions",
+   "row_ids": [
+    "MDE0054",
+    "MDE0111",
+    "MDE0112",
+    "MDE0113",
+    "MDS0923",
+    "MDS0930"
+   ]
+  }
+ ],
+ "cautions": [
+  "Equity values (money_type=equity_value: Series A round $124M, Series H $65B, FTX purchase $99,999,988, GVF Schedule B FMVs, DAF Schedule M closely-held totals) must never be summed with each other across years or with any commitment, recommendation, paid_grant, filed_grant or transfer. Round sizes are not any participant's stake (MDR0080 limitation; MDR0087 note).",
+  "The 'donation date' does not exist in the pack. Only statement dates exist (2025-11-10 press; 2025-12-18 Berger; 2026-03-30/04-11/08-26 Bluesky; 2026-04-17/04-20 press). Tuna's 'early 2025' is the only timing and is not a day (MDT0244). A timeline figure must plot statements, not a transfer.",
+  "The Series A date 2021-05-28 is an issuer statement naming individuals; no share count, cheque or share class is public for Tallinn, Moskovitz or Schmidt (MDR0080, MDR0081, MDR0082 limitations; MDS0239, MDS0757, MDS0758).",
+  "'Board observer' has two different evidentiary standings: Moskovitz's is his own words (MDR0089); Tallinn's is press reportage while his own quoted words decline a board seat (MDR0090, MDR0026). MD49 adjudicated the posted phrase 'two board observers by their own account' as incomplete (MDP0571). A figure must not label Tallinn 'observer by his own account'.",
+  "'Our foundation' must not be drawn as Good Ventures Foundation. MDT0237 ('GV is itself a beneficiary…') names Good Ventures but does not say GV received the 2025 donation (MDP0702). The Bluesky handle moskov.goodventures.org is a handle, not a filer identification.",
+  "GVF Schedule B FY2020–FY2025 shows only PUBLICLY TRADED SECURITIES on every noncash line. That is an exclusion of GVF as recipient of private stock for those periods only (MDF0322/0330/0333 limitation). It is not evidence about FY2026, and the pack does not infer from Tuna's 'early 2025' plus the FY2025 Schedule B that GVF is excluded as the vehicle; a figure may state both facts side by side but must not draw the inference (it would need the Schedule B reporting threshold/characterisation, which is not stated).",
+  "Within a Schedule B year the contributor TotalContributionsAmt and the noncash FairMarketValueAmt differ in FY2022 (170,486,492 vs 168,195,798) and FY2024 contributor 2 (354,990,800 vs 359,047,750; FMV exceeds the total) and FY2023 (1,911,246,067 vs 1,907,189,117). The rows record both and explicitly do not sum or reconcile them. Plot one series or the other, labelled by XML field, never both stacked.",
+  "The contributor rows are dated at fiscal-year end (e.g. MDF0317 2020-06-30) while the noncash rows carry ReceivedDt (MDF0318 2020-06-26; MDF0329 2024-02-05). Use ReceivedDt for any dated event marker and the FY label for bars.",
+  "The noncash Schedule B rows (MDF0318, 0320, 0322, 0325, 0329, 0330, 0333) have from_entity blank; the contributor is linked only by ContributorNum in the subject. Do not auto-join by amount alone (FY2024 has two contributors).",
+  "The remainder-interest trust's contributions into GVF are equity_value inflows to GVF, not Anthropic stock (NoncashPropertyDesc PUBLICLY TRADED SECURITIES; Facebook/Meta Class B in the proxies) and not a METR payment (MDE0110, MDF0991).",
+  "Vanguard Charitable FY2025 $4,000,000 and SVCF TY2024 $20,000 are real filed grants INTO METR from DAF sponsors (MDF0012, MDF0220). They are sponsor-level; the account principal is undisclosed by design (MDS1104, MDS1105, MDE0135). A figure must neither attribute them to any named person nor state they are unrelated to the donated stake; both are 'not stated'.",
+  "A public Anthropic S-1 would only list >5% holders and directors/NEOs (MDP0463); a stake press-estimated at 'less than 0.8%' (MDT0241) would likely fall outside Item 403 — so 'wait for the S-1' is not a guaranteed closer. The FY2026 GVF 990-PF is the only calendared document that could identify the vehicle, and only if the vehicle is GVF and the stake arrived after 2025-06-30.",
+  "The '$7.7B'/'up to $7.7B' figure in the posted material is 0.8% x $965B Series H, a ceiling computed from a press bound times a round valuation; MD49 marks it a ceiling not a measured holding (MDP0572). Do not draw it as a stake value.",
+  "METR's own FY2024 Schedule B is RESTRICTED on the public copy (MDS0769); redaction is not evidence of any named donor.",
+  "Craig Falls (MDR0124, MDE0128) is a natural-person purchaser named in the FTX court exhibit; the pack does not connect him to METR's unnamed 'individuals from Jane Street' and a figure must not either.",
+  "MDP0536/MDS1218 record framing defects in earlier posted figures: do not stand Moskovitz/Tuna in for GVF; do not slash-merge Moskovitz with Coefficient/OP, Tallinn with SFF, Schmidt Sciences with Eric Schmidt, or Jane Street the firm with the unnamed individuals; do not use investor status as the other side of a donor money table.",
+  "Seed rows (S0-seed-import: MDR0001, MDR0002, MDR0003, MDT0004–MDT0008, MDF0008–MDF0012, MDF0015) are role=context with checked_utc 2026-09-14 from the 10-metr pack. Every one relevant here has a this-run lane row (MD33, MD39, MD71) that should be the cited evidence; cite the seed only as locator.",
+  "Quotes carry rendering artefacts to normalise for display: HTML entity I&#8217;m in MDT0238/MDP0703 vs typographic apostrophe in MDR0089 vs straight apostrophe in seed MDR0003; soft hyphen in 'dona­ted' (MDT0241); truncated quote_300 in MDT0242; Estonian original in MDR0090 (English paraphrase only in the row's subject).",
+  "No motive is asserted anywhere in these rows and none may be added. Tuna's quoted purpose clause ('dispel any perception of conflict of interest') is her stated reason as quoted by press, not a pack finding."
+ ],
+ "table_defects": [
+  "MDE0110 (MD41, entities table) carries the FY2024 Schedule B contribution as an entity row with money_type and amount_usd stripped by audit-1/audit-2 (note: 'lane said money_type=transfer', 'lane said amount_usd=446082975'), verdict DIFFERS, while MDF0326 (MD39) records the same line as equity_value 446,082,975 CONFIRMED. Use MDF0326.",
+  "MDF0296 (MD41) duplicates the FY2024 noncash line already in MDF0329 (MD39) with amount_usd deliberately empty ('so it is not added to A05'); treat as a duplicate, cite MDF0329.",
+  "MDT0242 quote_300 is cut mid-sentence ('…which had'); the fuller wording is only paraphrased in result.",
+  "MDT0239 quote_300 holds one sentence of the Berger tweet; the full three-point text is only in seed MDT0006 (context row) and in MDT0239's note.",
+  "MDR0004 (MD07) is DIFFERS after three audits touched source_class/quantity fields, while MDR0083 (MD33) is CONFIRMED for the same court line; MDE0001 likewise DIFFERS vs MDE0058 CONFIRMED. Cite the MD33 rows.",
+  "MDF0213 (individuals from Jane Street) had money_type=commitment stripped by audit-1 and is DIFFERS; MDF0015 (seed) still carries money_type=commitment 'undisclosed'. Neither has an amount; treat as acknowledgment only.",
+  "MDS1275 and MDS1276 (MD50) supersede seed negatives MDS0006/MDS0007 but their own result text is the audit verdict 'unbounded in form…' rather than a bounded negative; the bounded negatives live in MDS1011–MDS1016 (GVF) and MDS0186–MDS0190 (NPT).",
+  "MDS0853–MDS0860 and MDS0858 (MD40) are DIFFERS because the lane targeted MDE for what are source-coverage negatives; content is usable, verdict flag is a routing correction.",
+  "MDR0207 (MD71) is a fourth promoted row for the same Series A sentence (after MDR0001 seed, MDR0024 MD09, MDR0082 MD33); MDE0083, MDE0108, MDE0061, MDE0063 also quote it. Figures should cite one evidence row per actor (MDR0080 Tallinn, MDR0082 Moskovitz, MDR0081 Schmidt) to avoid implying four events.",
+  "STATE.md line 439 says MD47 bound 'eleven explicit adjacency/access labellings'; the eleven are MDP0612–MDP0622 (MD47 Task C rows C01–C11). CLAIMS.md counts C06.E4 primary=11, consistent."
+ ],
+ "suggested_figures": [
+  {
+   "id": "E1",
+   "title": "Two dates that are not the same date",
+   "form": "horizontal timeline, two lanes",
+   "content": "Lane A 'investment event': 2021-05-28 Series A (Tallinn lead; Moskovitz, Schmidt, McClave, CERR participants) — one marker, issuer statement. Lane B 'statements about the donated stake': 2025-10-20 (observer only, no donation), 2025-11-10 Tuna/Forbes AU ('early 2025' bracket drawn as a shaded range Jan–Apr 2025 labelled 'not a day'), 2025-12-18 Berger, 2026-02-14 Forbes India, 2026-03-30 x2, 2026-04-11, 2026-04-17, 2026-04-20, 2026-08-26. Right edge: calendar closer 2026-11-16 (GVF FY2026 990-PF original due; extension to 2027-05-17). No transfer marker anywhere.",
+   "rows": "MDR0080, MDR0082, MDR0081, MDR0207, MDP0707, MDT0238, MDT0240, MDT0239, MDT0243, MDT0234, MDT0235, MDT0236, MDT0242, MDT0241, MDT0237, MDT0244, MDT0165, MDT0220"
+  },
+  {
+   "id": "E2",
+   "title": "What each statement says and does not say",
+   "form": "matrix: statements (rows) x {speaker is Moskovitz?, vehicle named?, legal entity?, timing?, share class?, amount?, excludes a vehicle?}",
+   "content": "cells filled only 'stated'/'not stated'/'press estimate' from MDP0699–MDP0706; Berger row marks 'excludes Coefficient/OP (person statement)'.",
+   "rows": "MDP0699, MDP0700, MDP0701, MDP0702, MDP0703, MDP0704, MDP0705, MDP0706, MDT0242, MDT0243, MDE0140"
+  },
+  {
+   "id": "E3",
+   "title": "Where the stake could sit: vehicles x documents",
+   "form": "exclusion/possibility grid",
+   "content": "Rows: Coefficient/OP; GVF (through FY2025); GVF FY2026; Remainder Interest Trust; DAF account at NPT/Vanguard/Fidelity/SVCF/DACG; Moskovitz Investments LLC & other named vehicles; S-1 Item 403 table. Columns: excluding document + period, identifying document + expected date, 'would the document name the principal?' (DAF: no). Cell text limited to the row limitation fields.",
+   "rows": "see vehicles.excluded and vehicles.possible"
+  },
+  {
+   "id": "E4",
+   "title": "Good Ventures Foundation Schedule B, FY2020–FY2025: only publicly traded securities",
+   "form": "one bar per fiscal year of the NonCashPropertyContributionGrp FairMarketValueAmt (single field; not the contributor total), annotated with ReceivedDt and contributor label (person vs remainder trust); separate small marks for the two cash contributors (FLI, Beneficial AI Foundation) typed 'transfer'; a footer strip 'Part XV vs METR: none found' per year; FY2026 shown as an empty dashed bar 'not yet posted'.",
+   "content": "equity_value panel only; no grants stacked on it",
+   "rows": "MDF0318, MDF0320, MDF0322, MDF0325, MDF0329, MDF0330, MDF0333, MDF0324, MDF0328, MDF0332, MDS1011–MDS1016, MDT0221"
+  },
+  {
+   "id": "E5",
+   "title": "Supporters and their Anthropic ties, as the source names them",
+   "form": "table",
+   "content": "columns: METR-named supporter string (metr.org/about) | Anthropic-side entity as the source names it | link type | investment date(s) | strength (issuer/court/self/press/none found) | donation-side row types (acknowledgment / recommendation / commitment / paid_grant / filed_grant, unsummed). Rows: SFF recommendations (→Tallinn), Schmidt Sciences (→Eric Schmidt; Hillspire), individuals from Jane Street (→Jane Street Global Trading LLC; 'Jane Street'), Farhi, Ralston, Field, Newman, Pew, Packard, Sijbrandij, others (→none found). Moskovitz placed outside the table with the label 'not a METR-named supporter'.",
+   "rows": "supporter_anthropic_links"
+  },
+  {
+   "id": "E6",
+   "title": "Same word, different entities",
+   "form": "entity-separation diagram, no money arrows",
+   "content": "Clusters: {Dustin Moskovitz individual | Good Ventures Foundation EIN 46-1008520 | Open Philanthropy (brand) | Coefficient Giving (brand) | 'our foundation' (unidentified) | Remainder Interest Trust 2018 | Moskovitz Investments LLC / Monster Growth Ventures / CTF Trust / Investment Holdings LLC / 2005 Trust}; {Jaan Tallinn | Metaplanet | SFF | SFC | Founders Pledge Inc / FP-US | SVCF}; {Eric Schmidt | Schmidt Sciences LLC | Schmidt Fund EIN 46-3460261 | Hillspire LLC}; {individuals from Jane Street | Jane Street Group LLC | Jane Street Capital LLC | Jane Street Global Trading LLC}. Edges only where a document links two nodes, typed role/contributor/adjacency.",
+   "rows": "entity_separation; MDE0132–MDE0140"
+  },
+  {
+   "id": "E7",
+   "title": "Not money: the eleven reclassifications",
+   "form": "legend panel / small multiples",
+   "content": "eleven labelled boxes with n counts (170, 280, 66, 73, 78, 50, 55, 30, 165, 180, 20) and the one-line rule from each limitation field; header 'documented_transaction = no'.",
+   "rows": "MDP0612–MDP0622"
+  }
+ ]
+}

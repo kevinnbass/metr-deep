@@ -1,0 +1,354 @@
+{
+  "banned_motive_words": [
+    "intended",
+    "scheme",
+    "secretly",
+    "coordinated",
+    "captured",
+    "wanted to",
+    "sought to",
+    "laundering",
+    "corruption",
+    "bribe",
+    "quid pro quo"
+  ],
+  "figure_globs": [
+    "figures/*.html"
+  ],
+  "freshness_days": {
+    "filings": 90,
+    "press": 30,
+    "registries": 90,
+    "x": 30
+  },
+  "kind": "investigative",
+  "lane_columns": [
+    "row",
+    "task",
+    "target_prefix",
+    "element_ids",
+    "subject",
+    "entity_type",
+    "aliases",
+    "identifier",
+    "from_entity",
+    "intermediary",
+    "to_entity",
+    "relationship_type",
+    "start_date",
+    "end_date",
+    "ledger",
+    "money_type",
+    "amount_usd",
+    "currency",
+    "date",
+    "date_precision",
+    "period",
+    "payment_status",
+    "purpose_restriction",
+    "project",
+    "provider",
+    "in_kind_type",
+    "quantity_or_value",
+    "terms",
+    "policy_version",
+    "disclosure_recusal",
+    "provider_authority",
+    "personnel_conflicts",
+    "edge_type",
+    "documented_transaction",
+    "source_class",
+    "query_or_endpoint",
+    "url",
+    "quote_300",
+    "checked_utc",
+    "result",
+    "result_count",
+    "next_document",
+    "limitation",
+    "note"
+  ],
+  "lane_outputs": {
+    "glob": "research/grok-out/*.csv",
+    "required_column": "checked_utc",
+    "required_header_comment": "#"
+  },
+  "lane_prefix": "MD",
+  "name": "metr_deep",
+  "root": "/mnt/f/projects/anthropic/metr_deep",
+  "rules": "Rules: fetch and write only; no network or system changes (never nmcli, resolvectl, protonvpn, sudo, systemctl, ip, iptables, nft); never send, submit, email, post, file or publish anything, and never contact METR, a funder, a donor, an employee or a records custodian - this lane only reads public material; primary sources first (issuer, recipient and funder documents, then government filings and procurement records, then retained archives, then named on-record statements, then high-quality press; a secondary database is used only to locate a primary); every row carries url, quote_300 verbatim, source_class, checked_utc in UTC, and a note giving provenance and limits; every row must have a non-empty url naming the exact page, endpoint or document checked - a none-found row cites the URL of the source that was searched; write \"none found in <exact source> as of <UTC date>\" for every task with no responsive record, never \"nothing more can be pulled\" and never an unbounded negative; keep legal entities separate (individual, employer, investment vehicle, foundation, DAF sponsor, DAF account, grantmaker, project, recipient) and never merge two because they are connected; keep money types separate in money_type (commitment, paid_grant, filed_grant, recommendation, transfer, regrant, contract, in_kind_estimate, equity_value) and never sum across types, periods or currencies; a commitment is not a payment and an award is not a receipt; assert no motive about any person or organization and name only public people in public roles; never deanonymize a private donor, a DAF adviser or a Jane Street individual by probabilistic matching; record a search failure reproducibly (exact term, endpoint, filters, result count, UTC) rather than omitting it; do not use posts by @kevinnbass as sources, they may only point to a source located independently; where a live URL is dead use Wayback (web.archive.org/web/2024*/<url>, raw with id_) or the r.jina.ai proxy and say so in note; save every primary document relied on under research/primary/<lane>/ with the UTC fetch time in the filename; put a header comment in the CSV giving fetch window, routes used, caps hit and no_kevinnbass_sources; before adding a fact read research/STATE.md so nothing already held is recollected; write only the named output file and the named primary directory.",
+  "source_class_na": {
+    "C01": {
+      "state registries": "no element of C01 names this class (MD52 D01, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "SEC": "no element of C01 names this class (MD52 D02, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C01 names this class (MD52 D03, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C01 names this class (MD52 D04, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "self-statements": "no element of C01 names this class (MD52 D05, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "project documents": "no element of C01 names this class (MD52 D06, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C01 names this class (MD52 D07, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C02": {
+      "SEC": "no element of C02 names this class (MD52 D08, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C02 names this class (MD52 D09, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C02 names this class (MD52 D10, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "self-statements": "no element of C02 names this class (MD52 D11, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "project documents": "no element of C02 names this class (MD52 D12, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "press": "no element of C02 names this class (MD52 D13, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C02 names this class (MD52 D14, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C03": {
+      "state registries": "no element of C03 names this class (MD52 D15, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "SEC": "no element of C03 names this class (MD52 D16, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C03 names this class (MD52 D17, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C03 names this class (MD52 D18, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C03 names this class (MD52 D19, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "self-statements": "no element of C03 names this class (MD52 D20, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "press": "no element of C03 names this class (MD52 D21, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C03 names this class (MD52 D22, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C04": {
+      "recipient filings": "no element of C04 names this class (MD52 D23, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "funder filings": "no element of C04 names this class (MD52 D24, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "DAF sponsor filings": "no element of C04 names this class (MD52 D25, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "IRS TEOS and e-file index": "no element of C04 names this class (MD52 D26, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "state registries": "no element of C04 names this class (MD52 D27, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "SEC": "no element of C04 names this class (MD52 D28, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C04 names this class (MD52 D29, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C04 names this class (MD52 D30, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C04 names this class (MD52 D31, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "press": "no element of C04 names this class (MD52 D32, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C04 names this class (MD52 D33, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C05": {
+      "recipient filings": "no element of C05 names this class (MD52 D34, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "DAF sponsor filings": "no element of C05 names this class (MD52 D35, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "IRS TEOS and e-file index": "no element of C05 names this class (MD52 D36, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C05 names this class (MD52 D37, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C05 names this class (MD52 D38, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "project documents": "no element of C05 names this class (MD52 D39, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "archives": "no element of C05 names this class (MD52 D40, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "press": "no element of C05 names this class (MD52 D41, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C05 names this class (MD52 D42, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C06": {
+      "IRS TEOS and e-file index": "no element of C06 names this class (MD52 D43, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "state registries": "no element of C06 names this class (MD52 D44, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "SEC": "no element of C06 names this class (MD52 D45, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C06 names this class (MD52 D46, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C06 names this class (MD52 D47, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "self-statements": "no element of C06 names this class (MD52 D48, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "project documents": "no element of C06 names this class (MD52 D49, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "archives": "no element of C06 names this class (MD52 D50, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C07": {
+      "court dockets": "no element of C07 names this class (MD52 D51, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C07 names this class (MD52 D52, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C07 names this class (MD52 D53, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "issuer statements": "no element of C07 names this class (MD52 D54, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "project documents": "no element of C07 names this class (MD52 D55, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C08": {
+      "funder filings": "no element of C08 names this class (MD52 D56, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "DAF sponsor filings": "no element of C08 names this class (MD52 D57, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "IRS TEOS and e-file index": "no element of C08 names this class (MD52 D58, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "state registries": "no element of C08 names this class (MD52 D59, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "SEC": "no element of C08 names this class (MD52 D60, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C08 names this class (MD52 D61, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C08 names this class (MD52 D62, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C08 names this class (MD52 D63, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "press": "no element of C08 names this class (MD52 D64, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C08 names this class (MD52 D65, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C09": {
+      "recipient filings": "no element of C09 names this class (MD52 D66, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "DAF sponsor filings": "no element of C09 names this class (MD52 D67, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "IRS TEOS and e-file index": "no element of C09 names this class (MD52 D68, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "state registries": "no element of C09 names this class (MD52 D69, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "SEC": "no element of C09 names this class (MD52 D70, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C09 names this class (MD52 D71, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C09 names this class (MD52 D72, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C09 names this class (MD52 D73, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "self-statements": "no element of C09 names this class (MD52 D74, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "project documents": "no element of C09 names this class (MD52 D75, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "press": "no element of C09 names this class (MD52 D76, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C09 names this class (MD52 D77, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    },
+    "C10": {
+      "recipient filings": "no element of C10 names this class (MD52 D78, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "funder filings": "no element of C10 names this class (MD52 D79, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "DAF sponsor filings": "no element of C10 names this class (MD52 D80, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "IRS TEOS and e-file index": "no element of C10 names this class (MD52 D81, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "state registries": "no element of C10 names this class (MD52 D82, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "SEC": "no element of C10 names this class (MD52 D83, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "court dockets": "no element of C10 names this class (MD52 D84, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "public grant databases": "no element of C10 names this class (MD52 D85, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "procurement records": "no element of C10 names this class (MD52 D86, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "project documents": "no element of C10 names this class (MD52 D87, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "press": "no element of C10 names this class (MD52 D88, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+      "statutory records requests": "no element of C10 names this class (MD52 D89, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+    }
+  },
+  "source_classes": [
+    "recipient filings",
+    "funder filings",
+    "DAF sponsor filings",
+    "IRS TEOS and e-file index",
+    "state registries",
+    "SEC",
+    "court dockets",
+    "public grant databases",
+    "procurement records",
+    "issuer statements",
+    "self-statements",
+    "project documents",
+    "archives",
+    "press",
+    "statutory records requests"
+  ],
+  "tables": {
+    "MDE": {
+      "file": "research/entities.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    },
+    "MDF": {
+      "file": "research/funding_events.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    },
+    "MDI": {
+      "file": "research/in_kind_access.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    },
+    "MDP": {
+      "file": "research/provenance.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    },
+    "MDQ": {
+      "file": "research/project_coi.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    },
+    "MDR": {
+      "file": "research/relationships.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    },
+    "MDS": {
+      "file": "research/source_coverage.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    },
+    "MDT": {
+      "file": "research/timeline.csv",
+      "id_widths": [
+        3,
+        4
+      ],
+      "required": false,
+      "required_columns": [
+        "row_id",
+        "url",
+        "quote_300",
+        "source_class",
+        "checked_utc",
+        "review_verdict",
+        "lane",
+        "note"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<!-- casework-review lane=research/grok-out/MD44-public-record-requests.csv -->
+
+# Review of MD44 — public record requests
+
+Reviewing agent: Claude (parent session), 2026-09-16. Lane CSV sha256 4c4d3040107aae4dbbc15b2f5315a78fa08e4805a3a1754b174076ae88a0f51f; goal state complete. Checked against the lane's saved GOV.UK, NIST, Commission and legislation pages, the TED XML, the Contracts Finder JSON, the NIST consortium and CAISI pages, and the three draft files themselves (read in full). Nothing was sent, filed, emailed or posted; research/records/REQUESTS.jsonl was not written by the lane; the three drafts (UK DSIT FOIA 2000, US NIST FOIA, Commission EASE) are unsent with approved_for_send false and ask only for copies of existing records naming METR. Reviewer flag carried on C01-C03: each draft's disclaimer sentence names the ~$71M total and must be deleted before any draft is put to Kevin. Statutory clocks are route facts (context); re-checks of already promoted MD19/MD20/MD21 facts are context.
+
+| row | verdict | target_prefix | element_ids | primary_values | strength | role | supersedes | note |
+|---|---|---|---|---|---|---|---|---|
+| A01 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | statutory response clock for a records route (quote verified against the saved official text); route fact, not award evidence; nothing sent |
+| A02 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | statutory response clock for a records route (quote verified against the saved official text); route fact, not award evidence; nothing sent |
+| A03 | CONFIRMED | MDE | C06.E3 | {} | supporting | context |  | holding public authority for the unpublished-instrument element; entity row, context |
+| A04 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | route page (publication scheme / EASE portal); nothing filed; context |
+| A05 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | statutory response clock for a records route (quote verified against the saved official text); route fact, not award evidence; nothing sent |
+| A06 | CONFIRMED | MDE | C06.E3 | {} | supporting | context |  | holding public authority for the unpublished-instrument element; entity row, context |
+| A07 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | statutory response clock for a records route (quote verified against the saved official text); route fact, not award evidence; nothing sent |
+| A08 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | route page (publication scheme / EASE portal); nothing filed; context |
+| B01 | CONFIRMED | MDF | C06.E3 | {} | supporting | context |  | live re-check of TED 864574-2025 LOT-0003 (EUR 1,167,484 lot total, METR share undisclosed) already promoted from MD20; context, not a second funding event |
+| B02 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | re-check of Contracts Finder 4113c27b awards=[] already promoted from MD19; context |
+| B03 | CONFIRMED | MDR | C06.E3 | {} | supporting | context |  | re-check of the NIST AI Consortium member list already promoted from MD21; context |
+| B04 | CONFIRMED | MDP | C06.E3 | {} | supporting | negative |  | NIST join page: general CRADA requirement only; the executed METR instrument is not published there; bounded |
+| B05 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | NIST sample CRADA is a template; bounded negative for the executed instrument |
+| B06 | CONFIRMED | MDI | C06.E3 | {} | supporting | context |  | re-check of the CAISI March 2026 slide already promoted from MD21 (CRADAs and DTAs; access to private benchmarks; no amount); context |
+| B07 | CONFIRMED | MDP | C06.E3 | {} | supporting | evidence |  | metr.org/about: 'a small part of our income is from a technical assistance contract with the European AI Office' - issuer statement of the contract class with no amount; supports the not-disclosed state of METR's share |
+| B08 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | bounded negative on a named public log/page for a METR production or awardee line; blind spots stated |
+| B09 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | bounded negative on a named public log/page for a METR production or awardee line; blind spots stated |
+| B10 | CONFIRMED | MDS | C06.E3 | {} | supporting | context |  | OpenMined CRADA news is a different legal entity; context |
+| B11 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | bounded negative on a named public log/page for a METR production or awardee line; blind spots stated |
+| C01 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | unsent UK FOIA draft (approved_for_send false; USER_AUTHORITY_WAIT); asks only for copies of existing records naming METR; does not ask for the ~$71M composition; draft text read by the reviewer Reviewer flag: each draft contains a disclaimer sentence that names 'METR's approximately $71 million commitment total'; it asks nothing, but a records custodian has no need to hear the figure, so the sentence is to be deleted before any draft is put to Kevin for approval (drafts remain unsent; Kevin approves exact text). |
+| C02 | DIFFERS | MDP | C06.E3 | {"target_prefix": "MDP"} | supporting | context |  | unsent US FOIA draft; retargeted from MDI to MDP (a draft is a proposition/record, not an in-kind row); approved_for_send false; asks only for executed CRADA/DTA copies Reviewer flag: each draft contains a disclaimer sentence that names 'METR's approximately $71 million commitment total'; it asks nothing, but a records custodian has no need to hear the figure, so the sentence is to be deleted before any draft is put to Kevin for approval (drafts remain unsent; Kevin approves exact text). |
+| C03 | DIFFERS | MDP | C06.E3 | {"money_type": "", "ledger": "", "amount_usd": ""} | supporting | context |  | unsent Commission access-to-documents draft; retargeted from MDF to MDP with money_type cleared (a draft is not a funding event); asks only for the signed contract and any existing share annex; EUR not converted Reviewer flag: each draft contains a disclaimer sentence that names 'METR's approximately $71 million commitment total'; it asks nothing, but a records custodian has no need to hear the figure, so the sentence is to be deleted before any draft is put to Kevin for approval (drafts remain unsent; Kevin approves exact text). |
+| D01 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | journal state: draft unsent, approved_for_send false, USER_AUTHORITY_WAIT; to be registered in research/records/REQUESTS.jsonl at S4 promotion |
+| D02 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | journal state: draft unsent, approved_for_send false, USER_AUTHORITY_WAIT; to be registered in research/records/REQUESTS.jsonl at S4 promotion |
+| D03 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | journal state: draft unsent, approved_for_send false, USER_AUTHORITY_WAIT; to be registered in research/records/REQUESTS.jsonl at S4 promotion |
+| E01 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | class-level bounded negative with blind spots stated; nothing filed |
+| E02 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | class-level bounded negative with blind spots stated; nothing filed |
+| E03 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | class-level bounded negative with blind spots stated; nothing filed |
+| E04 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | class-level bounded negative with blind spots stated; nothing filed |
+| E05 | CONFIRMED | MDS | C06.E3 | {} | supporting | context |  | route failure (403/CAPTCHA, JS shell) recorded reproducibly; context, not a negative |
+| E06 | CONFIRMED | MDS | C06.E3 | {} | supporting | context |  | route failure (403/CAPTCHA, JS shell) recorded reproducibly; context, not a negative |

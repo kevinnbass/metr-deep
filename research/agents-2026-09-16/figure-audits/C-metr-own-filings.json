@@ -1,0 +1,1355 @@
+{
+ "audit": {
+  "id": "C-metr-own-filings",
+  "subject": "METR (Model Evaluation and Threat Research, Inc., EIN 99-1219864): what METR itself has filed or stated about its own money",
+  "pack": "/mnt/f/projects/anthropic/metr_deep (read-only)",
+  "generated_utc": "2026-09-16",
+  "tables_read": [
+   "research/funding_events.csv",
+   "research/provenance.csv",
+   "research/source_coverage.csv",
+   "research/timeline.csv",
+   "research/entities.csv",
+   "research/project_coi.csv",
+   "research/in_kind_access.csv",
+   "research/commitment_reconciliation.csv"
+  ],
+  "rows_loaded": 4341,
+  "rows_skipped_superseded": 30,
+  "primary_verified": "research/primary/MD01-metr-recipient-baseline/metr-fy2024-990-202523209349300367-20260916T053316Z.xml (SHA-256 recomputed = 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9; every leaf field read)",
+  "rules": "money types never summed across type; a commitment is not revenue; no motive language; seed lane S0-seed-import = baseline (context), MDnn lanes = investigation additions"
+ },
+ "fy2024_return": {
+  "lines": [
+   {
+    "line": "Fiscal period (ReturnHeader TaxPeriodBeginDt / TaxPeriodEndDt; TaxYr)",
+    "amount": "2024-05-01 to 2024-12-31; TaxYr 2024; InitialReturnInd=X; FormationYr=2024; LegalDomicileStateCd=DE; Schedule A Part VI: \"TAX YEAR 2024 IS A SHORT YEAR AS IT IS THE ORGANIZATION'S INITIAL YEAR OF ACIVITY.\" (sic); Schedule O Part III line 2: \"FIRST FORM 990 SUBMITTED AS AN ORGANIZATION WILL BE FOR THIS YEAR (2024).\"",
+    "row_id": "MDF0410; MDP0277; MDS1112",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "An 8-month initial short year, not a calendar year. Only METR return in index_2024/2025/2026 (MDP0277). Do not annualise."
+   },
+   {
+    "line": "Return timestamps and signers (ReturnHeader)",
+    "amount": "ReturnTs 2025-11-16T12:01:28-06:00; SignatureDt 2025-11-14; PreparationDt 2025-11-14; signing officer BHASKAR CHATURVEDI, SECRETARY; preparer ABBOTT STRINGHAM & LYNCH (EIN 770051130), preparer person SHEBA B DALANEY; PrincipalOfficerNm ELIZABETH BARNES; books in care of GRAPHITE FINANCIAL GROUP LLC, New York",
+    "row_id": "MDE0089; MDF0410 (note)",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "Signer is in ReturnHeader, not Part VII (MDE0089). Filed roughly 10.5 months after period end."
+   },
+   {
+    "line": "Part I line 6 / Part V EmployeeCnt — employees",
+    "amount": "TotalEmployeeCnt 38; EmployeeCnt 38; TotalVolunteersCnt 3; IRPDocumentCnt 24; IndivRcvdGreaterThan100KCnt 18",
+    "row_id": "MDE0038; MDE0039",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "Calendar-2024 W-2 count as filed; Schedule F TotalEmployeeCnt 63 is a different measure (employees/contractors in activities outside the US) and is not added (MDE0038 limitation)."
+   },
+   {
+    "line": "GrossReceiptsAmt",
+    "amount": "13,639,155",
+    "row_id": "MDF0410 (quantity_or_value); MDF0146 (quantity_or_value)",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "Equals CYTotalRevenueAmt on this return."
+   },
+   {
+    "line": "Part I line 8 / Part VIII line 1h — CYContributionsGrantsAmt / TotalContributionsAmt",
+    "amount": "13,603,035",
+    "row_id": "MDF0146 and MDF0410 (quantity_or_value only); MDS0588 and MDS0587 (quote_300); MDP0619; MDS1026 (Schedule A PublicSupportTotal170Amt 13,603,035)",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row; no standalone MDF row carries 13,603,035 as amount_usd (table gap, see cautions)",
+    "note": "Arithmetic check in this audit: RelatedOrganizationsAmt 4,501,424 + AllOtherContributionsAmt 9,101,611 = 13,603,035 exactly. Contributions + investment income 36,120 = total revenue 13,639,155 exactly."
+   },
+   {
+    "line": "Part VIII line 1d — RelatedOrganizationsAmt (contribution from related organization)",
+    "amount": "4,501,424 (from Alignment Research Center, EIN 86-3605182; Schedule R Part V transaction type C, InvolvedAmt 4,501,424, MethodOfAmountDeterminationTxt FAIR MARKET VALUE)",
+    "row_id": "MDF0034 (verdict DIFFERS); MDP0032 (recon excluded; verdict DIFFERS); MDF0497; MDS0587; MDP0587; MDS1617",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row; pack rows MDF0034 and MDP0032 carry review_verdict DIFFERS (field-level lane/review differences recorded in their notes; the amount itself is confirmed against the XML here)",
+    "note": "Typed transfer (program spin-off). ARC-side Schedule I shows CashGrantAmt 4,477,169 (MDF0064) + NonCashAssistanceAmt 76,766 computers (MDF0065), DistributionDt 2024-04-30; these are different filed figures for the same spin-off, never two payments (MDP0587). Seed MDF0007 sums cash+non-cash to 4,553,935 and is context only. MDF0064 note says the METR-side/ARC-side cash difference is \"$47,511\"; 4,501,424 minus 4,477,169 is 24,255 (note arithmetic defect, do not quote)."
+   },
+   {
+    "line": "Part VIII line 1f — AllOtherContributionsAmt (\"all other contributions\", unnamed on the public return)",
+    "amount": "9,101,611",
+    "row_id": "MDF0411 (supersedes MDF0035); MDF0498; MDF0874; MDS0588; MDS0432",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "No payer names on the public return; Schedule B is RESTRICTED. A lab, Canary/Audacious money, or any named supporter could sit inside it without being identifiable (MDS0588, MDS0432 limitations). Not attributed."
+   },
+   {
+    "line": "Part VIII line 1e — GovernmentGrantsAmt",
+    "amount": "element absent from the XML (not reported); the pack reads this as no government-grant revenue on this return",
+    "row_id": "MDS0589",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary XML: absence of the element verified in this audit",
+    "note": "The brief lists this line as 0; the filed return has no GovernmentGrantsAmt element at all. State \"not reported / no element\", not a filed zero. Contracts booked after 2024-12-31 (EU AI Office 2025-12-15; UK AISI) would not appear here (MDS0589 limitation)."
+   },
+   {
+    "line": "Part VIII line 2g / Part I line 9 — CYProgramServiceRevenueAmt",
+    "amount": "0 (TotalRevenueGrp RelatedOrExemptFuncIncomeAmt 0; UnrelatedBusinessRevenueAmt 0)",
+    "row_id": "MDS0589; MDF0410 (quantity_or_value CYOtherRevenueAmt=0)",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "Filed zero. No lab-contract or evaluation-fee revenue line on this return."
+   },
+   {
+    "line": "Part VIII line 3 — CYInvestmentIncomeAmt",
+    "amount": "36,120 (InvestmentIncomeGrp TotalRevenueColumnAmt 36,120; ExclusionAmt 36,120)",
+    "row_id": "MDF0410 (quantity_or_value); MDS0587 / MDS0588 (quote_300)",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary XML only: value re-read from the pack primary in this audit; no MDF/MDI/MDE row binds this line as its amount (it appears, if at all, inside a note, limitation or quantity_or_value field of the row named)",
+    "note": "Small interest line; only bound inside other rows."
+   },
+   {
+    "line": "Part VIII line 11e / Part I line 11 — CYOtherRevenueAmt",
+    "amount": "0",
+    "row_id": "MDF0410 (quantity_or_value)",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary XML only: value re-read from the pack primary in this audit; no MDF/MDI/MDE row binds this line as its amount (it appears, if at all, inside a note, limitation or quantity_or_value field of the row named)",
+    "note": ""
+   },
+   {
+    "line": "Part I line 12 / Part VIII line 12 — CYTotalRevenueAmt (total revenue)",
+    "amount": "13,639,155",
+    "row_id": "MDF0146 (MD25 B01); MDF0410 (MD01-xhigh, supersedes MDF0031); MDP0031 (recon excluded); MDF0494, MDF0609, MDF0873 (audit rows); MDP0497; MDP0639",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row; ProPublica org page restates Revenue $13,639,155 (MDP0031, SHA-256 cab41da1…)",
+    "note": "money_type left empty on MDF0146/MDF0410: filed recipient-side revenue is not a grant and not a commitment. Excluded from the ~$71M test for period and type (MDP0031)."
+   },
+   {
+    "line": "Part I line 18 / Part IX line 25 — CYTotalExpensesAmt (total expenses)",
+    "amount": "8,234,524 (functional split: program services 6,924,735; management and general 1,144,255; fundraising 165,534)",
+    "row_id": "MDF0147 (verdict DIFFERS); MDF0610 (audit row)",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row; ProPublica restates Expenses $8,234,524",
+    "note": "Components as filed: CYSalariesCompEmpBnftPaidAmt 4,505,180; CYOtherExpensesAmt 3,729,344; CYGrantsAndSimilarPaidAmt 0; CYTotalProfFndrsngExpnsAmt 0. 8-month period; not a run-rate (MDF0147 limitation)."
+   },
+   {
+    "line": "Part IX selected lines (as filed)",
+    "amount": "Compensation of current officers/directors 1,118,235; other salaries and wages 2,962,402; other employee benefits 119,825; payroll taxes 304,718; information technology 1,127,374; occupancy 429,410; legal fees 191,234; other fees for services 198,593; management fees 123,859; accounting 25,317; travel 42,061; other expenses: \"DATA & RESEARCH CONTRAC\" 1,103,985, \"AWARDS\" 204,427, \"RECRUITMENT\" 184,544, \"EXCHANGE LOSS\" 204; depreciation 32,428; insurance 28,410; office 33,464; conferences 4,034",
+    "row_id": "(none; MDF0147 quantity_or_value carries only the salary line 4,505,180)",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary XML only: value re-read from the pack primary in this audit; no MDF/MDI/MDE row binds this line as its amount (it appears, if at all, inside a note, limitation or quantity_or_value field of the row named)",
+    "note": "Read from the XML in this audit for completeness; not bound to any promoted row. A figure using these must cite the primary file directly."
+   },
+   {
+    "line": "Part I line 19 — CYRevenuesLessExpensesAmt",
+    "amount": "5,404,631",
+    "row_id": "MDF0147 (quantity_or_value); ReconcilationRevenueExpnssAmt 5,404,631",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "13,639,155 minus 8,234,524 = 5,404,631 exactly (checked in this audit). OtherChangesInNetAssetsAmt 0."
+   },
+   {
+    "line": "Part I line 22 / Part X line 32 — NetAssetsOrFundBalancesEOYAmt (net assets, end of year)",
+    "amount": "5,404,631 (BOY 0); TotalAssetsEOYAmt 6,544,206; TotalLiabilitiesEOYAmt 1,139,575 (all AccountsPayableAccrExpnss); cash non-interest-bearing 854,773; savings and temporary cash investments 5,225,268; accounts receivable 325,984; prepaid 8,763; equipment net 44,338; other assets 85,080",
+    "row_id": "MDF0032; MDF0495 (audit row); MDF0147 (quantity_or_value)",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "First-year balance sheet; BOY columns are 0 because the organisation was formed in 2024."
+   },
+   {
+    "line": "Part X lines 27-29 — restricted-fund / donor-restriction lines",
+    "amount": "OrgDoesNotFollowFASB117Ind=X (fund-accounting presentation); DonorRstrOrQuasiEndowmentsInd=0; RtnEarnEndowmentIncmOthFndsGrp EOYAmt 5,404,631 (BOY 0); CapStkTrPrinCurrentFundsGrp 0; PdInCapSrplsLandBldgEqpFundGrp 0; NoDonorRestrictionsNetAssetsGrp and DonorRestrictionNetAssetsGrp absent",
+    "row_id": "MDP0150 (verdict DIFFERS); MDF0032",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "The return does not report a with-donor-restriction split, so it neither shows nor denies restricted funds (MDP0150 limitation). Do not draw a \"restricted vs unrestricted\" bar from this return."
+   },
+   {
+    "line": "Schedule B (Schedule of Contributors) — public copy",
+    "amount": "ScheduleBRequiredInd=1; the public e-file carries ContributorInformationGrp fields ContributorNum, BusinessNameLine1, AddressLine1/2, City, State, ZIPCode and TotalContributionsAmt all equal to the literal token RESTRICTED; DonorAdvisedFundInd=0",
+    "row_id": "MDS0011; MDS0094; MDS0586; MDS0769; MDS0238; MDS0270; MDS0415; MDS0895; MDP0606",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "IRC 6104(d) public-inspection copy of a public charity redacts contributor identity and amount (MDS0011 limitation). This is the legal public record, not a donor list. Redaction is not evidence of any particular donor."
+   },
+   {
+    "line": "Schedule A (public charity status and support)",
+    "amount": "PublicOrganization170Ind=X; First5Years170Ind=X; GiftsGrantsContriRcvd170Grp CurrentTaxYearAmt 13,603,035; PublicSupportTotal170Amt 13,603,035; GrossInvestmentIncome170Grp 36,120; TotalSupportAmt 13,639,155; no named substantial contributors",
+    "row_id": "MDS1026",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "Same-year aggregates as Part VIII; not a second payer list."
+   },
+   {
+    "line": "Schedule D Parts XI-XII — reconciliation to audited financial statements (in-kind line)",
+    "amount": "TotalRevEtcAuditedFinclStmtAmt 14,080,505; DonatedServicesAndUseFcltsAmt 441,350; RevenueNotReportedAmt 441,350; TotalRevenuePerForm990Amt 13,639,155; TotExpnsEtcAuditedFinclStmtAmt 8,675,875; DonatedServicesUseFcltsAmt 441,350; OtherExpensesIncludedAmt 1 (\"ROUNDING 1.\"); ExpensesNotReportedAmt 441,351; TotalExpensesPerForm990Amt 8,234,524; FSAuditedInd=1; IndependentAuditFinclStmtInd=1; SeparateBasisFinclStmtInd=X; AuditCommitteeInd=1; MethodOfAccountingAccrualInd=X; binaryAttachmentCnt=\"0\"",
+    "row_id": "MDS0112 (note); MDF0032 (note); MDP0273 (Schedule O: audit committee formed in 2025)",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "strength": "primary XML only: value re-read from the pack primary in this audit; no MDF/MDI/MDE row binds this line as its amount (it appears, if at all, inside a note, limitation or quantity_or_value field of the row named) — the 441,350 donated-services figure sits only in the note of MDS0112 and in no in_kind_access row",
+    "note": "METR's own return reports $441,350 of donated services and use of facilities recognised in its audited FY2024 statements and excluded from the 990. This is the only METR-filed in-kind dollar figure in the pack corpus; it is not in research/in_kind_access.csv. Audited statements exist but are not attached (binaryAttachmentCnt=0); Schedule O says financial statements are available on request (not requested by the pack)."
+   },
+   {
+    "line": "Schedule R (related organizations and transactions)",
+    "amount": "IdRelatedTaxExemptOrgGrp: ALIGNMENT RESEARCH CENTER, EIN 863605182, 440 N BARRANCA AVE 9807 COVINA CA 91723 (METR files from 440 N BARRANCA AVE 3345, same street, different suite), PrimaryActivitiesTxt MACHINE LEARNING, 501(C)3, PublicCharityStatusTxt LINE 7, ControlledOrganizationInd=0. Part V indicators: GiftGrntCapContriFromOthOrgInd=1; LoansOrGuaranteesToOtherOrgInd=1; LoansOrGuaranteesFromOthOrgInd=1; all other transaction indicators 0. Transactions with ARC: type C (gift/grant/contribution from) 4,501,424; type E (loans or loan guarantees by related org) 490,182; type D (loans or loan guarantees to/for related org) 325,431; all FAIR MARKET VALUE",
+    "row_id": "MDF0034 (limitation names D 325,431 and E 490,182); MDE0132; MDS0587",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row for 4,501,424; primary XML only: value re-read from the pack primary in this audit; no MDF/MDI/MDE row binds this line as its amount (it appears, if at all, inside a note, limitation or quantity_or_value field of the row named) for the two loan-type lines",
+    "note": "Two loan-type lines (490,182 and 325,431) are not grants and are not bound as MDF rows. ARC is a separate legal entity, unmerged throughout the pack. RelatedEntityInd=1 on Part IV."
+   },
+   {
+    "line": "Schedule I (grants paid)",
+    "amount": "absent — schedules present on this return: A, B, D, F, J, O, R; GrantsToOrganizationsInd=0; GrantsToIndividualsInd=0; CYGrantsAndSimilarPaidAmt 0",
+    "row_id": "MDS1112",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "METR made no reportable grants in FY2024."
+   },
+   {
+    "line": "Schedule F (activities outside the US)",
+    "amount": "6 regions; TotalEmployeeCnt 63 (employees/contractors abroad); TotalOfficeCnt 0; TotalSpentAmt 396,556 (largest: Europe 324,366 with 45 employees/contractors, \"REMOTE EMPLOYEE AND CONTRACTOR SERVICES / RESEARCH, DATA, AND OPERATIONS TASKS\"); ForeignOfficeInd=1; ForeignActivitiesInd=1",
+    "row_id": "MDE0038 (limitation mentions the 63)",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary XML only: value re-read from the pack primary in this audit; no MDF/MDI/MDE row binds this line as its amount (it appears, if at all, inside a note, limitation or quantity_or_value field of the row named)",
+    "note": "Not a funding line; recorded because the brief asked for every line the tables hold and MDE0038 references it."
+   },
+   {
+    "line": "Part VII Section A — officers, directors, key and highest-compensated employees (ReportableCompFromOrgAmt / ReportableCompFromRltdOrgAmt / OtherCompensationAmt)",
+    "amount": "ELIZABETH BARNES, CTO/CEO, director+officer, 40 h/wk: 172,737 / 75,637 / 6,416. EMMA ABELE, CEO/COO, director+officer: 190,395 / 52,375 / 6,849. RAJIV DATTANI, COO AND TREASURER, director+officer: 230,384 / 0 / 630. ADAM GLEAVE, DIRECTOR, 0.50 h/wk: 0 / 0 / 0. KYLE SCOTT, SECRETARY AND TREASURER, officer: 141,577 / 94,127 / 630. Key employees: CHRIS PAINTER, MEMBER OF POLICY STAFF 167,556 / 84,123 / 7,358; BEN WEST, MEMBER OF TECHNICAL STAFF 215,587 / 0 / 5,048. Highest compensated: MAKSYM TARAN 243,560 / 0 / 0; KATHARYN GARCIA 226,183 / 0 / 4,948; TAO LIN 184,335 / 84,127 / 5,993; HANNES HJALMAR WIJK 160,170 / 67,212 / 6,486; HAROLD BROADLEY 144,693 / 0 / 7,674. Totals: TotalReportableCompFromOrgAmt 2,077,177; TotReportableCompRltdOrgAmt 457,601; TotalOtherCompensationAmt 52,032. Independent contractor: QALLY'S, 425 DIVISADERO ST SAN FRANCISCO, RESEARCH CONTRACTOR, 147,200 (CntrctRcvdGreaterThan100KCnt 1)",
+    "row_id": "MDE0084 (Barnes), MDE0085 (Abele), MDE0086 (Dattani), MDE0087 (Gleave), MDE0088 (Scott) — names and titles only; compensation amounts are not bound in any table",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary XML only: value re-read from the pack primary in this audit; no MDF/MDI/MDE row binds this line as its amount (it appears, if at all, inside a note, limitation or quantity_or_value field of the row named); the officer/director names and titles are bound (MDE0084-MDE0088)",
+    "note": "Schedule J: CompensationCommitteeInd, IndependentConsultantInd, Form990OfOtherOrganizationsInd, WrittenEmploymentContractInd, CompensationSurveyInd, BoardOrCommitteeApprovalInd all X; no bonus, deferred, severance, equity-based or revenue-based compensation (all 0). The only related organization identified on Schedule R is Alignment Research Center; the return does not itself label which related organization paid the \"related org\" compensation column. Schedule O line 15: \"THE OPERATIONS TEAM CONTRACTED OUR LAW FIRM TO DO AN INDEPENDENT THIRD-PARTY COMPENSATION SURVEY…\" (MDP0275)."
+   },
+   {
+    "line": "Part VI governance checkboxes and Schedule O text",
+    "amount": "VotingMembersGoverningBodyCnt 3; VotingMembersIndependentCnt 1; ConflictOfInterestPolicyInd=1; AnnualDisclosureCoveredPrsnInd=1; RegularMonitoringEnfrcInd=1; WhistleblowerPolicyInd=1; DocumentRetentionPolicyInd=0; CompensationProcessCEOInd=1; CompensationProcessOtherInd=1; MinutesOfGoverningBodyInd=1; MinutesOfCommitteesInd=0; Form990ProvidedToGvrnBodyInd=1; StatesWhereCopyOfReturnIsFldCd CA; UponRequestInd=X. Schedule O 12C: \"AS PART OF THE BI-ANNUAL REGULAR BOARD MEETINGS, THE BOARD DISCUSSES AND DOCUMENTS ALL POTENTIAL CONFLICTS OF INTEREST AND UPDATES THE COMPANY RECORDS WITH POTE[NTIAL CONFLICTS…]\"; 8B: \"THE AUDIT COMMITTEE FORMED IN 2025 TO REVIEW THE FY2024 AUDIT.\"; 11B: \"THE 990 IS REVIEWED BY THE OPERATIONS TEAM, TREASURER, AND BOARD MEMBERS BEFORE FILING.\"; 19: \"METR GOVERNING DOCUMENTS, CONFLICT OF INTEREST POLICY AND FINANCIAL STATEMENTS ARE MADE AVAILABLE TO THE PUBLIC UPON REQUEST…\"",
+    "row_id": "MDP0272; MDP0674; MDP0675; MDP0231; MDP0269; MDP0270; MDP0271; MDP0273; MDP0274; MDP0275; MDS0663; MDS0789; MDQ0069",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "The Part VI conflict-of-interest checkbox is an organisational/board policy indicator for FY2024; the pack (MDQ0069) records it as \"undetermined / not the same document\" relative to the FRR statement that no applicable personnel CoI policy was in place at project start in Feb 2026. Record as a tension between document kinds, not a contradiction."
+   },
+   {
+    "line": "Mission / activity text",
+    "amount": "\"METR IS ADVANCING SCIENTIFIC METHODS TO ASSESS CATASTROPHIC RISKS FROM AI SYSTEMS' CAPABILITIES AND ENABLE INFORMED AI DEVELOPMENT AND GOVERNANCE.\" ; WebsiteAddressTxt HTTPS://METR.ORG/ ; Organization501c3Ind=X; TypeOfOrganizationCorpInd=X; ExpenseAmt (single program service) 6,924,735",
+    "row_id": "MDE0053; MDS0585",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml",
+    "strength": "primary: IRS e-file XML object 202523209349300367 (SHA-256 84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9), value re-read from the pack primary in this audit and matches the cited row",
+    "note": "Single program-service line covering all program expenses."
+   }
+  ],
+  "period": {
+   "begin": "2024-05-01",
+   "end": "2024-12-31",
+   "tax_year": "2024",
+   "kind": "initial short year (8 months); InitialReturnInd=X; FormationYr=2024",
+   "only_fiscal_year_filed": true,
+   "next_return": "FY2025 (calendar 2025) Form 990 not in IRS index_2026 as of 2026-09-16; due after 2026-11-16 with extension possible (MDP0603, MDS0345, MDS1189); FY2026 return would be the first to overlap the Feb-Aug 2026 commitment window (MDP0062)"
+  },
+  "filing_source": {
+   "locator": "IRS e-file index_2025.csv row: \",EFILE,991219864,202412,2025,MODEL EVALUATION AND THREAT RESEARCH INC,990,93493320003675,202523209349300367,2025_TEOS_XML_11C\" (MDS0115)",
+   "object_id": "202523209349300367",
+   "batch": "2025_TEOS_XML_11C",
+   "dln": "93493320003675",
+   "primary_urls": [
+    "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip",
+    "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523209349300367_public.xml"
+   ],
+   "local_captures": [
+    "research/primary/MD01-metr-recipient-baseline/metr-fy2024-990-202523209349300367-20260916T053316Z.xml",
+    "research/primary/MD01-metr-recipient-baseline/irs-bulk-2025-TEOS-XML-11C-202523209349300367_public-20260916T094907Z.xml",
+    "research/primary/MD01-metr-recipient-baseline/irs-efile-202523209349300367_public-20260916T094907Z.xml"
+   ],
+   "sha256_all_three": "84979ec8023f9e286198370353fab8d8bf01d76befe637ff8c1bf2bd9d20c8d9",
+   "sha256_recomputed_in_this_audit": true,
+   "bytes": 56264,
+   "secondary": [
+    "ProPublica org page https://projects.propublica.org/nonprofits/organizations/991219864 restates Revenue $13,639,155 and Expenses $8,234,524 (MDP0031; MDF0147 note)",
+    "ProPublica API v2: filings_with_data empty, filings_without_data tax_prd 202412 (MDP0262, MDS0748, MDS1029)",
+    "philanthropy.org who-funds: \"Model Evaluation and Threat Research has received $8.7 million across 3 grants from 3 funders. Its largest funder is Alignment Research Center.\" (MDS0057) — third-party aggregation across funder filings (ARC, Vanguard Charitable, Founders Pledge), not a METR statement and not a 990 line"
+   ],
+   "caps": [
+    "IRS TEOS interactive app HTTP 403 from this host (MDS0019, MDS0518, MDS0768, MDS1224, MDP0611)",
+    "standalone per-object IRS XML URL 404 (MDS0122, MDS0803)",
+    "one lane's index_2025.csv download was truncated (195,937 lines, no METR row) and its none-found was withdrawn (MDS0247, verdict DIFFERS); MDS0115 is authoritative"
+   ],
+   "audited_financial_statements": "exist (FSAuditedInd=1; IndependentAuditFinclStmtInd=1) but are not attached to the e-file (binaryAttachmentCnt=0) and were not requested (MDS0112)"
+  }
+ },
+ "statements": [
+  {
+   "date": "2026-08-14",
+   "speaker_or_document": "METR blog, \"Funding update\" (JSON-LD datePublished 2026-08-14T00:00:00-07:00; live SHA-256 ea456b2a…; Wayback 20260827031340)",
+   "quote": "In the last 6 months, METR raised commitments of around $71 million.",
+   "money_type": "commitment",
+   "amount_or_range": "around $71,000,000 (working integer 71000000 inherits \"around\")",
+   "row_id": "MDF0089 (primary re-fetch); MDF0001 (S0 seed, context); MDF0145; MDF0463; MDP0029; MDT0033; MDP0479 (Wayback)",
+   "url": "https://metr.org/blog/2026-08-14-funding-update/",
+   "what_it_does_not_say": "Composition; who committed; per-donor amounts; whether any of it is paid; whether in-kind (tokens/credits) is inside it; the calendar dates of \"the last 6 months\" (derived ≈2026-02-14 to 2026-08-14 by the pack, not stated by METR); whether Audacious/Canary multi-year money is inside it; instrument dates (MDF0089 limitation; MDS1689; MDP0524-MDP0529)."
+  },
+  {
+   "date": "2026-08-14",
+   "speaker_or_document": "METR blog, \"Funding update\" — use-of-funds sentence",
+   "quote": "This will fund ambitious projects: studying autonomous capabilities, tracking recursive self-improvement, evaluating monitoring systems, conducting risk assessments, investigating AI incidents, and more.",
+   "money_type": "commitment (use-of-funds gloss on the same figure)",
+   "amount_or_range": "same ~$71M",
+   "row_id": "MDP0171",
+   "url": "https://metr.org/blog/2026-08-14-funding-update/",
+   "what_it_does_not_say": "Not a funder restriction and not an allocation across projects (MDP0171 limitation)."
+  },
+  {
+   "date": "2026-08-14",
+   "speaker_or_document": "METR blog, \"Funding update\" — independence paragraph",
+   "quote": "We work to maintain our independence from frontier AI companies, especially as our risk assessments become more consequential. We have not accepted funding from these companies, and we do not accept donations made by or at the direction of their staff. However, frontier AI companies currently provide a significant amount of free tokens for our evaluations, research, and engineering.",
+   "money_type": "statement of rule; in-kind (free tokens) unquantified",
+   "amount_or_range": "no amount",
+   "row_id": "MDP0279; MDT0127; MDI0034; MDI0111; MDS0719; MDS0607",
+   "url": "https://metr.org/blog/2026-08-14-funding-update/",
+   "what_it_does_not_say": "Which companies; the dollar value or token volume of free tokens; whether tokens are counted inside the $71M; whether \"funding\" excludes contracts or in-kind; any lab-by-lab or annual total (MDS0719 limitation)."
+  },
+  {
+   "date": "2026-08-14",
+   "speaker_or_document": "METR blog, \"Funding update\" — thank-you paragraph",
+   "quote": "Thank you to everyone who has supported METR over the years: The Audacious Project, through which we received our first institutional-scale funding; individuals from Jane Street; foundations like the Sijbrandij Foundation, The Pew Charitable Trusts, Schmidt Sciences and the Packard Foundation; and many others, including David Farhi, Geoff Ralston, Dylan Field and Steve Newman.",
+   "money_type": "acknowledgment (no money type)",
+   "amount_or_range": "no amounts",
+   "row_id": "MDP0027; MDT0252; MDF0019/MDF0482 (Jane Street); MDF0024/0026/0028/0030 (named individuals); MDP0049; MDP0147; MDS0450",
+   "url": "https://metr.org/blog/2026-08-14-funding-update/",
+   "what_it_does_not_say": "Any amount, date, vehicle, or that any named supporter participated in the six-month raise (\"over the years\" is not a window date; MDP0027 limitation). Does not restate the Audacious/Canary amount or term (MDS0450)."
+  },
+  {
+   "date": "2025-09-28 (postedAt 2025-09-28T20:34:12.755Z)",
+   "speaker_or_document": "Beth Barnes, shortform comment (GreaterWrong render of LessWrong/EA Forum comment w3e6cbHeozQJaJH5c; SHA-256 e31dca3c…)",
+   "quote": "Budget: We run at ~$13m p.a. rn (~$15m for the next year under modest growth assumptions, quite plausibly $17m++ given the increasingly insane ML job market).",
+   "money_type": "run-rate (spend), not an inbound amount; money_type left empty on MDF0465/MDP0059; typed \"commitment\" on seed MDF0002 and recon row MDP0036 (typing defect)",
+   "amount_or_range": "~$13M per year now; ~$15M next year; \"quite plausibly $17m++\"",
+   "row_id": "MDF0465 (supersedes seed MDF0002); MDP0059; MDP0036 (recon excluded); MDP0502; MDF0962; MDF0997",
+   "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c",
+   "what_it_does_not_say": "Fiscal basis of \"p.a.\"; whether the figure is cash or accrual; relation to FY2024 filed expenses ($8,234,524 over 8 months); any inbound amount (MDP0036 limitation: \"A run rate is not an inbound amount\")."
+  },
+  {
+   "date": "2025-09-28",
+   "speaker_or_document": "Beth Barnes, same comment",
+   "quote": "Runway: Depending on spend/growth assumptions, we have between 12 and 16 months of runway.",
+   "money_type": "runway (derived spend coverage); not a funding event",
+   "amount_or_range": "12-16 months as of Sep 2025",
+   "row_id": "MDF0466 (supersedes seed MDF0003); MDP0037 (recon excluded); MDT0034; MDP0503",
+   "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c",
+   "what_it_does_not_say": "Cash balance, committed-but-unpaid balance, or the spend assumptions behind either bound (MDP0037 limitation)."
+  },
+  {
+   "date": "2025-09-28",
+   "speaker_or_document": "Beth Barnes, same comment",
+   "quote": "Audacious funding: This ended up being a bit under $16m, and is a commitment across 3 years.",
+   "money_type": "commitment (restatement of METR's Canary share)",
+   "amount_or_range": "a bit under $16,000,000 over 3 years (start/end not stated)",
+   "row_id": "MDF0169; MDF0004 (S0 seed); MDF0172; MDP0035 (recon excluded); MDP0152; MDP0501; MDF0467/0632/0635 (audit rows)",
+   "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c",
+   "what_it_does_not_say": "Exact amount; start and end dates of the 3 years; how much has been paid; whether the unpaid balance sits inside the 2026 $71M (MDF0169 limitation). Not additive with the 2024-10-09 \"approximately $17 million\"."
+  },
+  {
+   "date": "2025-09-28",
+   "speaker_or_document": "Beth Barnes, same comment",
+   "quote": "The audacious funding was a one-off, and we need to make sure we have a sustainable funding model.",
+   "money_type": "commitment (nature clause; not a payment flag)",
+   "amount_or_range": "n/a",
+   "row_id": "MDP0145",
+   "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c",
+   "what_it_does_not_say": "\"one-off\" is not a paid flag and not a term of years (MDP0145 limitation)."
+  },
+  {
+   "date": "2025-09-28",
+   "speaker_or_document": "Beth Barnes, same comment",
+   "quote": "Our fundraising goal for the end of 2025 is to raise $10M",
+   "money_type": "fundraising goal (not revenue, not a commitment); money_type empty",
+   "amount_or_range": "$10,000,000 target by end-2025",
+   "row_id": "MDP0060 (verdict DIFFERS)",
+   "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c",
+   "what_it_does_not_say": "Whether the goal was met; FY2025 revenue (no FY2025 990 yet)."
+  },
+  {
+   "date": "2024-10-09",
+   "speaker_or_document": "METR blog, \"New support through the Audacious Project\"",
+   "quote": "Approximately $17 million of this will support work at METR.",
+   "money_type": "commitment (METR share of the joint ~$38M Canary commitment)",
+   "amount_or_range": "approximately $17,000,000",
+   "row_id": "MDF0166; MDF0006 (S0 seed); MDP0034 (recon excluded)",
+   "url": "https://metr.org/blog/2024-10-09-new-support-through-the-audacious-project/",
+   "what_it_does_not_say": "Payment schedule; term; funder-of-record (Audacious partners pay recipients; TED itself does not); whether restricted to Canary (purpose stated as Canary). Superseded in amount by the 2025-09-28 \"bit under $16m\" restatement; show both with dates (MDF0006 quote instruction)."
+  },
+  {
+   "date": "2024-10-09",
+   "speaker_or_document": "RAND press release (joint with METR)",
+   "quote": "The Audacious Project, a collaborative funding initiative housed at TED, has committed approximately $38 million to RAND and METR for Canary, a new research collaboration designed to help make future AI systems safer.",
+   "money_type": "commitment (joint project; not METR-only)",
+   "amount_or_range": "approximately $38,000,000 to RAND and METR jointly",
+   "row_id": "MDF0165; MDF0173; MDF0005 (S0 seed); MDP0033 (recon excluded); MDP0586",
+   "url": "https://www.rand.org/news/press/2024/10/09.html",
+   "what_it_does_not_say": "METR-only share (stated separately as ~$17M); payments (the two filed Audacious-partner payments found, Valhalla $10,000,000 and High Tide $333,334, went to RAND, MDP0046/MDP0047). Live rand.org HTTP 403; quote via r.jina.ai / Wayback (MDP0586 limitation)."
+  },
+  {
+   "date": "2024 (report for calendar 2024; PDF SHA-256 e7f0c272…, 10,749,402 bytes)",
+   "speaker_or_document": "METR 2024 Annual Report (PDF)",
+   "quote": "METR achieved this and more on a total 2024 budget of $10 million.",
+   "money_type": "budget statement (issuer); money_type empty (not in vocabulary)",
+   "amount_or_range": "$10,000,000 calendar-2024 budget",
+   "row_id": "MDP0057 (verdict DIFFERS); MDS1025",
+   "url": "https://metr.org/2024-annual-report.pdf",
+   "what_it_does_not_say": "Actual spend; fiscal basis; reconciliation to the FY2024 990 (8-month period, expenses $8,234,524; audited-statement expenses $8,675,875). It is not a Form 990, not an audited statement, and names no net assets (MDS1025). The PDF is robots-disallowed but live HTTP 200."
+  },
+  {
+   "date": "2024 (same PDF)",
+   "speaker_or_document": "METR 2024 Annual Report (PDF)",
+   "quote": "In 2025, we seek to raise and deploy $15 million, and intend to achieve even more than in 2024.",
+   "money_type": "fundraising/deployment target (issuer); money_type empty",
+   "amount_or_range": "$15,000,000 target for 2025",
+   "row_id": "MDP0058 (verdict DIFFERS)",
+   "url": "https://metr.org/2024-annual-report.pdf",
+   "what_it_does_not_say": "Whether met; FY2025 filed revenue. Two sentences in one document are not two budgets to add (MDP0058 note). No 2025 annual report exists at /2025-annual-report.pdf (HTTP 404, MDS0348)."
+  },
+  {
+   "date": "live 2026-09-16 (first funding section 2025-07-14 capture)",
+   "speaker_or_document": "metr.org/about — funding paragraph",
+   "quote": "METR is funded by donations. We are grateful to METR's many supporters: from METR's first institutional-scale funding through The Audacious Project (a funding initiative housed at TED); to individuals from Jane Street; foundations such as the Sijbrandij Foundation, The Pew Charitable Trusts, Schmidt Sciences, the Packard Foundation, LaCentra-Sumerlin Foundation, Astralis Foundation and Expa.org",
+   "money_type": "acknowledgment list (no money type)",
+   "amount_or_range": "no amounts",
+   "row_id": "MDF0018 (verdict DIFFERS); MDP0028 (verdict DIFFERS); MDP0004; MDP0054 (recon excluded); MDP0048 (recon excluded); MDT0061; MDT0306; MDP0717",
+   "url": "https://metr.org/about",
+   "what_it_does_not_say": "Amounts, dates, vehicles, or whether any listed supporter is inside the $71M (MDP0028). Wording changed from \"Our largest funding to date was through The Audacious Project\" (2025-07-14 through capture 2026-07-19T23:27:59Z, MDT0306/MDT0411) to \"first institutional-scale funding\" (first capture 2026-08-04T07:49:10Z, MDT0412), i.e. before the 2026-08-14 post."
+  },
+  {
+   "date": "live 2026-09-16 (rule first captured 2025-07-14; \"free compute credits\" → \"significant free compute credits\" by 2026-07-19 → \"significant free tokens\" by 2026-08-04)",
+   "speaker_or_document": "metr.org/about — AI-company funding rule and in-kind sentence",
+   "quote": "METR has not accepted funding from AI companies, though we make use of significant free tokens, which we use for evaluations, research, and engineering, as noted above. Independent funding has been crucial for our ability to pursue the most promising research directions and set standards for evidence-based understanding of risks from AI.",
+   "money_type": "statement of rule; in-kind unquantified",
+   "amount_or_range": "no amount",
+   "row_id": "MDP0230; MDI0001 (S0 seed); MDP0238; MDT0065; MDT0130; MDT0116; MDT0411/MDT0412",
+   "url": "https://metr.org/about",
+   "what_it_does_not_say": "Which companies, how many tokens, dollar value, whether contracts (EU AI Office, UK AISI) count as \"funding\", whether tokens are inside any total. Earlier 2025-07-14 wording: \"…though we make use of free compute credits, as noted above. Being independently funded has been crucial…\" (MDT0065)."
+  },
+  {
+   "date": "live 2026-09-16 (parenthesis first captured 2026-07-19T17:12:36Z on /about; \"Note:\" prefix by 2026-08-04)",
+   "speaker_or_document": "metr.org/about — employee-directed donation rule",
+   "quote": "(Note: METR cannot accept donations made by or at the direction of frontier AI company employees.)",
+   "money_type": "statement of rule",
+   "amount_or_range": "n/a",
+   "row_id": "MDT0016; MDT0125; MDT0071; MDT0131; MDT0114; MDT0115; MDT0002/MDT0003 (S0 seed)",
+   "url": "https://metr.org/about",
+   "what_it_does_not_say": "Any past instance, any amount declined, or a definition of \"at the direction of\". Page-appearance dates are not gift dates."
+  },
+  {
+   "date": "live 2026-09-16 (sentence first captured 2026-02-02)",
+   "speaker_or_document": "metr.org/about — contract income sentence",
+   "quote": "Additionally, a small part of our income is from a technical assistance contract with the European AI Office, supporting their approach and technical methods for assessing loss of control risks.",
+   "money_type": "contract (issuer wording); amount undisclosed",
+   "amount_or_range": "\"a small part of our income\"; TED notice 864574-2025 total EUR 1,167,484 for the consortium, METR share undisclosed",
+   "row_id": "MDP0051 (recon excluded); MDP0182; MDP0187; MDF0017 (S0 seed); MDT0069",
+   "url": "https://metr.org/about",
+   "what_it_does_not_say": "METR's share in EUR or USD; contract dates; whether contract income is inside \"funded by donations\" or the $71M (contract ≠ commitment, MDP0051). UK AI Security Institute partnership likewise has no public METR amount (MDP0050, MDF0016)."
+  },
+  {
+   "date": "live 2026-09-16 (independence copy present since 2024 captures; footnote history below)",
+   "speaker_or_document": "metr.org/donate",
+   "quote": "Donations fund our assessment of AI capabilities, risks and mitigations, and are crucial for our ability to pursue groundbreaking projects. We keep our evaluations independent and trustworthy by relying on support from a wide range of independent donors.",
+   "money_type": "solicitation copy (no money type)",
+   "amount_or_range": "no amount",
+   "row_id": "MDS0022; MDS1652; MDS0720; MDS1122",
+   "url": "https://metr.org/donate",
+   "what_it_does_not_say": "No $71M sentence, no supporter names, no amounts on the donate page (MDS1122, MDS1652 limitation). Page lists legal name \"Model Evaluation and Threat Research, Inc.\" and EIN 99-1219864 (MDE0016, MDE0036)."
+  },
+  {
+   "date": "live 2026-09-16 (first on /donate in capture 2026-08-04T02:46:01Z; absent 2026-07-03)",
+   "speaker_or_document": "metr.org/donate — employee-direction rule and every.org processor statement",
+   "quote": "(METR cannot accept donations made by or at the direction of frontier AI company employees.) All every.org donations are re-granted to METR as batched, unrestricted donations. Every.org does not charge METR for use of the platform, but transaction fees are deducted out of your donation.",
+   "money_type": "statement of rule; regrant channel description (money_type regrant on MDP0138, no amount)",
+   "amount_or_range": "no amount",
+   "row_id": "MDT0126; MDT0132; MDT0108/MDT0109; MDP0138; MDP0168",
+   "url": "https://metr.org/donate",
+   "what_it_does_not_say": "Any every.org volume or year; donor names (every.org batches are unrestricted regrants, MDP0138). Earlier capture 2025-04-01: \"All donations are unrestricted, even if you give to a specific fundraiser.\" (MDT0134)."
+  },
+  {
+   "date": "2025-04-18 capture (first); relabelled \"September 2025\" by 2025-10-02; removed between 2026-02-05 and 2026-02-11",
+   "speaker_or_document": "metr.org/donate — compensation footnote (historical)",
+   "quote": "To date, April 2025, we have not accepted compensation from AI companies for the evaluations we have conducted.  |  later: To date, September 2025, we have not accepted compensation from AI companies for the evaluations we have conducted. However, companies have provided access and compute credits to enable evaluations and evaluation research.",
+   "money_type": "statement of rule (historical); in-kind acknowledged",
+   "amount_or_range": "no amount",
+   "row_id": "MDT0001 (S0 seed); MDT0106/MDT0107; MDT0128; MDT0112/MDT0113; MDT0129; MDT0110/MDT0111",
+   "url": "https://metr.org/donate",
+   "what_it_does_not_say": "Why the footnote was removed (no reason stated; no motive asserted here); any amount of access or credits. \"To date\" labels are page text, not transaction dates (MDT0110 note)."
+  },
+  {
+   "date": "2026-05-19 (assessment window 2026-02-16 to 2026-03-16)",
+   "speaker_or_document": "METR \"Frontier Risk Report\" blog post — Table A.1 self-assessment against AEF-1 and operating-conditions preamble",
+   "quote": "Item 2.1 (Yes): \"METR did not request or receive compensation for this assessment. Participants provided complimentary access to their models.\"  |  Item 2.3 (No): \"The evaluator has published a conflict of interest policy, and it was applied to the evaluation.\"  |  Item 2.4 sub-answers all No, incl.: \"Does a meaningful fraction of the evaluator's funding come from the system provider, its employees, or its direct competitors? No. Note that METR's work with nonpublic models and use of free tokens incentivize a cordial relationship with AI companies.\"  |  Item 2.4.6: \"Several of the staff and collaborators directly involved in this pilot (at least 6) have close personal relationships with AI company staff.\"  |  Item 2.5 (Yes): \"The evaluator recused any individuals with a significant financial interest in the system provider from carrying out the evaluation.\"  |  Item 5.4 (No): \"METR has not established a specific responsible disclosure policy.\"  |  Preamble: \"METR did not have an applicable personnel conflict of interest (CoI) policy in place at the start of this project, and as such we did not run a formal recusal or disclosures process. Given this, this pilot was not compliant with all of the requirements of the AEF-1 standard.\"  |  Institutional sentence: \"…not accepting cash payments or donations from AI companies and AI lab executives. Also note that some METR staff have strong social ties to employees of AI companies, and METR currently works out of a shared research center (Constellation) which hosts some AI…\"",
+   "money_type": "self-graded independence table; in_kind_estimate (complimentary access, no figure) on 2.1",
+   "amount_or_range": "no cash; complimentary access unquantified; Table 3 challenge-task inference budget \"~$500-$5K (500M tokens)\" (MDI0049)",
+   "row_id": "MDQ0051 (2.1, DIFFERS); MDQ0049 and MDQ0082 (2.3 No); MDQ0084 (2.4 sub-answers); MDQ0054, MDQ0083, MDQ0001 seed (2.4.6); MDQ0052, MDQ0085 (2.5 Yes); MDQ0050 (5.4 No); MDQ0044, MDQ0080, MDQ0048, MDQ0064 (preamble); MDQ0055 (institutional); MDP0250; MDP0256; MDQ0063; MDP0716; MDQ0089/MDQ0090/MDQ0177 (no policy in force)",
+   "url": "https://metr.org/blog/2026-05-19-frontier-risk-report/",
+   "what_it_does_not_say": "The two \"No\" answers are 2.3 (published CoI policy applied) and 5.4 (responsible disclosure policy). The page does not name the at-least-6 individuals, does not quantify complimentary access, and does not reconcile item 2.5 \"Yes\" with the preamble's \"did not run a formal recusal or disclosures process\" (MDQ0052, MDQ0064: recorded, not reconciled). The brief dated this document 2025-05-19; every pack row and the URL carry 2026-05-19."
+  },
+  {
+   "date": "2026-08-26",
+   "speaker_or_document": "METR blog, OpenAI / Hugging Face incident investigation",
+   "quote": "We estimate we spent roughly ~$400K in API credits over the six days of our investigation.",
+   "money_type": "in_kind_estimate",
+   "amount_or_range": "~$400,000 API credits (single investigation)",
+   "row_id": "MDI0047; MDI0002 (S0 seed); MDP0052 (recon excluded)",
+   "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+   "what_it_does_not_say": "Who granted the credits; whether they are inside any funding total; not cash; dated after 2026-08-14 (MDP0052)."
+  },
+  {
+   "date": "2026-08-31",
+   "speaker_or_document": "METR blog, security update",
+   "quote": "These credits would have been worth approximately $600,000, although the model developer had granted them to METR for free.",
+   "money_type": "in_kind_estimate",
+   "amount_or_range": "approximately $600,000 (valuation of free credits)",
+   "row_id": "MDI0043; MDI0051; MDI0078; MDI0081; MDP0672",
+   "url": "https://metr.org/blog/2026-08-31-security-update/",
+   "what_it_does_not_say": "Which developer; whether the loss was reimbursed; not cash and not inside any money total. Not summed with the ~$400K estimate (different events)."
+  },
+  {
+   "date": "2026-09-11",
+   "speaker_or_document": "Beth Barnes, on-record in Business Insider (press, not metr.org)",
+   "quote": "Ideally, we'd like to scale really large, but in practice, we've been able to fundraise as much as we need, and the bottleneck is much more talent,",
+   "money_type": "qualitative self-statement via press; no amount",
+   "amount_or_range": "none",
+   "row_id": "MDP0061 (verdict DIFFERS)",
+   "url": "https://www.businessinsider.com/metr-beth-barnes-ai-talent-shortage-safety-research-openai-2026-8",
+   "what_it_does_not_say": "Any figure; not a run-rate and not the $71M (MDP0061 limitation). Press-mediated, not an issuer page."
+  }
+ ],
+ "reconciliation": {
+  "source": "research/commitment_reconciliation.csv (header: derived from promoted rows only by scripts/build_commitment_reconciliation.py at 2026-09-16T18:36:38Z; 66 data rows: 1 denominator, 1 compatible_component, 31 excluded, 31 remainder_statement, 2 computed)",
+  "denominator": {
+   "row_id": "MDF0089",
+   "money_type": "commitment",
+   "amount": "71000000",
+   "currency": "USD",
+   "date": "2026-08-14",
+   "period": "the last 6 months (sentence as of 2026-08-14; derived window approximately 2026-02-14 to 2026-08-14)",
+   "reason": "METR's own statement of commitments raised in the last 6 months; approximate",
+   "url": "https://metr.org/blog/2026-08-14-funding-update/",
+   "quote": "In the last 6 months, METR raised commitments of around $71 million.",
+   "note": "Working integer 71000000 is the round number in the sentence; the \"around\" qualifier is retained on every derived figure (MDP0055 limitation)."
+  },
+  "compatible": [
+   {
+    "row_id": "MDP0030",
+    "counterparty": "The David and Lucile Packard Foundation",
+    "money_type": "commitment",
+    "amount": "350000",
+    "currency": "USD",
+    "date": "2026-07-06",
+    "period": "award year 2026; listing 2026-07-06 inside window",
+    "reason": "Listing date is not an instrument date. Award year 2026 is coarser than the six-month window; compatibility of period rests on datePublished 2026-07-06 falling inside the derived window, not on a signed-grant day.",
+    "url": "https://www.packard.org/grantee/model-evaluation-and-threat-research/",
+    "quote": "1 Grants / $350,000",
+    "catalog_fields": "Year 2026; Term 12; Amount $350,000; Funding Areas Just Societies, Democracy, Rights, and Governance; Purpose for general support; JSON-LD datePublished 2026-07-06T06:09:41+00:00 (MDF0020)",
+    "caveats": "Listing date is not an instrument date; paid vs approved not on the page (MDP0585, MDP0589, MDP0591, MDP0598). MDF0020 itself says \"This lane has no source connecting the $350,000 to METR's approximately $71 million Feb-Aug 2026 total\"; compatibility is a period/type/currency test, not a METR statement. If Packard is later excluded, compatible total becomes 0 and remainder the whole ~$71M (MDP0055 limitation). Same award appears on MDF0020, MDF0021, MDF0078, MDF0090-0092, MDF0191-0193, MDF0416 (MDP0585): never sum funding_events.csv."
+   }
+  ],
+  "excluded": [
+   {
+    "row_id": "MDP0031",
+    "counterparty": "",
+    "money_type": "filed_grant",
+    "amount": "13639155",
+    "currency": "USD",
+    "date": "2024-12-31",
+    "period": "FY2024 short year 2024-05-01 to 2024-12-31",
+    "reason": "Filed revenue is not a commitment. FY2024 is before the last-6-months window.",
+    "url": "https://projects.propublica.org/nonprofits/organizations/991219864"
+   },
+   {
+    "row_id": "MDP0032",
+    "counterparty": "Alignment Research Center",
+    "money_type": "transfer",
+    "amount": "4501424",
+    "currency": "USD",
+    "date": "2024-12-31",
+    "period": "FY2024",
+    "reason": "This lane re-fetched the FY2024 Form 990 XML. RelatedOrganizationsAmt is a transfer, not a commitment, and FY2024 is before the last-6-months window.",
+    "url": "https://apps.irs.gov/pub/epostcard/990/xml/2025/2025_TEOS_XML_11C.zip"
+   },
+   {
+    "row_id": "MDP0033",
+    "counterparty": "The Audacious Project (TED)",
+    "money_type": "commitment",
+    "amount": "38000000",
+    "currency": "USD",
+    "date": "2024-10-09",
+    "period": "",
+    "reason": "Joint-project commitment; not a METR-only amount. Approximate.",
+    "url": "https://www.rand.org/news/press/2024/10/09.html"
+   },
+   {
+    "row_id": "MDP0034",
+    "counterparty": "The Audacious Project (TED)",
+    "money_type": "commitment",
+    "amount": "17000000",
+    "currency": "USD",
+    "date": "2024-10-09",
+    "period": "",
+    "reason": "Subset of the ~$38M Canary commitment; not additive with it or with the later bit-under-$16m restatement.",
+    "url": "https://metr.org/blog/2024-10-09-new-support-through-the-audacious-project/"
+   },
+   {
+    "row_id": "MDP0035",
+    "counterparty": "The Audacious Project (TED)",
+    "money_type": "commitment",
+    "amount": "<16000000",
+    "currency": "USD",
+    "date": "2025-09-28",
+    "period": "3 years (restated 2025-09-28)",
+    "reason": "Not an exact integer. Not additive with the 2024-10-09 $17 million figure.",
+    "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c"
+   },
+   {
+    "row_id": "MDP0036",
+    "counterparty": "",
+    "money_type": "commitment",
+    "amount": "~13000000 per year",
+    "currency": "USD",
+    "date": "2025-09-28",
+    "period": "annual, Sep 2025",
+    "reason": "A run rate is not an inbound amount.",
+    "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c"
+   },
+   {
+    "row_id": "MDP0037",
+    "counterparty": "",
+    "money_type": "",
+    "amount": "",
+    "currency": "",
+    "date": "2025-09-28",
+    "period": "",
+    "reason": "Runway is derived spend coverage, not a funding event.",
+    "url": "https://www.greaterwrong.com/posts/yrephKDBFL6h9zAFv/beth-barnes-s-shortform/comment/w3e6cbHeozQJaJH5c"
+   },
+   {
+    "row_id": "MDP0038",
+    "counterparty": "Survival and Flourishing Fund (Jaan Tallinn)",
+    "money_type": "recommendation",
+    "amount": "204000",
+    "currency": "USD",
+    "date": "SFF-2024",
+    "period": "",
+    "reason": "Round label SFF-2024 is not a day date. A recommendation is not a commitment and not a payment.",
+    "url": "https://survivalandflourishing.fund/"
+   },
+   {
+    "row_id": "MDP0039",
+    "counterparty": "Survival and Flourishing Fund (Jaan Tallinn)",
+    "money_type": "recommendation",
+    "amount": "120000 + 428000 matching pledge",
+    "currency": "USD",
+    "date": "SFF-2025",
+    "period": "",
+    "reason": "Two figures on one row are not summed. Matching pledge is not a payment. Round 2025 is not the last-6-months-to-2026-08-14 window.",
+    "url": "https://survivalandflourishing.fund/"
+   },
+   {
+    "row_id": "MDP0040",
+    "counterparty": "Survival and Flourishing Fund",
+    "money_type": "recommendation",
+    "amount": "220000",
+    "currency": "USD",
+    "date": "2025-02-15",
+    "period": "",
+    "reason": "Page last published 2025-02-15. Adjacent $1,210,000 column is not added. Recommendation not commitment.",
+    "url": "https://survivalandflourishing.fund/2025/further-opportunities"
+   },
+   {
+    "row_id": "MDP0041",
+    "counterparty": "Founders Pledge Inc",
+    "money_type": "filed_grant",
+    "amount": "184000",
+    "currency": "USD",
+    "date": "2024",
+    "period": "",
+    "reason": "TY2024 filed grant is not a 2026 commitment. A filed_grant is not a commitment.",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202523079349303352_public.xml"
+   },
+   {
+    "row_id": "MDP0042",
+    "counterparty": "Silicon Valley Community Foundation",
+    "money_type": "filed_grant",
+    "amount": "20000",
+    "currency": "USD",
+    "date": "2024",
+    "period": "",
+    "reason": "TY2024 filed grant. DAF sponsor is not the account principal.",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202543149349305759_public.xml"
+   },
+   {
+    "row_id": "MDP0043",
+    "counterparty": "Vanguard Charitable Endowment Program",
+    "money_type": "filed_grant",
+    "amount": "4000000",
+    "currency": "USD",
+    "date": "FY2025 (2024-07-01 to 2025-06-30)",
+    "period": "FY2025 ending 2025-06-30",
+    "reason": "Live ProPublica Schedule I HTML is a JS shell without grant rows; gt990datalake S3 XML 404; IRS 2026_TEOS_XML_05A.zip (521158638 bytes) listing does not contain OBJECT_ID 202621329349306657. Amount is a seed-held known amount quoted from S0-seed-import.csv.",
+    "url": "https://projects.propublica.org/nonprofits/full_text/202621329349306657/IRS990ScheduleI"
+   },
+   {
+    "row_id": "MDP0044",
+    "counterparty": "Longview Philanthropy (public fund)",
+    "money_type": "recommendation",
+    "amount": "220000",
+    "currency": "USD",
+    "date": "2023",
+    "period": "",
+    "reason": "Recommendation not payment. 2023 period.",
+    "url": "https://www.givingwhatwecan.org/charities/arc-evals"
+   },
+   {
+    "row_id": "MDP0045",
+    "counterparty": "Effektiv Spenden (Giving Fund: Safeguarding the future)",
+    "money_type": "regrant",
+    "amount": "128000",
+    "currency": "EUR",
+    "date": "2023-08",
+    "period": "",
+    "reason": "Live page HTTP 403 this host. Quote is from Wayback 20250126120532 capture. EUR is not USD. Never convert and add.",
+    "url": "https://web.archive.org/web/20250126120532/https://effektiv-spenden.org/en/safeguarding-the-future/"
+   },
+   {
+    "row_id": "MDP0046",
+    "counterparty": "Valhalla Foundation",
+    "money_type": "filed_grant",
+    "amount": "10000000",
+    "currency": "USD",
+    "date": "2024",
+    "period": "",
+    "reason": "A payment to RAND is not a payment to METR. ProPublica /full HTML is a shell; XML is the primary.",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202502559349100000_public.xml"
+   },
+   {
+    "row_id": "MDP0047",
+    "counterparty": "High Tide Foundation",
+    "money_type": "filed_grant",
+    "amount": "333334",
+    "currency": "USD",
+    "date": "2024",
+    "period": "",
+    "reason": "A payment to RAND is not a payment to METR. Purpose text is as filed (tTHE).",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202503179349100135_public.xml"
+   },
+   {
+    "row_id": "MDP0048",
+    "counterparty": "individuals from Jane Street",
+    "money_type": "commitment",
+    "amount": "undisclosed",
+    "currency": "",
+    "date": "undated",
+    "period": "",
+    "reason": "METR names individuals, not the firm. No individual is named and no amount is public. This lane does not deanonymize Jane Street individuals.",
+    "url": "https://metr.org/about"
+   },
+   {
+    "row_id": "MDP0049",
+    "counterparty": "David Farhi; Geoff Ralston; Dylan Field; Steve Newman",
+    "money_type": "commitment",
+    "amount": "undisclosed",
+    "currency": "",
+    "date": "undated",
+    "period": "",
+    "reason": "Page appearance of a name is not a gift date (STATE.md). Individuals, employers and any DAF accounts stay unmerged. Wave 1 MD08 found no public gift amounts.",
+    "url": "https://metr.org/blog/2026-08-14-funding-update/"
+   },
+   {
+    "row_id": "MDP0050",
+    "counterparty": "AI Security Institute (UK)",
+    "money_type": "contract",
+    "amount": "undisclosed",
+    "currency": "",
+    "date": "undated",
+    "period": "",
+    "reason": "No public METR award amount on the about page. Contract is not a commitment.",
+    "url": "https://metr.org/about"
+   },
+   {
+    "row_id": "MDP0051",
+    "counterparty": "European AI Office",
+    "money_type": "contract",
+    "amount": "undisclosed share of EUR 1167484",
+    "currency": "EUR",
+    "date": "2025-12-15",
+    "period": "",
+    "reason": "TED notice 864574-2025 GET returned HTTP 202 empty body this lane (cap). Consortium award; METR share not on the about page. EUR not USD.",
+    "url": "https://metr.org/about"
+   },
+   {
+    "row_id": "MDP0052",
+    "counterparty": "",
+    "money_type": "in_kind_estimate",
+    "amount": "400000",
+    "currency": "USD",
+    "date": "2026-08-26",
+    "period": "",
+    "reason": "In-kind estimate is not a cash commitment. Date 2026-08-26 is after 2026-08-14.",
+    "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+   },
+   {
+    "row_id": "MDP0053",
+    "counterparty": "Coefficient Giving",
+    "money_type": "paid_grant",
+    "amount": "",
+    "currency": "",
+    "date": "2025-12",
+    "period": "",
+    "reason": "A staff suggestion to individual donors is not a Coefficient grant. Date of the note is 2025, before the window.",
+    "url": "https://www.coefficientgiving.org/research/suggestions-for-individual-donors-from-coefficient-giving-staff-2025/"
+   },
+   {
+    "row_id": "MDP0054",
+    "counterparty": "The Pew Charitable Trusts; Schmidt Sciences; Sijbrandij Foundation; LaCentra-Sumerlin Foundation; Astralis Foundation; Expa.org",
+    "money_type": "",
+    "amount": "undisclosed",
+    "currency": "",
+    "date": "",
+    "period": "",
+    "reason": "Wave 1 MD03-MD06 found no METR grant amounts. Packard is the exception and is counted once in C02, not here. Sibling Wave 1 may still be incomplete for MD09-MD13.",
+    "url": "https://metr.org/about"
+   },
+   {
+    "row_id": "MDP0481",
+    "counterparty": "Alignment Research Center",
+    "money_type": "transfer",
+    "amount": "4477169",
+    "currency": "USD",
+    "date": "2024-04-30",
+    "period": "ARC FY2024",
+    "reason": "A 2024 program spin-off transfer is not a 2026 commitment. Non-cash $76,766 is a different money_type (in_kind_estimate) and is not added here.",
+    "url": "https://gt990datalake-rawdata.s3.amazonaws.com/EfileData/XmlFiles/202513219349323246_public.xml"
+   },
+   {
+    "row_id": "MDP0484",
+    "counterparty": "Jaan Tallinn",
+    "money_type": "paid_grant",
+    "amount": "184000",
+    "currency": "USD",
+    "date": "2024-12-06",
+    "period": "",
+    "reason": "Three 2024 disbursements; not summed here with each other for the denominator test. A paid_grant is not a commitment. 2024 is before the window.",
+    "url": "https://jaan.online/philanthropy/donations.csv"
+   },
+   {
+    "row_id": "MDP0485",
+    "counterparty": "Open Philanthropy",
+    "money_type": "recommendation",
+    "amount": "265000",
+    "currency": "USD",
+    "date": "2022-03",
+    "period": "",
+    "reason": "Live Open Philanthropy grants index redirected (E06); Wayback id_ used because the live grant URL is gone with the rebrand, said so in this note.",
+    "url": "https://web.archive.org/web/20240620191457id_/https://www.openphilanthropy.org/grants/alignment-research-center-general-support/"
+   },
+   {
+    "row_id": "MDP0486",
+    "counterparty": "Open Philanthropy",
+    "money_type": "recommendation",
+    "amount": "1250000",
+    "currency": "USD",
+    "date": "2022-11",
+    "period": "",
+    "reason": "Not summed with the March 2022 $265,000 recommendation. Not a METR amount.",
+    "url": "https://web.archive.org/web/20240620191457id_/https://www.openphilanthropy.org/grants/alignment-research-center-general-support-november-2022/"
+   },
+   {
+    "row_id": "MDP0487",
+    "counterparty": "FTX Foundation",
+    "money_type": "paid_grant",
+    "amount": "1250000",
+    "currency": "USD",
+    "date": "2022",
+    "period": "",
+    "reason": "ARC receipt, not a METR receipt. Not summed with the Open Philanthropy November 2022 $1,250,000 recommendation.",
+    "url": "https://www.alignment.org/funding-from-ftx/"
+   },
+   {
+    "row_id": "MDP0488",
+    "counterparty": "Future of Life Institute",
+    "money_type": "recommendation",
+    "amount": "1401000",
+    "currency": "USD",
+    "date": "",
+    "period": "",
+    "reason": "ARC Evals Team at ARC is not METR Inc.",
+    "url": "https://futureoflife.org/grant/alignment-research-center/"
+   },
+   {
+    "row_id": "MDP0489",
+    "counterparty": "Open Philanthropy",
+    "money_type": "commitment",
+    "amount": "10000000",
+    "currency": "USD",
+    "date": "2025-09",
+    "period": "",
+    "reason": "A gift to RAND is not a gift to METR. September 2025 is before the derived window. Live Open Philanthropy grants index redirected (E06); Wayback id_ used, said so in this note.",
+    "url": "https://web.archive.org/web/20251025225511id_/https://www.openphilanthropy.org/grants/rand-corporation-ai-evaluation-and-testing/"
+   }
+  ],
+  "remainder": {
+   "identified_compatible_total": {
+    "row_id_as_written": "MDP0030",
+    "amount": "350000",
+    "currency": "USD",
+    "money_type": "commitment",
+    "reason": "sum of 1 compatible commitment-type USD component(s); no other money type included",
+    "url": "https://metr.org/blog/2026-08-14-funding-update/",
+    "binding_rows": "MDP0055; MDP0521; MDP0741; MDP0638"
+   },
+   "unresolved_remainder": {
+    "row_id_as_written": "(blank)",
+    "amount": "70650000",
+    "currency": "USD",
+    "money_type": "commitment",
+    "reason": "denominator (around 71000000) minus identified compatible total (350000); inherits 'around'; composition unknown from public sources checked; residual, not a donor list",
+    "url": "https://metr.org/blog/2026-08-14-funding-update/",
+    "binding_rows": "MDP0056 (DIFFERS); MDP0522; MDP0592; MDP0739; MDP0636; MDP0637"
+   },
+   "arithmetic": "71000000 - 350000 = 70650000 (commitment minus commitment, USD, same window); inherits \"around\"; residual is not a donor list (MDP0056, MDP0592)",
+   "remainder_statement_rows": [
+    {
+     "row_id": "MDP0055",
+     "counterparty": "",
+     "amount": "350000",
+     "date": "2026-08-14",
+     "reason": "Denominator is \"around $71 million\"; the working integer 71000000 is the round number in the sentence, not a certified exact total. Remainder therefore inherits \"around\". Listing-date period test for Packard is stated on C02. If a later review excludes Packard for lack of an instrument day, compatib"
+    },
+    {
+     "row_id": "MDP0056",
+     "counterparty": "",
+     "amount": "70650000",
+     "date": "",
+     "reason": "This is not a finding that $70.65 million was raised from any named person. It is the arithmetic gap. Asking METR how it was composed is MD99 / S6 and is embargoed."
+    },
+    {
+     "row_id": "MDP0062",
+     "counterparty": "",
+     "amount": "",
+     "date": "2026-08-14",
+     "reason": "Do not add around $71 million (commitment, last 6 months to 2026-08-14) to $13,639,155 (filed FY2024 total revenue, 2024-05-01 to 2024-12-31) or to the 2024 annual-report $10 million budget (calendar 2024). No combined commitment+filed total is stated."
+    },
+    {
+     "row_id": "MDP0063",
+     "counterparty": "",
+     "amount": "",
+     "date": "2026-09-16",
+     "reason": "This row does not compute 71000000 minus 13639155 and does not treat that difference as unpaid remainder, cash, or 2026 receipts."
+    },
+    {
+     "row_id": "MDP0585",
+     "counterparty": "The David and Lucile Packard Foundation",
+     "amount": "350000",
+     "date": "2026-07-06",
+     "reason": "Listing date is not an instrument date; paid vs approved is not on the catalog page."
+    },
+    {
+     "row_id": "MDP0586",
+     "counterparty": "The Audacious Project (TED)",
+     "amount": "38000000",
+     "date": "2024-10-09",
+     "reason": "Live rand.org press page HTTP 403 this host; quote from r.jina.ai capture of the same URL."
+    },
+    {
+     "row_id": "MDP0587",
+     "counterparty": "Alignment Research Center",
+     "amount": "4501424",
+     "date": "",
+     "reason": "double-count risk: METR FY2024 RelatedOrganizationsAmt 4501424 (MDP0032 / MDF0034) and ARC FY2024 Schedule I CashGrantAmt 4477169 plus NonCashAssistanceAmt 76766 (MDF0064/MDF0065) describe the same program spin-off. They are different filed figures, not two payments. Recon excludes the transfer. Add"
+    },
+    {
+     "row_id": "MDP0588",
+     "counterparty": "Founders Pledge Inc",
+     "amount": "184000",
+     "date": "",
+     "reason": "double-count risk across money types: 7 promoted rows carry 184000 (Founders Pledge filed_grant and/or Tallinn public ledger via FP-US). Recon excludes MDP0041 as filed_grant, not a 2026 commitment. Adding the ledger line to the 990 line would count one $184,000 twice and would mix recommendation/pa"
+    },
+    {
+     "row_id": "MDP0589",
+     "counterparty": "The David and Lucile Packard Foundation",
+     "amount": "350000",
+     "date": "2026-07-06",
+     "reason": "No public signed-grant day on the catalog page or permalink this run."
+    },
+    {
+     "row_id": "MDP0590",
+     "counterparty": "",
+     "amount": "13639155",
+     "date": "2024-12-31",
+     "reason": "Blind spot: instrument dates not on catalog pages."
+    },
+    {
+     "row_id": "MDP0591",
+     "counterparty": "The David and Lucile Packard Foundation",
+     "amount": "350000",
+     "date": "",
+     "reason": "Catalog page does not use the word commitment; payment status not determinable from this page."
+    },
+    {
+     "row_id": "MDP0592",
+     "counterparty": "",
+     "amount": "70650000",
+     "date": "",
+     "reason": "cross-type check: identified_compatible_total 350000 and unresolved_remainder 70650000 are both money_type=commitment and 350000+70650000=71000000 uses the working integer of 'around $71 million'. Excluded filed_grant, recommendation, transfer, regrant, contract, and in_kind_estimate rows are not su"
+    },
+    {
+     "row_id": "MDP0593",
+     "counterparty": "Vanguard Charitable Endowment Program",
+     "amount": "4000000",
+     "date": "",
+     "reason": "Public Schedule I HTML may be a JS shell; XML 404 on GT this pack; principal undisclosed."
+    },
+    {
+     "row_id": "MDP0594",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "MD51 is out of this lane; gate item 8 requires both MD50 and MD51."
+    },
+    {
+     "row_id": "MDP0595",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0596",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0597",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0598",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0599",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0600",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0601",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0602",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0603",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0604",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0605",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0606",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0607",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0608",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0609",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0610",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    },
+    {
+     "row_id": "MDP0611",
+     "counterparty": "",
+     "amount": "",
+     "date": "",
+     "reason": "Gate remains closed until each listed correction is done or N/A-with-reason is recorded on the frontier."
+    }
+   ],
+   "side_by_side_discipline": "MDP0062 / MDP0063 / MDP0523: do not add ~$71M (commitment, Feb-Aug 2026) to $13,639,155 (filed revenue, May-Dec 2024), to the $10M 2024 budget, to the ~$13M p.a. run-rate, to Audacious/Canary 2024-2025 figures, or to EUR amounts; do not compute 71000000 - 13639155."
+  }
+ },
+ "not_stated": [
+  "Composition of the ~$71M: who committed, how many commitments, or any per-donor amount (MDF0089 limitation; MDS1689 bounded negative on the funding-update and about pages; residual request cells MDP0524-MDP0528 all \"unknown from public sources checked\").",
+  "Cash paid: whether any part of the ~$71M has been received; the sentence says \"raised commitments\" (MDF0089 payment_status \"committed; payment not stated\"; MDP0527).",
+  "Whether in-kind (free tokens, compute credits, complimentary model access) is counted inside the ~$71M (MDP0529, MDI0119; the free-tokens sentence sits in the same post but does not say).",
+  "The calendar bounds of \"the last 6 months\" (pack derives ≈2026-02-14 to 2026-08-14 from datePublished; METR names no months, MDT0033).",
+  "Whether the unpaid balance of the Audacious/Canary 3-year commitment (\"a bit under $16m\", 2025-09-28) is inside the ~$71M; whether the 2024 ~$17M figure was ever paid in full (MDF0169, MDP0035).",
+  "Any dollar figure for free tokens / compute credits as an annual or lab-by-lab total (MDS0719 limitation); only two event-level estimates exist (~$400K, 2026-08-26; ~$600,000 valuation, 2026-08-31).",
+  "The identities behind AllOtherContributionsAmt $9,101,611 and Schedule B (public copy RESTRICTED) (MDS0011, MDS0588).",
+  "FY2025 revenue, expenses, or net assets: no FY2025 Form 990 is filed or indexed as of 2026-09-16 (MDS0345, MDP0603); no 2025 annual report (MDS0348).",
+  "The METR share of the European AI Office contract (EUR) and any UK AI Security Institute contract amount (MDP0051, MDP0050, MDP0607).",
+  "Packard $350,000: signed-instrument date and paid/approved status (MDF0020, MDP0598).",
+  "Audited FY2024 financial statements (exist per FSAuditedInd=1; not attached; \"available upon request\" per Schedule O; not requested by the pack, MDS0112).",
+  "Which related organization paid the $457,601 of Part VII \"related organization\" compensation (Schedule R names only Alignment Research Center; the return does not label the payer column) — XML-only observation.",
+  "Any reconciliation between the 2024 annual-report \"$10 million\" budget (calendar 2024) and the FY2024 990 (May-Dec 2024, expenses $8,234,524; audited-statement expenses $8,675,875) — different periods and bases; METR states no bridge (MDP0057, MDS1025).",
+  "Any reason for wording changes on /about and /donate (largest funding to date → first institutional-scale funding; compensation footnote removed; compute credits → tokens; employee-direction parenthesis added). Dates are page-capture bounds only; no motive is asserted (MDT0410-MDT0412, MDT0110/0111, MDT0116, MDT0071)."
+ ],
+ "cautions": [
+  "Money types are never summed across type. The ~$71M (commitment), $13,639,155 (filed revenue), $10M (budget), ~$13M p.a. (run-rate), $4,000,000 / $184,000 / $20,000 (filed grants), SFF figures (recommendations), EUR 128,000 (regrant), ~$400K / ~$600K / $441,350 (in-kind) must never share an axis that implies addition (MDP0523, MDP0062, MDP0063).",
+  "The FY2024 return is an 8-month initial short year (2024-05-01 to 2024-12-31). Do not annualise or compare its expenses to the 2024 annual-report calendar budget or to the Sep-2025 run-rate as if like-for-like.",
+  "GovernmentGrantsAmt is absent from the XML, not a filed 0 (MDS0589). Say \"not reported\".",
+  "The restricted-fund question cannot be answered from this return: the filer elected fund-accounting presentation (OrgDoesNotFollowFASB117Ind=X) and no with/without-donor-restriction split is filed (MDP0150). Do not draw a restricted/unrestricted split.",
+  "Schedule B \"RESTRICTED\" is the legal public-inspection redaction, not a METR choice to hide a specific donor and not evidence of any named contributor (MDS0011).",
+  "Related-organization line 4,501,424 (METR-side) and ARC Schedule I 4,477,169 + 76,766 (ARC-side) describe one spin-off; use one, never both, and never the seed sum 4,553,935 (MDF0007) (MDP0587). MDF0064's \"$47,511 difference\" note is arithmetically wrong (4,501,424 - 4,477,169 = 24,255); do not quote it.",
+  "Contributions total 13,603,035 has no standalone amount row; cite MDF0146/MDF0410 quantity_or_value or MDS0588 quote, or the XML primary directly.",
+  "Officer compensation amounts, Schedule R loan lines (490,182; 325,431), Schedule F spend (396,556), Schedule D donated services (441,350) and audited-FS revenue (14,080,505) are in the primary XML but not bound as amount rows; a figure must cite the primary file (SHA-256 84979ec8…) plus the note-bearing row (MDF0034, MDS0112, MDF0032, MDE0038).",
+  "Rows with review_verdict DIFFERS among the key 990 rows (MDF0034, MDF0147, MDP0032, MDP0150, MDP0497, MDS0247) record field-level lane/review differences; the amounts were re-verified against the XML in this audit and match. MDS0247 is a withdrawn none-found (truncated index download); MDS0115 governs.",
+  "Seed rows (lane S0-seed-import: MDF0001-MDF0017, MDT0001-MDT0003, MDI0001-MDI0002, MDQ0001, MDP0001-MDP0002) are context only (checked_utc 2026-09-14 = seed pack build date); every one used here has a re-verified MDnn counterpart (new_vs_seed marked in the .md). Seed MDF0002/MDF0003 typed run-rate/runway as \"commitment\" and are superseded by MDF0465/MDF0466 (type empty); recon row MDP0036 still carries money_type=commitment for the run-rate (typing defect; its own reason says a run rate is not an inbound amount).",
+  "The `lane` column is empty on all 4,341 rows; lane provenance lives in the note field as \"lane=research/grok-out/<file>#<row>\" (and \"research/rerun/..-xhigh-added.csv\" for re-runs). Any tooling that filters by the lane column will see nothing.",
+  "commitment_reconciliation.csv computed rows: identified_compatible_total re-uses row_id MDP0030 (duplicate id within the file) and unresolved_remainder has a blank row_id. MDP0610 (a MD50 gate correction) says these rows have empty url fields; the current file carries the funding-update url on both, so that correction is stale (STATE.md: \"computed rows now carry the funding-update url\").",
+  "MDP0602 (MD50 gate correction) states \"research/grok-out/MD46-funding-reconciliation.csv is not present\"; the file exists (48 promoted rows including MDP0523-MDP0529) — stale relative to the current pack.",
+  "figures/metr-deep-01-71m-known-and-unknown.html lists 15 exclusions using MDF row ids (MDF0064, MDF0065, MDF0165, MDF0166, MDF0038, MDF0058, MDF0037, MDF0047, MDF0045, MDF0046, MDF0070, MDF0072, MDI0047, MDP0053, MDP0031) whereas the recon has 31 excluded rows keyed on MDP ids; figure 01 also labels the $17M 2024-10-09 figure (MDF0166) as \"Audacious METR-side restatement\" — the restatement is the 2025-09-28 \"bit under $16m\" (MDF0169), and the $17M is the original announcement share. Any new figure should not inherit that label.",
+  "The brief dates the Frontier Risk Report 2025-05-19; the pack URL and all rows carry 2026-05-19 (assessment window 2026-02-16 to 2026-03-16). Use 2026-05-19.",
+  "The FY2024 Part VI ConflictOfInterestPolicyInd=1 and the FRR statement of no applicable personnel CoI policy at project start (Feb 2026) are different document kinds (organisational vs personnel policy); the pack records this as undetermined (MDQ0069). Present as a dated tension, not a contradiction, and without motive.",
+  "FRR Table A.1 item 2.5 \"Yes\" (recused individuals with significant financial interest) sits on the same page as \"we did not run a formal recusal or disclosures process\"; the pack records both and does not reconcile them (MDQ0052, MDQ0064). Quote both verbatim if either is shown.",
+  "philanthropy.org \"$8.7 million across 3 grants from 3 funders\" (MDS0057) is a third-party aggregation of funder-side filings (ARC, Vanguard Charitable, Founders Pledge) and is not METR's statement nor a 990 line; do not present it as METR's own.",
+  "Wording-change dates on /about and /donate are Wayback unique-digest capture bounds, not decision or transaction dates (MD24 rows). No motive language.",
+  "Named supporters (Jane Street individuals; Sijbrandij, Pew, Schmidt Sciences, Packard, LaCentra-Sumerlin, Astralis, Expa.org; Farhi, Ralston, Field, Newman) have no public amount or date except Packard; they are not allocated any part of the remainder (MDP0048, MDP0049, MDP0054, MDP0599). Individuals, employers and DAF accounts stay unmerged.",
+  "Embargo: the pack has not asked METR how the ~$71M was composed (MD99 draft unsent, approved_for_send false, MDP0744). Nothing here should be phrased as if METR declined to say; METR has simply not published it."
+ ],
+ "table_defects": [
+  {
+   "id": "D1",
+   "where": "all seven research/*.csv tables",
+   "defect": "`lane` column empty on every row (4,341 rows); lane is embedded in `note` as lane=research/grok-out/<file>#<row>",
+   "effect": "seed-vs-new must be derived from note text; lane-based filters return nothing"
+  },
+  {
+   "id": "D2",
+   "where": "research/commitment_reconciliation.csv",
+   "defect": "computed row identified_compatible_total re-uses row_id MDP0030 (duplicate id in file); computed row unresolved_remainder has blank row_id",
+   "effect": "cannot cite the computed rows by unique id; cite MDP0521/MDP0522 instead"
+  },
+  {
+   "id": "D3",
+   "where": "MDP0036 (recon excluded) and seed MDF0002/MDF0003/MDF0004",
+   "defect": "run-rate and runway typed money_type=commitment",
+   "effect": "contradicts the row's own reason \"A run rate is not an inbound amount\"; MDF0465/MDF0466 supersede the seed rows with empty type; MDP0036 remains as typed"
+  },
+  {
+   "id": "D4",
+   "where": "MDF0064 note",
+   "defect": "\"the $47,511 difference is not attributed\" — 4,501,424 - 4,477,169 = 24,255",
+   "effect": "do not quote the note figure"
+  },
+  {
+   "id": "D5",
+   "where": "seed MDF0007",
+   "defect": "amount 4,553,935 is cash 4,477,169 + non-cash 76,766 summed across money types",
+   "effect": "context only; superseded in substance by MDF0064/MDF0065 (not marked superseded)"
+  },
+  {
+   "id": "D6",
+   "where": "MDP0602 (MD50 gate correction)",
+   "defect": "states MD46-funding-reconciliation.csv is not present; file exists with 48 promoted rows",
+   "effect": "stale correction"
+  },
+  {
+   "id": "D7",
+   "where": "MDP0610 (MD50 gate correction)",
+   "defect": "states computed recon rows have empty url; current file has url on both",
+   "effect": "stale correction"
+  },
+  {
+   "id": "D8",
+   "where": "MDS0247",
+   "defect": "none-found on index_2025 from a truncated download (195,937 lines); withdrawn in result text, verdict DIFFERS",
+   "effect": "MDS0115 is the authoritative locator"
+  },
+  {
+   "id": "D9",
+   "where": "MDP0032, MDF0034, MDF0147, MDP0150, MDP0497, MDP0057, MDP0058, MDP0059, MDP0060, MDP0061, MDF0018, MDP0028, MDQ0051, MDQ0063",
+   "defect": "review_verdict DIFFERS (field-level differences between lane output and review, recorded in notes as audit-1/2/3)",
+   "effect": "values used here were re-verified against primaries in this audit; cite with the verdict visible"
+  },
+  {
+   "id": "D10",
+   "where": "figures/metr-deep-01-71m-known-and-unknown.html",
+   "defect": "15 exclusions vs 31 in the recon; MDF0166 ($17M, 2024-10-09) labelled \"Audacious METR-side restatement\"",
+   "effect": "label the $17M as the 2024-10-09 announcement share and the \"bit under $16m\" (MDF0169) as the restatement"
+  },
+  {
+   "id": "D11",
+   "where": "brief vs pack",
+   "defect": "brief says Frontier Risk Report 2025-05-19; pack has 2026-05-19",
+   "effect": "use 2026-05-19"
+  },
+  {
+   "id": "D12",
+   "where": "funding_events.csv",
+   "defect": "no standalone row for CYContributionsGrantsAmt 13,603,035; no rows for officer compensation, Schedule R loan lines, Schedule F spend, Schedule D donated services 441,350",
+   "effect": "cite XML primary plus note-bearing rows (MDF0146/MDF0410, MDF0034, MDS0112, MDF0032, MDE0038)"
+  },
+  {
+   "id": "D13",
+   "where": "MDF0089 vs MDP0032 url fields",
+   "defect": "the same XML is cited alternately via IRS zip URL (MDF0410, MDF0034, MDF0032, MDF0411) and via the gt990datalake per-object URL (MDF0146, MDP0150, MDS0587); MDP0032 carries the zip URL though its note says the lane cited the lake URL",
+   "effect": "both resolve to byte-identical content (SHA-256 84979ec8…); cite the SHA"
+  }
+ ],
+ "contradictions": [
+  {
+   "id": "X1",
+   "between": "FY2024 990 Part VI ConflictOfInterestPolicyInd=1 with Schedule O 12C (MDP0231, MDP0269, MDP0271)",
+   "and_": "FRR 2026-05-19 \"METR did not have an applicable personnel conflict of interest (CoI) policy in place at the start of this project\" (MDQ0044)",
+   "status": "tension between document kinds (organisational board policy vs personnel/evaluation policy); pack: undetermined / not the same document (MDQ0069). No motive."
+  },
+  {
+   "id": "X2",
+   "between": "FRR Table A.1 item 2.5 = Yes \"The evaluator recused any individuals with a significant financial interest…\" (MDQ0052)",
+   "and_": "FRR preamble \"as such we did not run a formal recusal or disclosures process\" (MDQ0044)",
+   "status": "both on one page; recorded, not reconciled (MDQ0064 \"undetermined\")"
+  },
+  {
+   "id": "X3",
+   "between": "2024-10-09 \"Approximately $17 million of this will support work at METR.\" (MDF0166)",
+   "and_": "2025-09-28 \"This ended up being a bit under $16m, and is a commitment across 3 years.\" (MDF0169)",
+   "status": "dated restatement; show both, never replace or add (MDF0006 instruction)"
+  },
+  {
+   "id": "X4",
+   "between": "/about \"Our largest funding to date was through The Audacious Project\" (captures 2025-07-14 to 2026-07-19T23:27:59Z, MDT0306, MDT0411)",
+   "and_": "/about and funding update \"first institutional-scale funding through The Audacious Project\" (from capture 2026-08-04T07:49:10Z, MDT0412; funding update 2026-08-14, MDP0027)",
+   "status": "wording change bounded by captures; consistent with, but not stated to be caused by, the ~$71M raise. No motive."
+  },
+  {
+   "id": "X5",
+   "between": "2024 annual report \"total 2024 budget of $10 million\" (calendar 2024; MDP0057)",
+   "and_": "FY2024 990 CYTotalExpensesAmt 8,234,524 (2024-05-01 to 2024-12-31) and audited-statement expenses 8,675,875 (MDF0147; XML Schedule D)",
+   "status": "not a contradiction: different periods (12 vs 8 months) and bases (budget vs filed/audited actuals); METR states no bridge (MDS1025)"
+  },
+  {
+   "id": "X6",
+   "between": "MDS0247 \"none found in IRS index_2025.csv for EIN 991219864\"",
+   "and_": "MDS0115 index_2025 row for 202523209349300367",
+   "status": "MDS0247 withdrawn (truncated download); MDS0115 governs"
+  },
+  {
+   "id": "X7",
+   "between": "MDP0602 \"MD46-funding-reconciliation.csv is not present\"",
+   "and_": "research/grok-out/MD46-funding-reconciliation.csv present with 48 promoted rows",
+   "status": "stale gate-correction row"
+  },
+  {
+   "id": "X8",
+   "between": "philanthropy.org \"$8.7 million across 3 grants from 3 funders\" (MDS0057)",
+   "and_": "METR 990 contributions 13,603,035 / all-other 9,101,611",
+   "status": "different bases (funder-side filed grants located by a third party vs recipient-side totals); not comparable; not a METR statement"
+  }
+ ],
+ "suggested_figures": [
+  {
+   "id": "C-1",
+   "title": "METR FY2024 Form 990 (8-month initial year): revenue composition, expenses, net assets",
+   "form": "single-type waterfall or stacked bar; one money type (filed) only",
+   "data": "Contributions 13,603,035 = related-organization (Alignment Research Center) 4,501,424 + all other contributions (unnamed) 9,101,611; investment income 36,120; total revenue 13,639,155; expenses 8,234,524 (program 6,924,735 / M&G 1,144,255 / fundraising 165,534); revenues less expenses = net assets EOY 5,404,631; program service revenue 0; government grants not reported; Schedule B public copy RESTRICTED",
+   "rows": "MDF0410 (or MDF0146), MDF0034, MDF0411, MDS0589, MDF0147, MDF0032, MDS0011; primary XML SHA-256 84979ec8…",
+   "labels_required": "\"Tax period 2024-05-01 to 2024-12-31 (initial short year)\"; \"Schedule B contributor identities RESTRICTED on the public copy\"; \"$9,101,611 has no payer names\"; no annualisation"
+  },
+  {
+   "id": "C-2",
+   "title": "What METR has said about its own money, by date and money type (non-additive timeline)",
+   "form": "dated strip with one lane per money type; no shared value axis across types",
+   "data": "2024-10-09 ~$17M Audacious share (commitment) | 2024 AR: $10M 2024 budget; $15M 2025 target | 2025-09-28 Barnes: ~$13M p.a. run-rate (~$15M / $17m++), 12-16 months runway, Audacious \"a bit under $16m\" over 3 years, $10M end-2025 goal, \"one-off\" | 2026-08-14 ~$71M commitments in 6 months; free tokens (unquantified) | 2026-08-26 ~$400K API credits (in-kind) | 2026-08-31 ~$600,000 free-credit valuation (in-kind) | 2026-09-11 \"fundraise as much as we need\" (qualitative) | FY2024 990 filed 2025-11-16: revenue 13,639,155 (filed)",
+   "rows": "MDF0166, MDP0057, MDP0058, MDF0465, MDF0466, MDF0169, MDP0060, MDP0145, MDF0089, MDI0034, MDI0047, MDI0043, MDP0061, MDF0410",
+   "labels_required": "money type on every marker; \"not additive\"; exact quotes; dates are statement dates"
+  },
+  {
+   "id": "C-3",
+   "title": "Reconciling the ~$71M: one compatible component, 31 typed exclusions, an arithmetic remainder",
+   "form": "ledger table grouped by exclusion reason (period / type / entity / currency / no amount), with denominator, compatible and remainder as three commitment-type tiles",
+   "data": "denominator ~71,000,000 (MDF0089); compatible Packard 350,000 (MDP0030); remainder ~70,650,000 (MDP0056/MDP0522); 31 excluded rows MDP0031-MDP0054 and MDP0481, MDP0484-MDP0489 with the reason column verbatim",
+   "rows": "commitment_reconciliation.csv; MDP0055; MDP0056; MDP0592",
+   "labels_required": "\"around\" retained; \"remainder is a residual, not a donor list\"; \"excluded amounts are not subtracted\"; extends figure 01 (which shows 15)"
+  },
+  {
+   "id": "C-4",
+   "title": "Dated wording of METR's own funding rules on /about and /donate (page-capture chronology)",
+   "form": "two-lane chronology; text snippets at capture bounds",
+   "data": "/donate: 2025-04-01 no footnote → 2025-04-18 \"To date, April 2025, we have not accepted compensation from AI companies…\" → 2025-10-02 \"…September 2025… However, companies have provided access and compute credits…\" → removed 2026-02-05/11 → 2026-08-04 \"(METR cannot accept donations made by or at the direction of frontier AI company employees.)\". /about: 2025-07-14 first funding section, \"has not accepted funding from AI companies, though we make use of free compute credits\", \"Our largest funding to date was through The Audacious Project\" → 2026-02-02 EU AI Office sentence → 2026-07-19 employee-direction parenthesis; \"significant free compute credits\" → 2026-08-04 \"significant free tokens\", \"Note:\" prefix, \"first institutional-scale funding\" → 2026-08-14 funding update restates both rules; 2026-09-15 CoI policy link appears",
+   "rows": "MDT0134, MDT0107/MDT0128, MDT0113/MDT0129, MDT0110/MDT0111, MDT0109/MDT0132, MDT0061/MDT0065/MDT0130, MDT0306, MDT0069, MDT0071/MDT0131, MDT0116, MDT0115, MDT0411/MDT0412, MDT0127, MDP0230",
+   "labels_required": "\"capture bounds, not decision dates\"; no motive language"
+  },
+  {
+   "id": "C-5",
+   "title": "Frontier Risk Report (2026-05-19) Table A.1: METR's self-graded independence items",
+   "form": "item panel with Yes/No cells and verbatim notes",
+   "data": "2.1 Yes (no compensation; complimentary access); 2.3 No (published CoI policy applied); 2.4 five sub-answers No incl. funding-fraction No with free-tokens note; 2.4.6 at least 6 close personal relationships; 2.5 Yes (recusal) beside preamble \"did not run a formal recusal or disclosures process\"; 5.4 No (responsible disclosure policy); preamble \"not compliant with all of the requirements of the AEF-1 standard\"",
+   "rows": "MDQ0051, MDQ0049, MDQ0084, MDQ0054, MDQ0052, MDQ0050, MDQ0044, MDQ0064, MDQ0055",
+   "labels_required": "\"self-assessment, published 2026-05-19, window 2026-02-16 to 2026-03-16\"; \"COI policy v1.0 dated 2026-08-28 was not in force\"; both 2.5 statements quoted"
+  },
+  {
+   "id": "C-6",
+   "title": "What METR does not state about the ~$71M (residual cells)",
+   "form": "six-cell matrix, every cell \"not stated in public sources checked\"",
+   "data": "who/vehicle (MDP0524); committed amount per component (MDP0525); commitment date per component (MDP0526); cash paid to date incl. Packard (MDP0527); restriction/purpose per component (MDP0528); whether in-kind is inside the total (MDP0529)",
+   "rows": "MDP0524-MDP0529; MDS1689; MDP0744 (request unsent)",
+   "labels_required": "\"not published\" rather than \"declined\"; embargo note that METR has not been asked"
+  },
+  {
+   "id": "C-7",
+   "title": "In-kind figures METR itself has put in writing (separate, unsummed)",
+   "form": "small multiples, one tile per event, no total",
+   "data": "FY2024 990 Schedule D donated services and use of facilities 441,350 (audited statements, not on the 990 face); ARC non-cash computers 76,766 at book (ARC-side, 2024-04-30); FRR complimentary model access (no figure, 2026-05-19); ~$400K API credits (2026-08-26); ~$600,000 free-credit valuation (2026-08-31); \"significant free tokens\" (unquantified, 2026-08-14 / live about)",
+   "rows": "MDS0112 (note) + XML; MDF0065; MDQ0051; MDI0047; MDI0043; MDI0034; MDP0230",
+   "labels_required": "\"in-kind is not cash and is not inside any money total unless METR says so (it does not)\""
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "built_utc": "2026-09-16T20:17:25Z",
+ "exceptions": [
+  {
+   "field": "records_routes",
+   "line": "REQ-MD44-UK-DSIT-FOI,REQ-MD44-US-NIST-FOIA,REQ-MD44-EU-EASE-1049,REQ-MD37-NPT-6104D,REQ-MD41-IRS-4506A-5227",
+   "reason": "drafts unsent and unapproved; Kevin has neither approved nor explicitly declined them; no clock is running",
+   "next_check": "Kevin's decision"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL01",
+   "reason": "METR's Anthropic incident report if the initial eight-week schedule holds",
+   "next_check": "2026-11-04"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL02",
+   "reason": "CY2025 Forms 990 for calendar-year intermediaries and donor-advised sponsors (SVCF, Coefficient entities, RAND, calendar",
+   "next_check": "2026-11-16"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL03",
+   "reason": "Good Ventures Foundation FY2026 Form 990-PF (FYE 2026-06-30)",
+   "next_check": "2026-11-16"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL04",
+   "reason": "METR's next Form 990 (CY2025) and any audited financial statement",
+   "next_check": "2026-11-16"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL05",
+   "reason": "Anthropic registration statement or other holder disclosure",
+   "next_check": "2026-10-16"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL07",
+   "reason": "National Philanthropic Trust FY2026 Form 990 (FYE 2026-06-30)",
+   "next_check": "2026-11-16"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL08",
+   "reason": "Next unfiled returns of the named Audacious partners (MD43 Task A per-partner dates)",
+   "next_check": "2026-10-15"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL09",
+   "reason": "Vanguard Charitable FY2025 Form 990 XML in the GivingTuesday lake and Fidelity/Schwab FY2026 returns",
+   "next_check": "when posted"
+  },
+  {
+   "field": "calendar",
+   "line": "CAL10",
+   "reason": "Overdeck Family Foundation TY2024 Statement 26 attachment as extractable text; Joe and Clara Tsai Foundation TY2025 990-",
+   "next_check": "when posted"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 C0010",
+   "reason": "open (recorded): MDS0560 source_class mislabel; row retained as a bounded negative on the issuer page; no figure cites it",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 C0011",
+   "reason": "open (recorded): MDS0583 names a pre-formation period; retained as a locator negative; no figure cites it",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 C0012",
+   "reason": "open (recorded): MDS0917 result form; retained; the same negative is restated in bounded form by MD41 C-rows",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0001",
+   "reason": "open: money-side gate not approvable until D0002-D0018 are resolved or recorded N/A-with-reason; EXHAUSTION-GATE.json not written",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0004",
+   "reason": "open by design: the remainder's composition is embargoed until S6/MD99 (Kevin's decision)",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0005",
+   "reason": "open: calendar closer (Packard TY2025/TY2026 990-PF); listing date stated as not an instrument date on MDP0030",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0006",
+   "reason": "open (structural): bounded negatives exist for every named supporter; no public amount exists to add",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0007",
+   "reason": "open: calendar/lake closer (Vanguard FY2025 XML); the $4,000,000 line was re-verified on the live ProPublica full-text stream by MD46 A15",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0010",
+   "reason": "open by date: calendar closers CAL02/CAL04 (2026-11-16) and Packard 990-PF",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0011",
+   "reason": "USER_AUTHORITY_WAIT: five drafts unsent (REQUESTS.jsonl); no clock is running; Kevin decides whether any is sent or waived",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0014",
+   "reason": "open: METR's EU share and the UK AISI amount are undisclosed in checked documents; the EASE and DSIT drafts (unsent) are the routes; EUR never converted",
+   "next_check": "see reason"
+  },
+  {
+   "field": "audits",
+   "line": "MD50 D0016",
+   "reason": "open: frontier receipt and two review receipts are written at S5 closure; EXHAUSTION-GATE.json only if \u00a77 is satisfied",
+   "next_check": "see reason"
+  }
+ ],
+ "slices_complete": {
+  "S0": {
+   "receipt": "research/receipts/S0/S0-verification.json",
+   "sha256": "b02bdfa905674fefd3372535e5fcb09af58169ab525f7c17bf08950cf25f0d17"
+  },
+  "S1": {
+   "receipt": "research/receipts/S1/S1-verification.json",
+   "sha256": "b3a5f1da870050630052245e4e00a7ad1a89e62bf324b350d8abf64689652260"
+  },
+  "S2": {
+   "receipt": "research/receipts/S2/S2-verification.json",
+   "sha256": "39ce31f22019e971d8d23844d368ccd0dafcc2595b034be6660c3f9270b39a80"
+  },
+  "S3": {
+   "receipt": "research/receipts/S3/S3-verification.json",
+   "sha256": "3de8c07e0048a3fe693ea8dd239cb37b0ca8e19da650040d365e22a6381168d7"
+  },
+  "S4": {
+   "receipt": "research/receipts/S4/S4-verification.json",
+   "sha256": "529fc49048a45e83f64445aba816381290de1f577b0ac5acf848f0f415c37669"
+  },
+  "S5": {
+   "receipt": "research/receipts/S5/S5-verification.json",
+   "sha256": "9f3223806f8c76f1fa74df28308afe87c18a706b42e322b66146de739bd34065"
+  }
+ },
+ "frontier_command": {
+  "command": "cd /home/kevin/repos/casework && python3 -m casework frontier --pack metr_deep",
+  "utc": "2026-09-16T20:17:25Z",
+  "exit": 0,
+  "output_sha256": "6c3815c20cec68b2c2e636c27a7511373cfd9725b3c1cfac9d82871f668a4f14",
+  "lines": 153
+ },
+ "source_classes": {
+  "C01": {
+   "recipient filings": "COVERED",
+   "funder filings": "COVERED",
+   "DAF sponsor filings": "COVERED",
+   "IRS TEOS and e-file index": "COVERED",
+   "state registries": "N/A reason=no element of C01 names this class (MD52 D01, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "SEC": "N/A reason=no element of C01 names this class (MD52 D02, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "court dockets": "N/A reason=no element of C01 names this class (MD52 D03, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "public grant databases": "COVERED",
+   "procurement records": "N/A reason=no element of C01 names this class (MD52 D04, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "issuer statements": "COVERED",
+   "self-statements": "N/A reason=no element of C01 names this class (MD52 D05, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "project documents": "N/A reason=no element of C01 names this class (MD52 D06, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "archives": "COVERED",
+   "press": "COVERED",
+   "statutory records requests": "N/A reason=no element of C01 names this class (MD52 D07, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+  },
+  "C02": {
+   "recipient filings": "COVERED",
+   "funder filings": "COVERED",
+   "DAF sponsor filings": "COVERED",
+   "IRS TEOS and e-file index": "COVERED",
+   "state registries": "COVERED",
+   "SEC": "N/A reason=no element of C02 names this class (MD52 D08, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "court dockets": "N/A reason=no element of C02 names this class (MD52 D09, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "public grant databases": "COVERED",
+   "procurement records": "N/A reason=no element of C02 names this class (MD52 D10, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "issuer statements": "COVERED",
+   "self-statements": "N/A reason=no element of C02 names this class (MD52 D11, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "project documents": "N/A reason=no element of C02 names this class (MD52 D12, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "archives": "COVERED",
+   "press": "N/A reason=no element of C02 names this class (MD52 D13, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them",
+   "statutory records requests": "N/A reason=no element of C02 names this class (MD52 D14, 2026-09-16); the claim's elements draw on the classes they list and this class carries no test for any of them"
+  }
+ },
+ "named_supporters": {
+  "file": "research/supporter_coverage.csv",
+  "rows": 22,
+  "without_coverage": [],
+  "statuses": [
+   "acknowledged_no_amount",
+   "amount_identified"
+  ]
+ },
+ "records_routes": {
+  "requests": [
+   {
+    "id": "REQ-MD44-UK-DSIT-FOI",
+    "state": "USER_AUTHORITY_WAIT",
+    "approved_for_send": false,
+    "sent_utc": null
+   },
+   {
+    "id": "REQ-MD44-US-NIST-FOIA",
+    "state": "USER_AUTHORITY_WAIT",
+    "approved_for_send": false,
+    "sent_utc": null
+   },
+   {
+    "id": "REQ-MD44-EU-EASE-1049",
+    "state": "USER_AUTHORITY_WAIT",
+    "approved_for_send": false,
+    "sent_utc": null
+   },
+   {
+    "id": "REQ-MD37-NPT-6104D",
+    "state": "USER_AUTHORITY_WAIT",
+    "approved_for_send": false,
+    "sent_utc": null
+   },
+   {
+    "id": "REQ-MD41-IRS-4506A-5227",
+    "state": "USER_AUTHORITY_WAIT",
+    "approved_for_send": false,
+    "sent_utc": null
+   }
+  ],
+  "in_clock": []
+ },
+ "calendar": [
+  {
+   "closer_id": "CAL01",
+   "earliest_expected": "2026-11-04",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL02",
+   "earliest_expected": "2026-11-16",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL03",
+   "earliest_expected": "2026-11-16",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL04",
+   "earliest_expected": "2026-11-16",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL05",
+   "earliest_expected": "2026-10-16",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL06",
+   "earliest_expected": "per request clock",
+   "state": "USER_AUTHORITY_WAIT",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL07",
+   "earliest_expected": "2026-11-16",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL08",
+   "earliest_expected": "2026-10-15",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL09",
+   "earliest_expected": "when posted",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  },
+  {
+   "closer_id": "CAL10",
+   "earliest_expected": "when posted",
+   "state": "future",
+   "last_checked_utc": "2026-09-16T10:00:00Z"
+  }
+ ],
+ "reconciliation": {
+  "file": "research/commitment_reconciliation.csv",
+  "rows": 66,
+  "undecided": [],
+  "residual_cells": [
+   "Residual cell (request form): who/vehicle of each component of the around $70.65 million remainder",
+   "Residual cell (request form): committed amount of each remainder component",
+   "Residual cell (request form): commitment date of each remainder component",
+   "Residual cell (request form): cash paid to date on each remainder component (and on Packard 2026-79050)",
+   "Residual cell (request form): restriction/purpose of each remainder component",
+   "Residual cell (request form): whether in-kind is inside the approximately $71 million"
+  ]
+ },
+ "audits": {
+  "MD50": {
+   "review": "research/agents-2026-09-16/MDREVIEW-MD50.md",
+   "resolved": 31,
+   "open": {
+    "C0010": "open (recorded): MDS0560 source_class mislabel; row retained as a bounded negative on the issuer page; no figure cites it",
+    "C0011": "open (recorded): MDS0583 names a pre-formation period; retained as a locator negative; no figure cites it",
+    "C0012": "open (recorded): MDS0917 result form; retained; the same negative is restated in bounded form by MD41 C-rows",
+    "D0001": "open: money-side gate not approvable until D0002-D0018 are resolved or recorded N/A-with-reason; EXHAUSTION-GATE.json not written",
+    "D0004": "open by design: the remainder's composition is embargoed until S6/MD99 (Kevin's decision)",
+    "D0005": "open: calendar closer (Packard TY2025/TY2026 990-PF); listing date stated as not an instrument date on MDP0030",
+    "D0006": "open (structural): bounded negatives exist for every named supporter; no public amount exists to add",
+    "D0007": "open: calendar/lake closer (Vanguard FY2025 XML); the $4,000,000 line was re-verified on the live ProPublica full-text stream by MD46 A15",
+    "D0010": "open by date: calendar closers CAL02/CAL04 (2026-11-16) and Packard 990-PF",
+    "D0011": "USER_AUTHORITY_WAIT: five drafts unsent (REQUESTS.jsonl); no clock is running; Kevin decides whether any is sent or waived",
+    "D0014": "open: METR's EU share and the UK AISI amount are undisclosed in checked documents; the EASE and DSIT drafts (unsent) are the routes; EUR never converted",
+    "D0016": "open: frontier receipt and two review receipts are written at S5 closure; EXHAUSTION-GATE.json only if \u00a77 is satisfied"
+   }
+  },
+  "MD51": {
+   "review": "research/agents-2026-09-16/MDREVIEW-MD51.md",
+   "resolved": 20,
+   "open": {}
+  }
+ },
+ "embargo_check": {
+  "drafts": 11,
+  "drafts_asking_allocation": [],
+  "transmissions": 0
+ },
+ "reviewers": [
+  {
+   "lane": "MD50",
+   "review": "research/agents-2026-09-16/MDREVIEW-MD50.md",
+   "sha256": "b37c899f54d4ff8a827b0dc6aafc7920b42a3100f7ab1df0fd4e60a3e593a872"
+  },
+  {
+   "lane": "MD51",
+   "review": "research/agents-2026-09-16/MDREVIEW-MD51.md",
+   "sha256": "ac3621df67b167688ba74e4685292a9901815cd3ccbf97cdb8a10e29504d8bfb"
+  }
+ ],
+ "gate_pass": true,
+ "gate_note": "gate passes with the listed exceptions (future documents, the embargoed remainder, unsent drafts awaiting Kevin's decision, and audit items open by date)"
+}

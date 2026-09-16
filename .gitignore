@@ -1,0 +1,13 @@
+# sibling clone of the posted figure repository (kevinnbass/metr-money-figure); not part of this pack
+repo/
+# saved primary documents (3.6 GB; 11,583 files). Every file is listed with size and sha256 in research/PRIMARY-MANIFEST.csv
+research/primary/
+# unsent outreach and records-request drafts: held back from the public repository until the send decision is made
+research/outreach/
+research/records/REQUESTS.jsonl
+# local
+__pycache__/
+*.pyc
+.DS_Store
+# archived medium-effort lane outputs and their primaries (427 MB); superseded by the xhigh re-runs recorded in research/rerun/
+research/archive/

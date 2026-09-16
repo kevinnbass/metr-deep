@@ -1,0 +1,39 @@
+<!-- casework-review lane=research/grok-out/MD19-uk-aisi-contracts.csv -->
+
+# Review of MD19 — uk aisi contracts
+
+Reviewing agent: Claude (parent session), 2026-09-16. Lane CSV sha256 551032ad8f46ef5a9cb3de5572c8625a3420d40c09a2fc825d0bb215a75f5984; goal state complete. xhigh re-run (the medium run was stopped and set aside under A3). Checked against the lane's saved Contracts Finder v2 JSON responses (hitCount 0 for each quoted METR alias, verified), the 34 dumped AISI notices, 42 DSIT over-£25k spend CSVs (re-grepped), the GOV.UK search API output, the saved GOV.UK taskforce reports, AISI pages (quotes verified verbatim) and the Alignment Project 2026 awardee PDF (pdftotext). No UK award names METR in any checked system; the Frontier AI Taskforce 'partnership' with ARC Evals and the AISI acknowledgements are unquantified collaboration/in-kind rows, separated from the taskforce's stated new contracts (Advai, Gryphon Scientific, Faculty AI); programme ceilings (Challenge Fund, Alignment Project) are moved out of money_type and recorded in terms apart from METR's undisclosed (non-)share; RAND Europe and Alignment Research Center are different legal entities and never merged with METR. FOIA routes are named, nothing sent; MD44 owns any draft.
+
+| row | verdict | target_prefix | element_ids | primary_values | strength | role | supersedes | note |
+|---|---|---|---|---|---|---|---|---|
+| A01 | CONFIRMED | MDS | C06.E3 | {} | primary | negative |  | Contracts Finder v2 search_notices JSON with the exact quoted keyword: hitCount 0 (saved JSON verified); bounded |
+| A02 | CONFIRMED | MDS | C06.E3 | {} | primary | negative |  | Contracts Finder v2 search_notices JSON with the exact quoted keyword: hitCount 0 (saved JSON verified); bounded |
+| A03 | CONFIRMED | MDS | C06.E3 | {} | primary | negative |  | Contracts Finder v2 search_notices JSON with the exact quoted keyword: hitCount 0 (saved JSON verified); bounded |
+| A04 | DIFFERS | MDP | C06.E3 | {"money_type": "", "ledger": "", "edge_type": "programme grant opportunity notice (DSIT, GBP 50,000-200,000 per project); awards array empty; METR not named as supplier"} | supporting | evidence |  | retargeted from MDF to MDP: a programme notice with no METR award is a proposition about the route, not a funding event; valueLow/valueHigh and awards=[] verified in saved JSON |
+| A05 | CONFIRMED | MDS | C06.E3 | {} | primary | negative |  | 34 quoted-AISI and 5 quoted-'AI Security Institute' notices dumped; none names METR or an alias as supplier; bounded |
+| A06 | CONFIRMED | MDS | C06.E3 | {} | supporting | context |  | Find a Tender: JS shell, API 404, jina 403; route failure recorded reproducibly; context |
+| B01 | DIFFERS | MDP | C06.E3;C04.E1 | {"money_type": "", "payment_status": "acknowledged as a supporter and partner; amount, date, vehicle and award id not disclosed"} | supporting | evidence |  | metr.org/about acknowledgment; money_type cleared because an acknowledgment is not a contract |
+| B02 | CONFIRMED | MDR | C06.E3 | {} | primary | evidence |  | GOV.UK Frontier AI Taskforce first progress report (2023-09-07) names ARC Evals as a partnership; no award id or value; ARC Evals is METR's historical alias, kept distinct from ARC the 501(c)(3) |
+| B03 | CONFIRMED | MDI | C06.E3;C04.E1 | {} | primary | evidence |  | GOV.UK AISI 'approach to evaluations': 'unpublished work by METR, at the Summit' verified verbatim in the saved HTML; collaboration with no contract value; in-kind access element |
+| B04 | CONFIRMED | MDR | C06.E3 | {} | supporting | evidence |  | second progress report keeps ARC Evals on the partnership list; no value |
+| B05 | CONFIRMED | MDP | C06.E3 | {} | primary | evidence |  | GOV.UK news: 'These new contracts with Advai, Gryphon Scientific and Faculty' verified in saved HTML; ARC Evals is in the 'working with' group, not a contract party |
+| B06 | CONFIRMED | MDS | C06.E3;C04.E1 | {} | supporting | negative |  | AISI grants/awardee pages name no METR grantee; bounded with the incomplete-register caveat |
+| B07 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | AISI grants/awardee pages name no METR grantee; bounded with the incomplete-register caveat |
+| B08 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | AISI grants/awardee pages name no METR grantee; bounded with the incomplete-register caveat |
+| B09 | CONFIRMED | MDI | C04.E1 | {} | supporting | evidence |  | AISI evals-bounty page 'We also thank METR for their guidance and help' verified; unquantified in-kind acknowledgement, not a payment |
+| B10 | CONFIRMED | MDS | C06.E3 | {} | supporting | evidence |  | GOV.UK search API: 8 documents match quoted 'ARC Evals', none an award; coverage receipt |
+| B11 | CONFIRMED | MDS | C06.E3;C04.E1 | {} | primary | negative |  | DSIT spending-over-£25,000 CSVs (42 files saved, 2024-2025): no METR/ARC Evals payee (re-grepped); bounded by the threshold |
+| B12 | CONFIRMED | MDS | C06.E3;C04.E1 | {} | supporting | context |  | aisi.gov.uk CMS shell for the same publication; the GOV.UK HTML (B03) carries the text; route note, context |
+| B13 | CONFIRMED | MDS | C06.E3 | {} | primary | negative |  | Alignment Project 2026 Grants PDF (published awardee register, pdftotext saved): no METR / Model Evaluation and Threat Research / ARC Evals line; bounded |
+| B14 | CONFIRMED | MDP | C06.E3 | {} | supporting | evidence |  | the register lists Alignment Research Center (Jacob Hilton), a different legal entity from METR; unmerge fact verified in the saved text |
+| C01 | DIFFERS | MDP | C06.E3 | {"money_type": "", "terms": "programme ceiling GBP 50,000-200,000 per project (Challenge Fund notice 4113c27b); METR share: not disclosed (METR not a named supplier; awards array empty)"} | primary | evidence |  | money_type cleared: a programme ceiling is not a METR contract; ceiling kept in terms, METR share stated as not disclosed |
+| C02 | DIFFERS | MDP | C06.E3 | {"money_type": "", "terms": "programme ceiling GBP 15m at launch, then GBP 27m (Alignment Project); METR share: not disclosed; METR absent from the published awardee register"} | supporting | evidence |  | money_type cleared for the same reason; coalition partners are programme funders, not merged with METR |
+| C03 | DIFFERS | MDS | C06.E3 | {"money_type": "", "amount_usd": "", "terms": "nearest AISI award: RAND Europe, supplierName RAND Europe, awardedValue GBP 348,959 (2025-12-19) - a different legal entity, not METR's share"} | primary | negative |  | none of the 34 AISI notices is a consortium naming METR; RAND Europe supplier line verified in saved JSON; money_type cleared because the award is not METR's |
+| C04 | CONFIRMED | MDP | C06.E3 | {} | supporting | evidence |  | METR share not disclosed in the register; Alignment Research Center listing is a different legal entity |
+| D01 | CONFIRMED | MDP | C06.E3 | {} | supporting | context |  | unpublished document named with the DSIT FOIA route; nothing sent; MD44 owns any draft; context |
+| D02 | CONFIRMED | MDP | C06.E3;C04.E1 | {} | supporting | context |  | unpublished document named with the DSIT FOIA route; nothing sent; MD44 owns any draft; context |
+| D03 | CONFIRMED | MDP | C04.E1 | {} | supporting | context |  | unpublished document named with the DSIT FOIA route; nothing sent; MD44 owns any draft; context |
+| E01 | CONFIRMED | MDS | C06.E3 | {} | supporting | negative |  | class-level bounded negative with blind spots stated |
+| E02 | CONFIRMED | MDS | C06.E3;C04.E1 | {} | supporting | negative |  | class-level bounded negative with blind spots stated |
+| E03 | CONFIRMED | MDS | C06.E3;C04.E1 | {} | supporting | negative |  | class-level bounded negative with blind spots stated |
+| E04 | CONFIRMED | MDS | C06.E3 | {} | supporting | context |  | record that no request was sent; context |
